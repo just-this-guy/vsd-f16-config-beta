@@ -1,0 +1,7 @@
+{
+  "product": "VSD F16 Config Beta",
+  "version": "0.3.0-beta",
+  "profiles": 4,
+  "pages": 28,
+  "design": "single-button state graphics, status dots, large bold labels"
+}

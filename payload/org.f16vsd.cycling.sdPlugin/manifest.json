@@ -1,0 +1,38 @@
+{
+  "Name": "VSD F16 Config Beta controls",
+  "Author": "F-16 VSD Profiles",
+  "Version": "0.3.0",
+  "Description": "Single-button F-16 toggle and selector controls.",
+  "Icon": "images/icon",
+  "Category": "F-16 Controls",
+  "CategoryIcon": "images/icon",
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "4.1"
+  },
+  "OS": [
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Actions": [
+    {
+      "UUID": "org.f16vsd.cycling.selector",
+      "Name": "F-16 selector",
+      "Icon": "images/icon",
+      "Tooltip": "Press to toggle or cycle the configured control.",
+      "SupportedInMultiActions": false,
+      "ShowTitle": false,
+      "States": [
+        {
+          "Image": "images/icon"
+        }
+      ],
+      "Controllers": [
+        "Keypad"
+      ]
+    }
+  ],
+  "CodePathWin": "VSD F16 Controls.exe"
+}

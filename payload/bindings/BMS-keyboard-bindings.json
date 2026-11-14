@@ -1,0 +1,884 @@
+[
+  {
+    "callback": "SimOverHeat",
+    "scan_code": 59,
+    "modifier_mask": 1,
+    "description": "TEST: FIRE & OHEAT DETECT Button - Hold"
+  },
+  {
+    "callback": "SimOBOGSBit",
+    "scan_code": 60,
+    "modifier_mask": 1,
+    "description": "TEST: OXY QTY Switch - Hold"
+  },
+  {
+    "callback": "SimMalIndLights",
+    "scan_code": 61,
+    "modifier_mask": 1,
+    "description": "TEST: MAL & IND LTS Button - Hold"
+  },
+  {
+    "callback": "SimEpuGenTest",
+    "scan_code": 64,
+    "modifier_mask": 1,
+    "description": "TEST: EPU/GEN Switch - Hold"
+  },
+  {
+    "callback": "SimDigitalBUPBackup",
+    "scan_code": 88,
+    "modifier_mask": 6,
+    "description": "FLT: DIGITAL Switch - BACKUP"
+  },
+  {
+    "callback": "SimDigitalBUPOff",
+    "scan_code": 66,
+    "modifier_mask": 6,
+    "description": "FLT: DIGITAL Switch - OFF"
+  },
+  {
+    "callback": "SimAltFlapsExtend",
+    "scan_code": 57,
+    "modifier_mask": 6,
+    "description": "FLT: ALT FLAPS Switch - EXTEND"
+  },
+  {
+    "callback": "SimAltFlapsNorm",
+    "scan_code": 40,
+    "modifier_mask": 6,
+    "description": "FLT: ALT FLAPS Switch - NORM"
+  },
+  {
+    "callback": "SimLEFLock",
+    "scan_code": 18,
+    "modifier_mask": 5,
+    "description": "FLT: LE FLAPS Switch - LOCK"
+  },
+  {
+    "callback": "SimLEFAuto",
+    "scan_code": 15,
+    "modifier_mask": 6,
+    "description": "FLT: LE FLAPS Switch - AUTO"
+  },
+  {
+    "callback": "SimTrimAPDISC",
+    "scan_code": 64,
+    "modifier_mask": 5,
+    "description": "TRIM: TRIM/AP DISC Switch - DISC"
+  },
+  {
+    "callback": "SimTrimAPNORM",
+    "scan_code": 19,
+    "modifier_mask": 5,
+    "description": "TRIM: TRIM/AP DISC Switch - NORM"
+  },
+  {
+    "callback": "SimMasterFuelOn",
+    "scan_code": 35,
+    "modifier_mask": 7,
+    "description": "FUEL: MASTER Switch - ON"
+  },
+  {
+    "callback": "SimMasterFuelOff",
+    "scan_code": 34,
+    "modifier_mask": 7,
+    "description": "FUEL: MASTER Switch - OFF"
+  },
+  {
+    "callback": "SimFuelPumpOff",
+    "scan_code": 45,
+    "modifier_mask": 7,
+    "description": "FUEL: ENG FEED Knob - OFF"
+  },
+  {
+    "callback": "SimFuelPumpNorm",
+    "scan_code": 46,
+    "modifier_mask": 7,
+    "description": "FUEL: ENG FEED Knob - NORM"
+  },
+  {
+    "callback": "SimFuelPumpAft",
+    "scan_code": 47,
+    "modifier_mask": 7,
+    "description": "FUEL: ENG FEED Knob - AFT"
+  },
+  {
+    "callback": "SimFuelPumpFwd",
+    "scan_code": 48,
+    "modifier_mask": 7,
+    "description": "FUEL: ENG FEED Knob - FWD"
+  },
+  {
+    "callback": "SimFuelDoorOpen",
+    "scan_code": 50,
+    "modifier_mask": 7,
+    "description": "FUEL: AIR REFUEL Switch - OPEN"
+  },
+  {
+    "callback": "SimFuelDoorClose",
+    "scan_code": 49,
+    "modifier_mask": 7,
+    "description": "FUEL: AIR REFUEL Switch - CLOSE"
+  },
+  {
+    "callback": "SimAntiColModeOff",
+    "scan_code": 41,
+    "modifier_mask": 3,
+    "description": "EXT: ANTI COLLISION Knob - OFF"
+  },
+  {
+    "callback": "SimAntiColMode1",
+    "scan_code": 57,
+    "modifier_mask": 3,
+    "description": "EXT: ANTI COLLISION Knob - 1"
+  },
+  {
+    "callback": "SimAntiColMode2",
+    "scan_code": 15,
+    "modifier_mask": 3,
+    "description": "EXT: ANTI COLLISION Knob - 2"
+  },
+  {
+    "callback": "SimAntiColMode3",
+    "scan_code": 21,
+    "modifier_mask": 4,
+    "description": "EXT: ANTI COLLISION Knob - 3"
+  },
+  {
+    "callback": "SimAntiColMode4",
+    "scan_code": 22,
+    "modifier_mask": 4,
+    "description": "EXT: ANTI COLLISION Knob - 4"
+  },
+  {
+    "callback": "SimAntiColModeA",
+    "scan_code": 37,
+    "modifier_mask": 4,
+    "description": "EXT: ANTI COLLISION Knob - A"
+  },
+  {
+    "callback": "SimAntiColModeB",
+    "scan_code": 38,
+    "modifier_mask": 4,
+    "description": "EXT: ANTI COLLISION Knob - B"
+  },
+  {
+    "callback": "SimAntiColModeC",
+    "scan_code": 49,
+    "modifier_mask": 4,
+    "description": "EXT: ANTI COLLISION Knob - C"
+  },
+  {
+    "callback": "SimLightsFlash",
+    "scan_code": 3,
+    "modifier_mask": 3,
+    "description": "EXT: POSITION Switch - FLASH"
+  },
+  {
+    "callback": "SimLightsSteady",
+    "scan_code": 2,
+    "modifier_mask": 3,
+    "description": "EXT: POSITION Switch - STEADY"
+  },
+  {
+    "callback": "SimWingLightUp",
+    "scan_code": 4,
+    "modifier_mask": 3,
+    "description": "EXT: WING/TAIL Switch - BRT"
+  },
+  {
+    "callback": "SimWingLightMid",
+    "scan_code": 5,
+    "modifier_mask": 3,
+    "description": "EXT: WING/TAIL Switch - OFF"
+  },
+  {
+    "callback": "SimWingLightDown",
+    "scan_code": 6,
+    "modifier_mask": 3,
+    "description": "EXT: WING/TAIL Switch - DIM"
+  },
+  {
+    "callback": "SimFuselageLightUp",
+    "scan_code": 7,
+    "modifier_mask": 3,
+    "description": "EXT: FUSELAGE Switch - BRT"
+  },
+  {
+    "callback": "SimFuselageLightMid",
+    "scan_code": 8,
+    "modifier_mask": 3,
+    "description": "EXT: FUSELAGE Switch - OFF"
+  },
+  {
+    "callback": "SimFuselageLightDown",
+    "scan_code": 9,
+    "modifier_mask": 3,
+    "description": "EXT: FUSELAGE Switch - DIM"
+  },
+  {
+    "callback": "SimStepFormationLightsUp",
+    "scan_code": 45,
+    "modifier_mask": 1,
+    "description": "EXT: FORM Knob - Step Up"
+  },
+  {
+    "callback": "SimStepFormationLightsDown",
+    "scan_code": 44,
+    "modifier_mask": 1,
+    "description": "EXT: FORM Knob - Step Down"
+  },
+  {
+    "callback": "SimExtlMasterOff",
+    "scan_code": 10,
+    "modifier_mask": 3,
+    "description": "EXT: MASTER Switch/Knob - OFF"
+  },
+  {
+    "callback": "SimExtlMasterCovertAll",
+    "scan_code": 11,
+    "modifier_mask": 3,
+    "description": "EXT: MASTER Knob - ALL"
+  },
+  {
+    "callback": "SimExtlMasterCovertAC",
+    "scan_code": 66,
+    "modifier_mask": 3,
+    "description": "EXT: MASTER Knob - A-C"
+  },
+  {
+    "callback": "SimExtlMasterCovertForm",
+    "scan_code": 12,
+    "modifier_mask": 3,
+    "description": "EXT: MASTER Knob - FORM"
+  },
+  {
+    "callback": "SimExtlMasterNorm",
+    "scan_code": 13,
+    "modifier_mask": 3,
+    "description": "EXT: MASTER Switch/Knob - NORM"
+  },
+  {
+    "callback": "SimStepAARLightsUp",
+    "scan_code": 47,
+    "modifier_mask": 5,
+    "description": "EXT: AERIAL REFUELING Knob - Step Up"
+  },
+  {
+    "callback": "SimStepAARLightsDown",
+    "scan_code": 48,
+    "modifier_mask": 5,
+    "description": "EXT: AERIAL REFUELING Knob - Step Down"
+  },
+  {
+    "callback": "SimEpuOn",
+    "scan_code": 36,
+    "modifier_mask": 7,
+    "description": "EPU: EPU Switch - ON"
+  },
+  {
+    "callback": "SimEpuAuto",
+    "scan_code": 37,
+    "modifier_mask": 7,
+    "description": "EPU: EPU Switch - NORM"
+  },
+  {
+    "callback": "SimEpuOff",
+    "scan_code": 44,
+    "modifier_mask": 7,
+    "description": "EPU: EPU Switch - OFF"
+  },
+  {
+    "callback": "SimMainPowerMain",
+    "scan_code": 22,
+    "modifier_mask": 7,
+    "description": "ELEC: MAIN PWR Switch - MAIN"
+  },
+  {
+    "callback": "SimMainPowerBatt",
+    "scan_code": 23,
+    "modifier_mask": 7,
+    "description": "ELEC: MAIN PWR Switch - BATT"
+  },
+  {
+    "callback": "SimMainPowerOff",
+    "scan_code": 24,
+    "modifier_mask": 7,
+    "description": "ELEC: MAIN PWR Switch - OFF"
+  },
+  {
+    "callback": "SimElecReset",
+    "scan_code": 60,
+    "modifier_mask": 4,
+    "description": "ELEC: CAUTION RESET Button - Push"
+  },
+  {
+    "callback": "SimEcmPowerOn",
+    "scan_code": 66,
+    "modifier_mask": 5,
+    "description": "ECM: OPR Switch - OPR"
+  },
+  {
+    "callback": "SimEcmPowerOff",
+    "scan_code": 65,
+    "modifier_mask": 5,
+    "description": "ECM: OPR Switch - OFF"
+  },
+  {
+    "callback": "SimXMit1",
+    "scan_code": 57,
+    "modifier_mask": 5,
+    "description": "ECM: XMT Switch - 1"
+  },
+  {
+    "callback": "SimXMit2",
+    "scan_code": 15,
+    "modifier_mask": 5,
+    "description": "ECM: XMT Switch - 2"
+  },
+  {
+    "callback": "SimXMit3",
+    "scan_code": 19,
+    "modifier_mask": 3,
+    "description": "ECM: XMT Switch - 3"
+  },
+  {
+    "callback": "SimECMBit",
+    "scan_code": 18,
+    "modifier_mask": 6,
+    "description": "ECM: BIT Button - Hold"
+  },
+  {
+    "callback": "SimEcmMode1Toggle",
+    "scan_code": 16,
+    "modifier_mask": 7,
+    "description": "ECM: Mode 1 - Toggle"
+  },
+  {
+    "callback": "SimEcmMode2Toggle",
+    "scan_code": 17,
+    "modifier_mask": 7,
+    "description": "ECM: Mode 2 - Toggle"
+  },
+  {
+    "callback": "SimEcmMode3Toggle",
+    "scan_code": 18,
+    "modifier_mask": 7,
+    "description": "ECM: Mode 3 - Toggle"
+  },
+  {
+    "callback": "SimEcmMode4Toggle",
+    "scan_code": 19,
+    "modifier_mask": 7,
+    "description": "ECM: Mode 4 - Toggle"
+  },
+  {
+    "callback": "SimEcmMode5Toggle",
+    "scan_code": 21,
+    "modifier_mask": 7,
+    "description": "ECM: Mode 5 - Toggle"
+  },
+  {
+    "callback": "SimJfsStartUp",
+    "scan_code": 25,
+    "modifier_mask": 7,
+    "description": "ENG: JFS Switch - START 1"
+  },
+  {
+    "callback": "SimJfsStartDown",
+    "scan_code": 31,
+    "modifier_mask": 7,
+    "description": "ENG: JFS Switch - START 2"
+  },
+  {
+    "callback": "SimEngContPri",
+    "scan_code": 32,
+    "modifier_mask": 7,
+    "description": "ENG: ENG CONT Switch - PRI"
+  },
+  {
+    "callback": "SimEngContSec",
+    "scan_code": 33,
+    "modifier_mask": 7,
+    "description": "ENG: ENG CONT Switch - SEC"
+  },
+  {
+    "callback": "SimStepComm1VolumeUp",
+    "scan_code": 27,
+    "modifier_mask": 1,
+    "description": "AUDIO1: COMM 1 Knob - Volume Incr."
+  },
+  {
+    "callback": "SimStepComm1VolumeDown",
+    "scan_code": 26,
+    "modifier_mask": 1,
+    "description": "AUDIO1: COMM 1 Knob - Volume Decr."
+  },
+  {
+    "callback": "SimStepComm2VolumeUp",
+    "scan_code": 27,
+    "modifier_mask": 2,
+    "description": "AUDIO1: COMM 2 Knob - Volume Incr."
+  },
+  {
+    "callback": "SimStepComm2VolumeDown",
+    "scan_code": 26,
+    "modifier_mask": 2,
+    "description": "AUDIO1: COMM 2 Knob - Volume Decr."
+  },
+  {
+    "callback": "SimStepMissileVolumeUp",
+    "scan_code": 27,
+    "modifier_mask": 3,
+    "description": "AUDIO1: MSL Knob - Volume Incr."
+  },
+  {
+    "callback": "SimStepMissileVolumeDown",
+    "scan_code": 26,
+    "modifier_mask": 3,
+    "description": "AUDIO1: MSL Knob - Volume Decr."
+  },
+  {
+    "callback": "SimStepThreatVolumeUp",
+    "scan_code": 27,
+    "modifier_mask": 5,
+    "description": "AUDIO1: THREAT Knob - Volume Incr."
+  },
+  {
+    "callback": "SimStepThreatVolumeDown",
+    "scan_code": 26,
+    "modifier_mask": 5,
+    "description": "AUDIO1: THREAT Knob - Volume Decr."
+  },
+  {
+    "callback": "SimHmsSymWheelUp",
+    "scan_code": 27,
+    "modifier_mask": 0,
+    "description": "HMCS: HMSC Knob - Brightness Incr."
+  },
+  {
+    "callback": "SimHmsSymWheelDn",
+    "scan_code": 26,
+    "modifier_mask": 0,
+    "description": "HMCS: HMSC Knob - Brightness Decr."
+  },
+  {
+    "callback": "SimSymWheelUp",
+    "scan_code": 78,
+    "modifier_mask": 3,
+    "description": "ICP: SYM Wheel - Increase HUD Brightness"
+  },
+  {
+    "callback": "SimSymWheelDn",
+    "scan_code": 74,
+    "modifier_mask": 3,
+    "description": "ICP: SYM Wheel - Decrease HUD Brightness"
+  },
+  {
+    "callback": "SimFuelTransNorm",
+    "scan_code": 2,
+    "modifier_mask": 7,
+    "description": "QTY: EXT FUEL TRANS Switch - NORM"
+  },
+  {
+    "callback": "SimFuelTransWing",
+    "scan_code": 3,
+    "modifier_mask": 7,
+    "description": "QTY: EXT FUEL TRANS Switch - WING FIRST"
+  },
+  {
+    "callback": "SimLeftHptOn",
+    "scan_code": 38,
+    "modifier_mask": 3,
+    "description": "SNSR: LEFT HDPT Switch - ON"
+  },
+  {
+    "callback": "SimLeftHptOff",
+    "scan_code": 38,
+    "modifier_mask": 5,
+    "description": "SNSR: LEFT HDPT Switch - OFF"
+  },
+  {
+    "callback": "SimRightHptOn",
+    "scan_code": 37,
+    "modifier_mask": 5,
+    "description": "SNSR: RIGHT HDPT Switch - ON"
+  },
+  {
+    "callback": "SimRightHptOff",
+    "scan_code": 37,
+    "modifier_mask": 3,
+    "description": "SNSR: RIGHT HDPT Switch - OFF"
+  },
+  {
+    "callback": "SimFCROn",
+    "scan_code": 25,
+    "modifier_mask": 3,
+    "description": "SNSR: FCR Switch - ON"
+  },
+  {
+    "callback": "SimFCROff",
+    "scan_code": 50,
+    "modifier_mask": 5,
+    "description": "SNSR: FCR Switch - OFF"
+  },
+  {
+    "callback": "SimRALTON",
+    "scan_code": 65,
+    "modifier_mask": 4,
+    "description": "SNSR: RDR ALT Switch - ON"
+  },
+  {
+    "callback": "SimRALTSTDBY",
+    "scan_code": 66,
+    "modifier_mask": 4,
+    "description": "SNSR: RDR ALT Switch - STDBY"
+  },
+  {
+    "callback": "SimRALTOFF",
+    "scan_code": 11,
+    "modifier_mask": 7,
+    "description": "SNSR: RDR ALT Switch - OFF"
+  },
+  {
+    "callback": "SimScalesVVVAH",
+    "scan_code": 62,
+    "modifier_mask": 7,
+    "description": "HUD: Scales Switch - VV/VAH"
+  },
+  {
+    "callback": "SimScalesVAH",
+    "scan_code": 63,
+    "modifier_mask": 7,
+    "description": "HUD: Scales Switch - VAH"
+  },
+  {
+    "callback": "SimScalesOff",
+    "scan_code": 64,
+    "modifier_mask": 7,
+    "description": "HUD: Scales Switch - OFF"
+  },
+  {
+    "callback": "SimPitchLadderATTFPM",
+    "scan_code": 65,
+    "modifier_mask": 7,
+    "description": "HUD: FPM Switch - ATT/FPM"
+  },
+  {
+    "callback": "SimPitchLadderFPM",
+    "scan_code": 66,
+    "modifier_mask": 7,
+    "description": "HUD: FPM Switch - FPM"
+  },
+  {
+    "callback": "SimPitchLadderOff",
+    "scan_code": 67,
+    "modifier_mask": 7,
+    "description": "HUD: FPM Switch - OFF"
+  },
+  {
+    "callback": "SimHUDDEDDED",
+    "scan_code": 68,
+    "modifier_mask": 7,
+    "description": "HUD: DED Data Switch - DED"
+  },
+  {
+    "callback": "SimHUDDEDPFL",
+    "scan_code": 87,
+    "modifier_mask": 7,
+    "description": "HUD: DED Data Switch - PFL"
+  },
+  {
+    "callback": "SimHUDDEDOff",
+    "scan_code": 88,
+    "modifier_mask": 7,
+    "description": "HUD: DED Data Switch - OFF"
+  },
+  {
+    "callback": "SimReticleStby",
+    "scan_code": 12,
+    "modifier_mask": 7,
+    "description": "HUD: DEPR RET Switch - STBY"
+  },
+  {
+    "callback": "SimReticlePri",
+    "scan_code": 13,
+    "modifier_mask": 7,
+    "description": "HUD: DEPR RET Switch - PRI"
+  },
+  {
+    "callback": "SimReticleOff",
+    "scan_code": 26,
+    "modifier_mask": 7,
+    "description": "HUD: DEPR RET Switch - OFF"
+  },
+  {
+    "callback": "SimHUDVelocityCAS",
+    "scan_code": 27,
+    "modifier_mask": 7,
+    "description": "HUD: Velocity Switch - CAS"
+  },
+  {
+    "callback": "SimHUDVelocityTAS",
+    "scan_code": 39,
+    "modifier_mask": 7,
+    "description": "HUD: Velocity Switch - TAS"
+  },
+  {
+    "callback": "SimHUDVelocityGND",
+    "scan_code": 40,
+    "modifier_mask": 7,
+    "description": "HUD: Velocity Switch - GND SPD"
+  },
+  {
+    "callback": "SimHUDAltRadar",
+    "scan_code": 41,
+    "modifier_mask": 7,
+    "description": "HUD: Altitude Switch - RADAR"
+  },
+  {
+    "callback": "SimHUDAltBaro",
+    "scan_code": 51,
+    "modifier_mask": 7,
+    "description": "HUD: Altitude Switch - BARO"
+  },
+  {
+    "callback": "SimHUDAltAuto",
+    "scan_code": 52,
+    "modifier_mask": 7,
+    "description": "HUD: Altitude Switch - AUTO"
+  },
+  {
+    "callback": "SimHUDBrtDay",
+    "scan_code": 53,
+    "modifier_mask": 7,
+    "description": "HUD: Brightness Switch - DAY"
+  },
+  {
+    "callback": "SimHUDBrtAuto",
+    "scan_code": 57,
+    "modifier_mask": 7,
+    "description": "HUD: Brightness Switch - AUTO BRT"
+  },
+  {
+    "callback": "SimHUDBrtNight",
+    "scan_code": 15,
+    "modifier_mask": 7,
+    "description": "HUD: Brightness Switch - NIG"
+  },
+  {
+    "callback": "SimInstrumentLightCW",
+    "scan_code": 36,
+    "modifier_mask": 5,
+    "description": "LIGHT: INST PNL Knob (Primary) - Step Up"
+  },
+  {
+    "callback": "SimInstrumentLightCCW",
+    "scan_code": 23,
+    "modifier_mask": 5,
+    "description": "LIGHT: INST PNL Knob (Primary) - Step Down"
+  },
+  {
+    "callback": "SimDedBrightnessCW",
+    "scan_code": 63,
+    "modifier_mask": 4,
+    "description": "LIGHT: DED Knob (Primary) - Step Up"
+  },
+  {
+    "callback": "SimDedBrightnessCCW",
+    "scan_code": 64,
+    "modifier_mask": 4,
+    "description": "LIGHT: DED Knob (Primary) - Step Down"
+  },
+  {
+    "callback": "SimInteriorLightCW",
+    "scan_code": 49,
+    "modifier_mask": 5,
+    "description": "LIGHT: CONSOLES Knob (Flood) - Step Up"
+  },
+  {
+    "callback": "SimInteriorLightCCW",
+    "scan_code": 49,
+    "modifier_mask": 3,
+    "description": "LIGHT: CONSOLES Knob (Flood) - Step Down"
+  },
+  {
+    "callback": "SimAirSourceOff",
+    "scan_code": 78,
+    "modifier_mask": 7,
+    "description": "AIR: AIR SOURCE Knob - OFF"
+  },
+  {
+    "callback": "SimAirSourceNorm",
+    "scan_code": 74,
+    "modifier_mask": 7,
+    "description": "AIR: AIR SOURCE Knob - NORM"
+  },
+  {
+    "callback": "SimAirSourceDump",
+    "scan_code": 16,
+    "modifier_mask": 6,
+    "description": "AIR: AIR SOURCE Knob - DUMP"
+  },
+  {
+    "callback": "SimAirSourceRam",
+    "scan_code": 20,
+    "modifier_mask": 6,
+    "description": "AIR: AIR SOURCE Knob - RAM"
+  },
+  {
+    "callback": "SimAntiIceUp",
+    "scan_code": 59,
+    "modifier_mask": 7,
+    "description": "ICE: ENGINE Switch - ON"
+  },
+  {
+    "callback": "SimAntiIceMid",
+    "scan_code": 60,
+    "modifier_mask": 7,
+    "description": "ICE: ENGINE Switch - AUTO"
+  },
+  {
+    "callback": "SimAntiIceDown",
+    "scan_code": 61,
+    "modifier_mask": 7,
+    "description": "ICE: ENGINE Switch - OFF"
+  },
+  {
+    "callback": "SimINSOff",
+    "scan_code": 4,
+    "modifier_mask": 7,
+    "description": "AVIONICS: INS Knob - OFF"
+  },
+  {
+    "callback": "SimINSNorm",
+    "scan_code": 5,
+    "modifier_mask": 7,
+    "description": "AVIONICS: INS Knob - NORM"
+  },
+  {
+    "callback": "SimINSNav",
+    "scan_code": 6,
+    "modifier_mask": 7,
+    "description": "AVIONICS: INS Knob - NAV"
+  },
+  {
+    "callback": "SimINSInFlt",
+    "scan_code": 7,
+    "modifier_mask": 7,
+    "description": "AVIONICS: INS Knob - IN FLT ALIGN"
+  },
+  {
+    "callback": "SimFCCOn",
+    "scan_code": 51,
+    "modifier_mask": 4,
+    "description": "AVIONICS: FCC Switch - ON"
+  },
+  {
+    "callback": "SimFCCOff",
+    "scan_code": 52,
+    "modifier_mask": 4,
+    "description": "AVIONICS: FCC Switch - OFF"
+  },
+  {
+    "callback": "SimSMSOn",
+    "scan_code": 57,
+    "modifier_mask": 4,
+    "description": "AVIONICS: SMS Switch - ON"
+  },
+  {
+    "callback": "SimSMSOff",
+    "scan_code": 15,
+    "modifier_mask": 4,
+    "description": "AVIONICS: SMS Switch - OFF"
+  },
+  {
+    "callback": "SimMFDOn",
+    "scan_code": 17,
+    "modifier_mask": 2,
+    "description": "AVIONICS: MFD Switch - ON"
+  },
+  {
+    "callback": "SimMFDOff",
+    "scan_code": 35,
+    "modifier_mask": 5,
+    "description": "AVIONICS: MFD Switch - OFF"
+  },
+  {
+    "callback": "SimUFCOn",
+    "scan_code": 20,
+    "modifier_mask": 2,
+    "description": "AVIONICS: UFC Switch - ON"
+  },
+  {
+    "callback": "SimUFCOff",
+    "scan_code": 24,
+    "modifier_mask": 6,
+    "description": "AVIONICS: UFC Switch - OFF"
+  },
+  {
+    "callback": "SimGPSOn",
+    "scan_code": 21,
+    "modifier_mask": 2,
+    "description": "AVIONICS: GPS Switch - ON"
+  },
+  {
+    "callback": "SimGPSOff",
+    "scan_code": 22,
+    "modifier_mask": 2,
+    "description": "AVIONICS: GPS Switch - OFF"
+  },
+  {
+    "callback": "SimDLOn",
+    "scan_code": 24,
+    "modifier_mask": 2,
+    "description": "AVIONICS: DL Switch - ON"
+  },
+  {
+    "callback": "SimDLOff",
+    "scan_code": 25,
+    "modifier_mask": 2,
+    "description": "AVIONICS: DL Switch - OFF"
+  },
+  {
+    "callback": "SimMIDSLVTZero",
+    "scan_code": 8,
+    "modifier_mask": 7,
+    "description": "AVIONICS: MIDS Knob - ZERO"
+  },
+  {
+    "callback": "SimMIDSLVTOff",
+    "scan_code": 9,
+    "modifier_mask": 7,
+    "description": "AVIONICS: MIDS Knob - OFF"
+  },
+  {
+    "callback": "SimMIDSLVTOn",
+    "scan_code": 10,
+    "modifier_mask": 7,
+    "description": "AVIONICS: MIDS Knob - ON"
+  },
+  {
+    "callback": "SimMAPOn",
+    "scan_code": 32,
+    "modifier_mask": 2,
+    "description": "AVIONICS: MAP Switch - ON"
+  },
+  {
+    "callback": "SimMAPOff",
+    "scan_code": 39,
+    "modifier_mask": 6,
+    "description": "AVIONICS: MAP Switch - OFF"
+  },
+  {
+    "callback": "SimOxySupplyOn",
+    "scan_code": 65,
+    "modifier_mask": 6,
+    "description": "OXY: Setting 2 - ON (Pilot breathing)"
+  },
+  {
+    "callback": "SimOxySupplyOff",
+    "scan_code": 25,
+    "modifier_mask": 6,
+    "description": "OXY: Setting 2 - OFF (Pilot breathing)"
+  }
+]

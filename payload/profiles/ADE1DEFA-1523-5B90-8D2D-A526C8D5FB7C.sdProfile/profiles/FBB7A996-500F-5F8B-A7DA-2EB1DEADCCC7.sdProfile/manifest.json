@@ -1,0 +1,418 @@
+{
+  "Name": "AVIONICS / SNSR",
+  "DeviceModel": "20GBA9901",
+  "DeviceUUID": "VSDXL",
+  "DeviceSerialNumber": "",
+  "Version": "1.0",
+  "AppIdentifier": "",
+  "Actions": {
+    "0,3": {
+      "ActionID": "ba56f962-dd7c-43eb-bc6e-4880cc0bcb49",
+      "Controller": "",
+      "Name": "Previous page",
+      "UUID": "com.hotspot.streamdock.page.previous",
+      "Settings": {},
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-7876d644674241cb6105.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "7,3": {
+      "ActionID": "300d9e84-f5f2-49f1-9978-4af1ead105f5",
+      "Controller": "",
+      "Name": "Next page",
+      "UUID": "com.hotspot.streamdock.page.next",
+      "Settings": {},
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-fd3a03f31f3a04ea7cde.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "3,3": {
+      "ActionID": "f0e0462a-3a48-40d0-a47d-71eb53f34821",
+      "Controller": "",
+      "Name": "Page Indicator",
+      "UUID": "com.hotspot.streamdock.page.indicator",
+      "Settings": {},
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-4dd1464b90eec6add97c.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "6,3": {
+      "ActionID": "a12efa82-fcad-4b1a-a9cc-3550abddd4e1",
+      "Controller": "Keypad",
+      "Name": "Multi Action",
+      "UUID": "com.hotspot.streamdock.multiactions.routine",
+      "Settings": {
+        "cycleDelay": 100,
+        "cycleMode": 0,
+        "cycleNumber": 1,
+        "enablingCycle": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "sim-current-dcs.png",
+          "Title": "TAP FOR BMS",
+          "ShowTitle": true,
+          "TitleAlignment": "bottom",
+          "FontSize": 14,
+          "TitleColor": "#ffffff"
+        }
+      ],
+      "Actions": [
+        {
+          "ActionID": "c293f3e7-4394-4d1b-807a-0fab216a1f97",
+          "Controller": "",
+          "Name": "Scene Shift",
+          "UUID": "com.hotspot.streamdock.profile.rotate",
+          "Settings": {
+            "deviceUUID": "VSDN4Pro",
+            "serialNumber": "",
+            "ProfileUUID": "A87AFB73-9C70-56DD-908D-1B3AD6BB7283",
+            "PageIndex": 1,
+            "delay": 100,
+            "executionTimes": 1
+          },
+          "SoftwareSettings": {},
+          "State": 0,
+          "States": [
+            {
+              "Image": ""
+            }
+          ]
+        },
+        {
+          "ActionID": "5025e0da-ea84-47f0-ad49-934da6f21637",
+          "Controller": "",
+          "Name": "Scene Shift",
+          "UUID": "com.hotspot.streamdock.profile.rotate",
+          "Settings": {
+            "deviceUUID": "VSDXL",
+            "serialNumber": "",
+            "ProfileUUID": "E09811E7-E3F8-599F-96F0-FB2611731320",
+            "PageIndex": 1,
+            "delay": 100,
+            "executionTimes": 1
+          },
+          "SoftwareSettings": {},
+          "State": 0,
+          "States": [
+            {
+              "Image": ""
+            }
+          ]
+        }
+      ]
+    },
+    "0,0": {
+      "ActionID": "1c1f87ab-41a2-418d-ab8f-bfd66d7af2f9",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "mmc",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-96205dbfc0a7f06757d0.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "1,0": {
+      "ActionID": "42f21f5a-d491-4264-a54a-ec077cb02798",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "sms",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-59ef19afab161cd586a7.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "2,0": {
+      "ActionID": "4596d117-41a8-44f3-8578-867caad371d6",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "mfd",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-203c723a023383dec4bb.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "3,0": {
+      "ActionID": "721c65ab-c40b-4821-8ed7-0c1c175318e5",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "ufc",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-b83b28e3a1db6aa5a9fb.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "4,0": {
+      "ActionID": "b99877d8-4baa-4e35-9c34-a9146bfb6e2c",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "gps",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-d369d71d3da691af6c1e.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "5,0": {
+      "ActionID": "ef7398f1-04f7-49dd-860a-c5558f9561e9",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "dl",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-ed5276d7453af61eae6f.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "6,0": {
+      "ActionID": "f1363937-4df2-4132-965d-b607223c3dbc",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "map",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-90a50193d0dbcab7a17d.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "7,0": {
+      "ActionID": "bf2226f4-efc3-428c-bc0b-6496faa76ee2",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "ins",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-6f730d90e830006485f4.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "0,1": {
+      "ActionID": "1e1419b4-ae7b-4c38-971c-5328a63cf67b",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "mids",
+        "index": 1
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-9c68a0c9d52d961c5ba1.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "1,1": {
+      "ActionID": "31f1d6f9-c5e1-4520-b863-879202560a42",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "lhdpt",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-5c52e41eb212f9e06eba.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "2,1": {
+      "ActionID": "c25db8ed-5144-48fd-8ee5-29bcf55020cc",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "rhdpt",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-f06903e0ff2f6f8fddad.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "3,1": {
+      "ActionID": "3a3119b1-40e2-43b5-bd44-15aece4e4f63",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "fcr",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-41a306440d1ae8a55cd8.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "4,1": {
+      "ActionID": "cc908979-dcaf-415c-9bdf-1900f9dc5b3a",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "ralt",
+        "index": 2
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-49522022482c6144a500.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "5,1": {
+      "ActionID": "6b4be166-0c35-4533-8606-925db38fa1e1",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "ice",
+        "index": 2
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-25cba45f04518b9f44c9.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    }
+  },
+  "Pages": {
+    "Current": "ADE1DEFA-1523-5B90-8D2D-A526C8D5FB7C.sdProfile",
+    "Pages": [
+      "ADE1DEFA-1523-5B90-8D2D-A526C8D5FB7C.sdProfile",
+      "FBB7A996-500F-5F8B-A7DA-2EB1DEADCCC7.sdProfile",
+      "87FE7C6B-6117-5076-8D6F-96C8FAA99D82.sdProfile",
+      "B1ED0F0A-814C-5D60-B075-1E8353E7D9C0.sdProfile",
+      "2D5C5DF1-AA1C-5C23-96FA-A6A2B50BC0AE.sdProfile",
+      "2DA38513-02BD-58F2-88CA-B88BC00E4BBA.sdProfile",
+      "3C3733FD-CE0B-5E4D-BC54-BBCF2E8CA1C6.sdProfile"
+    ]
+  }
+}

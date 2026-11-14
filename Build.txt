@@ -1,0 +1,6 @@
+Install Python 3.10+ with Tk and PyInstaller. Run:
+python build_beta.py --python "C:/path/to/python.exe"
+
+For image regeneration also install Pillow, then run python regenerate_graphics.py before building.
+Run python test_beta.py and python test_runtime.py for offline tests.
+Output: dist/VSD F16 Config Beta.exe. No simulator commands are issued by the tests.

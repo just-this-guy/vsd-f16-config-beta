@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.log
+*.spec
+/build/
+/dist/
+/test-runs/
+/runtime-temp/
+/Backups/
+/local-backups/
+*installation-report.json

@@ -1,0 +1,2229 @@
+{
+  "main": {
+    "id": "main",
+    "label": "MAIN PWR",
+    "arg": 510,
+    "states": [
+      "MAIN",
+      "BATT",
+      "OFF"
+    ],
+    "callbacks": [
+      "SimMainPowerMain",
+      "SimMainPowerBatt",
+      "SimMainPowerOff"
+    ],
+    "group": "ELEC",
+    "kind": "toggle",
+    "values": [
+      1,
+      0,
+      -1
+    ],
+    "dcs": {
+      "kind": "default_3_position_tumb",
+      "hint": "MAIN PWR Switch, MAIN PWR/BATT/OFF",
+      "device": 3,
+      "command": 3001,
+      "command_expr": "elec_commands.MainPwrSw",
+      "arg": 510
+    },
+    "initial": 2,
+    "bindings": [
+      {
+        "callback": "SimMainPowerMain",
+        "scan_code": 22,
+        "modifier_mask": 7,
+        "description": "ELEC: MAIN PWR Switch - MAIN"
+      },
+      {
+        "callback": "SimMainPowerBatt",
+        "scan_code": 23,
+        "modifier_mask": 7,
+        "description": "ELEC: MAIN PWR Switch - BATT"
+      },
+      {
+        "callback": "SimMainPowerOff",
+        "scan_code": 24,
+        "modifier_mask": 7,
+        "description": "ELEC: MAIN PWR Switch - OFF"
+      }
+    ],
+    "images": [
+      "images/beta-large-403131830f2e21c39d05.png",
+      "images/beta-large-443358a5a8801da5852b.png",
+      "images/beta-large-48ef82823f9398d55fe0.png"
+    ],
+    "offline": "images/beta-large-4eb822f9a4f2415b959d.png"
+  },
+  "eng": {
+    "id": "eng",
+    "label": "ENG CONT",
+    "arg": 449,
+    "states": [
+      "PRI",
+      "SEC"
+    ],
+    "callbacks": [
+      "SimEngContPri",
+      "SimEngContSec"
+    ],
+    "group": "ENGINE",
+    "kind": "toggle",
+    "values": [
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_2_position_tumb_small",
+      "hint": "ENG CONT Switch, PRI/SEC",
+      "device": 6,
+      "command": 3008,
+      "command_expr": "engine_commands.EngContSw",
+      "arg": 449
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimEngContPri",
+        "scan_code": 32,
+        "modifier_mask": 7,
+        "description": "ENG: ENG CONT Switch - PRI"
+      },
+      {
+        "callback": "SimEngContSec",
+        "scan_code": 33,
+        "modifier_mask": 7,
+        "description": "ENG: ENG CONT Switch - SEC"
+      }
+    ],
+    "images": [
+      "images/beta-large-bb1b648e519f781e307b.png",
+      "images/beta-large-ab49b7af128f223a64ad.png"
+    ],
+    "offline": "images/beta-large-45c125ff71e5b2412d3c.png"
+  },
+  "fuel": {
+    "id": "fuel",
+    "label": "FUEL MASTER",
+    "arg": 559,
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "callbacks": [
+      "SimMasterFuelOff",
+      "SimMasterFuelOn"
+    ],
+    "group": "FUEL",
+    "kind": "toggle",
+    "values": [
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_2_position_tumb_small",
+      "hint": "FUEL MASTER Switch, MASTER/OFF",
+      "device": 4,
+      "command": 3001,
+      "command_expr": "fuel_commands.FuelMasterSw",
+      "arg": 559
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimMasterFuelOff",
+        "scan_code": 34,
+        "modifier_mask": 7,
+        "description": "FUEL: MASTER Switch - OFF"
+      },
+      {
+        "callback": "SimMasterFuelOn",
+        "scan_code": 35,
+        "modifier_mask": 7,
+        "description": "FUEL: MASTER Switch - ON"
+      }
+    ],
+    "images": [
+      "images/beta-large-3275796509f3e57a96d3.png",
+      "images/beta-large-d6231e5f8a29bcba68e5.png"
+    ],
+    "offline": "images/beta-large-f20e0b353bddbd069843.png"
+  },
+  "epu": {
+    "id": "epu",
+    "label": "EPU",
+    "arg": 528,
+    "states": [
+      "ON",
+      "NORM",
+      "OFF"
+    ],
+    "callbacks": [
+      "SimEpuOn",
+      "SimEpuAuto",
+      "SimEpuOff"
+    ],
+    "group": "EPU",
+    "kind": "toggle",
+    "values": [
+      1,
+      0,
+      -1
+    ],
+    "dcs": {
+      "kind": "default_3_position_tumb_small",
+      "hint": "EPU Switch, ON/NORM/OFF",
+      "device": 6,
+      "command": 3003,
+      "command_expr": "engine_commands.EpuSw",
+      "arg": 528
+    },
+    "initial": 2,
+    "bindings": [
+      {
+        "callback": "SimEpuOn",
+        "scan_code": 36,
+        "modifier_mask": 7,
+        "description": "EPU: EPU Switch - ON"
+      },
+      {
+        "callback": "SimEpuAuto",
+        "scan_code": 37,
+        "modifier_mask": 7,
+        "description": "EPU: EPU Switch - NORM"
+      },
+      {
+        "callback": "SimEpuOff",
+        "scan_code": 44,
+        "modifier_mask": 7,
+        "description": "EPU: EPU Switch - OFF"
+      }
+    ],
+    "images": [
+      "images/beta-large-228c863bd965011db68f.png",
+      "images/beta-large-e5ad7af5503518c9479f.png",
+      "images/beta-large-ec7f499a2f79c04c7c89.png"
+    ],
+    "offline": "images/beta-large-87e29b055e063f75d8c5.png"
+  },
+  "feed": {
+    "id": "feed",
+    "label": "ENG FEED",
+    "arg": 556,
+    "states": [
+      "OFF",
+      "NORM",
+      "AFT",
+      "FWD"
+    ],
+    "callbacks": [
+      "SimFuelPumpOff",
+      "SimFuelPumpNorm",
+      "SimFuelPumpAft",
+      "SimFuelPumpFwd"
+    ],
+    "group": "FUEL",
+    "kind": "rotary",
+    "values": [
+      0,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "dcs": {
+      "kind": "multiposition_switch",
+      "hint": "ENGINE FEED Knob, OFF/NORM/AFT/FWD",
+      "device": 4,
+      "command": 3004,
+      "command_expr": "fuel_commands.EngineFeedSw",
+      "arg": 556
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimFuelPumpOff",
+        "scan_code": 45,
+        "modifier_mask": 7,
+        "description": "FUEL: ENG FEED Knob - OFF"
+      },
+      {
+        "callback": "SimFuelPumpNorm",
+        "scan_code": 46,
+        "modifier_mask": 7,
+        "description": "FUEL: ENG FEED Knob - NORM"
+      },
+      {
+        "callback": "SimFuelPumpAft",
+        "scan_code": 47,
+        "modifier_mask": 7,
+        "description": "FUEL: ENG FEED Knob - AFT"
+      },
+      {
+        "callback": "SimFuelPumpFwd",
+        "scan_code": 48,
+        "modifier_mask": 7,
+        "description": "FUEL: ENG FEED Knob - FWD"
+      }
+    ],
+    "images": [
+      "images/beta-large-58ee8b395dc144aec7df.png",
+      "images/beta-large-c111159fb2dcb7800be9.png",
+      "images/beta-large-231604d203780f78dd88.png",
+      "images/beta-large-1a55ad9cab9c5275af75.png"
+    ],
+    "offline": "images/beta-large-615303101295cc79b757.png"
+  },
+  "refuel": {
+    "id": "refuel",
+    "label": "AIR REFUEL",
+    "arg": 555,
+    "states": [
+      "CLOSE",
+      "OPEN"
+    ],
+    "callbacks": [
+      "SimFuelDoorClose",
+      "SimFuelDoorOpen"
+    ],
+    "group": "FUEL",
+    "kind": "toggle",
+    "values": [
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_2_position_tumb",
+      "hint": "AIR REFUEL Switch, OPEN/CLOSE",
+      "device": 4,
+      "command": 3008,
+      "command_expr": "fuel_commands.AirRefuelSw",
+      "arg": 555
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimFuelDoorClose",
+        "scan_code": 49,
+        "modifier_mask": 7,
+        "description": "FUEL: AIR REFUEL Switch - CLOSE"
+      },
+      {
+        "callback": "SimFuelDoorOpen",
+        "scan_code": 50,
+        "modifier_mask": 7,
+        "description": "FUEL: AIR REFUEL Switch - OPEN"
+      }
+    ],
+    "images": [
+      "images/beta-large-3d7142a07e067b4237fb.png",
+      "images/beta-large-3af77f8758d14a44a3e5.png"
+    ],
+    "offline": "images/beta-large-e53f364e889921e7efcb.png"
+  },
+  "transfer": {
+    "id": "transfer",
+    "label": "EXT TRANS",
+    "arg": 159,
+    "states": [
+      "NORM",
+      "WING 1ST"
+    ],
+    "callbacks": [
+      "SimFuelTransNorm",
+      "SimFuelTransWing"
+    ],
+    "group": "FUEL",
+    "kind": "toggle",
+    "values": [
+      1,
+      0
+    ],
+    "dcs": {
+      "kind": "default_2_position_tumb",
+      "hint": "External Fuel Transfer Switch, NORM/ WING FIRST",
+      "device": 4,
+      "command": 3003,
+      "command_expr": "fuel_commands.ExtFuelTransferSw",
+      "arg": 159
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimFuelTransNorm",
+        "scan_code": 2,
+        "modifier_mask": 7,
+        "description": "QTY: EXT FUEL TRANS Switch - NORM"
+      },
+      {
+        "callback": "SimFuelTransWing",
+        "scan_code": 3,
+        "modifier_mask": 7,
+        "description": "QTY: EXT FUEL TRANS Switch - WING FIRST"
+      }
+    ],
+    "images": [
+      "images/beta-large-9544a17a520d8acb1e3a.png",
+      "images/beta-large-d8760921b6d7e7b61eab.png"
+    ],
+    "offline": "images/beta-large-8cad6d3df775efe81235.png"
+  },
+  "mmc": {
+    "id": "mmc",
+    "label": "MMC",
+    "arg": 715,
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "callbacks": [
+      "SimFCCOff",
+      "SimFCCOn"
+    ],
+    "group": "AVIONICS",
+    "kind": "toggle",
+    "values": [
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_2_position_tumb",
+      "hint": "MMC Switch, MMC/OFF",
+      "device": 19,
+      "command": 3001,
+      "command_expr": "mmc_commands.MmcPwr",
+      "arg": 715
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimFCCOff",
+        "scan_code": 52,
+        "modifier_mask": 4,
+        "description": "AVIONICS: FCC Switch - OFF"
+      },
+      {
+        "callback": "SimFCCOn",
+        "scan_code": 51,
+        "modifier_mask": 4,
+        "description": "AVIONICS: FCC Switch - ON"
+      }
+    ],
+    "images": [
+      "images/beta-large-3c18951cdfd2ebaa3a3e.png",
+      "images/beta-large-eeec6034a8d03323f1c7.png"
+    ],
+    "offline": "images/beta-large-96205dbfc0a7f06757d0.png"
+  },
+  "sms": {
+    "id": "sms",
+    "label": "ST STA",
+    "arg": 716,
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "callbacks": [
+      "SimSMSOff",
+      "SimSMSOn"
+    ],
+    "group": "AVIONICS",
+    "kind": "toggle",
+    "values": [
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_2_position_tumb",
+      "hint": "ST STA Switch, ST STA/OFF",
+      "device": 22,
+      "command": 3001,
+      "command_expr": "sms_commands.StStaSw",
+      "arg": 716
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimSMSOff",
+        "scan_code": 15,
+        "modifier_mask": 4,
+        "description": "AVIONICS: SMS Switch - OFF"
+      },
+      {
+        "callback": "SimSMSOn",
+        "scan_code": 57,
+        "modifier_mask": 4,
+        "description": "AVIONICS: SMS Switch - ON"
+      }
+    ],
+    "images": [
+      "images/beta-large-85a86b0c57944944063b.png",
+      "images/beta-large-770ae11f4ec0cc3bdd17.png"
+    ],
+    "offline": "images/beta-large-59ef19afab161cd586a7.png"
+  },
+  "mfd": {
+    "id": "mfd",
+    "label": "MFD",
+    "arg": 717,
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "callbacks": [
+      "SimMFDOff",
+      "SimMFDOn"
+    ],
+    "group": "AVIONICS",
+    "kind": "toggle",
+    "values": [
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_2_position_tumb",
+      "hint": "MFD Switch, MFD/OFF",
+      "device": 19,
+      "command": 3014,
+      "command_expr": "mmc_commands.MFD",
+      "arg": 717
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimMFDOff",
+        "scan_code": 35,
+        "modifier_mask": 5,
+        "description": "AVIONICS: MFD Switch - OFF"
+      },
+      {
+        "callback": "SimMFDOn",
+        "scan_code": 17,
+        "modifier_mask": 2,
+        "description": "AVIONICS: MFD Switch - ON"
+      }
+    ],
+    "images": [
+      "images/beta-large-dc2b68e547b030bb10b4.png",
+      "images/beta-large-2e186c31aa1c2b8dff89.png"
+    ],
+    "offline": "images/beta-large-203c723a023383dec4bb.png"
+  },
+  "ufc": {
+    "id": "ufc",
+    "label": "UFC",
+    "arg": 718,
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "callbacks": [
+      "SimUFCOff",
+      "SimUFCOn"
+    ],
+    "group": "AVIONICS",
+    "kind": "toggle",
+    "values": [
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_2_position_tumb",
+      "hint": "UFC Switch, UFC/OFF",
+      "device": 17,
+      "command": 3001,
+      "command_expr": "ufc_commands.UFC_Sw",
+      "arg": 718
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimUFCOff",
+        "scan_code": 24,
+        "modifier_mask": 6,
+        "description": "AVIONICS: UFC Switch - OFF"
+      },
+      {
+        "callback": "SimUFCOn",
+        "scan_code": 20,
+        "modifier_mask": 2,
+        "description": "AVIONICS: UFC Switch - ON"
+      }
+    ],
+    "images": [
+      "images/beta-large-ef437e078c3828934990.png",
+      "images/beta-large-69d7c55b4641ecc75a91.png"
+    ],
+    "offline": "images/beta-large-b83b28e3a1db6aa5a9fb.png"
+  },
+  "gps": {
+    "id": "gps",
+    "label": "GPS",
+    "arg": 720,
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "callbacks": [
+      "SimGPSOff",
+      "SimGPSOn"
+    ],
+    "group": "AVIONICS",
+    "kind": "toggle",
+    "values": [
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_2_position_tumb",
+      "hint": "GPS Switch, GPS/OFF",
+      "device": 59,
+      "command": 3001,
+      "command_expr": "gps_commands.PwrSw",
+      "arg": 720
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimGPSOff",
+        "scan_code": 22,
+        "modifier_mask": 2,
+        "description": "AVIONICS: GPS Switch - OFF"
+      },
+      {
+        "callback": "SimGPSOn",
+        "scan_code": 21,
+        "modifier_mask": 2,
+        "description": "AVIONICS: GPS Switch - ON"
+      }
+    ],
+    "images": [
+      "images/beta-large-aaf2e6cfde4bb532f4d5.png",
+      "images/beta-large-6f66b717c8abe361c548.png"
+    ],
+    "offline": "images/beta-large-d369d71d3da691af6c1e.png"
+  },
+  "dl": {
+    "id": "dl",
+    "label": "DATALINK",
+    "arg": 721,
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "callbacks": [
+      "SimDLOff",
+      "SimDLOn"
+    ],
+    "group": "AVIONICS",
+    "kind": "toggle",
+    "values": [
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_2_position_tumb",
+      "hint": "DL Switch, DL/OFF",
+      "device": 60,
+      "command": 3001,
+      "command_expr": "idm_commands.PwrSw",
+      "arg": 721
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimDLOff",
+        "scan_code": 25,
+        "modifier_mask": 2,
+        "description": "AVIONICS: DL Switch - OFF"
+      },
+      {
+        "callback": "SimDLOn",
+        "scan_code": 24,
+        "modifier_mask": 2,
+        "description": "AVIONICS: DL Switch - ON"
+      }
+    ],
+    "images": [
+      "images/beta-large-7443f462a0087bd560f3.png",
+      "images/beta-large-db70a51de244a831c667.png"
+    ],
+    "offline": "images/beta-large-ed5276d7453af61eae6f.png"
+  },
+  "map": {
+    "id": "map",
+    "label": "MAP",
+    "arg": 722,
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "callbacks": [
+      "SimMAPOff",
+      "SimMAPOn"
+    ],
+    "group": "AVIONICS",
+    "kind": "toggle",
+    "values": [
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_2_position_tumb",
+      "hint": "MAP Switch, MAP/OFF",
+      "device": 61,
+      "command": 3001,
+      "command_expr": "map_commands.PwrSw",
+      "arg": 722
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimMAPOff",
+        "scan_code": 39,
+        "modifier_mask": 6,
+        "description": "AVIONICS: MAP Switch - OFF"
+      },
+      {
+        "callback": "SimMAPOn",
+        "scan_code": 32,
+        "modifier_mask": 2,
+        "description": "AVIONICS: MAP Switch - ON"
+      }
+    ],
+    "images": [
+      "images/beta-large-873d20b0d56b9163e594.png",
+      "images/beta-large-f2f019f1f653936eada4.png"
+    ],
+    "offline": "images/beta-large-90a50193d0dbcab7a17d.png"
+  },
+  "lhdpt": {
+    "id": "lhdpt",
+    "label": "L HDPT",
+    "arg": 670,
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "callbacks": [
+      "SimLeftHptOff",
+      "SimLeftHptOn"
+    ],
+    "group": "SENSOR",
+    "kind": "toggle",
+    "values": [
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_2_position_tumb",
+      "hint": "LEFT HDPT Switch, ON/OFF",
+      "device": 22,
+      "command": 3002,
+      "command_expr": "sms_commands.LeftHDPT",
+      "arg": 670
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimLeftHptOff",
+        "scan_code": 38,
+        "modifier_mask": 5,
+        "description": "SNSR: LEFT HDPT Switch - OFF"
+      },
+      {
+        "callback": "SimLeftHptOn",
+        "scan_code": 38,
+        "modifier_mask": 3,
+        "description": "SNSR: LEFT HDPT Switch - ON"
+      }
+    ],
+    "images": [
+      "images/beta-large-5c8d05d8b2c9931716da.png",
+      "images/beta-large-8d4a83f0ab77bc8e5822.png"
+    ],
+    "offline": "images/beta-large-5c52e41eb212f9e06eba.png"
+  },
+  "rhdpt": {
+    "id": "rhdpt",
+    "label": "R HDPT",
+    "arg": 671,
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "callbacks": [
+      "SimRightHptOff",
+      "SimRightHptOn"
+    ],
+    "group": "SENSOR",
+    "kind": "toggle",
+    "values": [
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_2_position_tumb",
+      "hint": "RIGHT HDPT Switch, ON/OFF",
+      "device": 22,
+      "command": 3003,
+      "command_expr": "sms_commands.RightHDPT",
+      "arg": 671
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimRightHptOff",
+        "scan_code": 37,
+        "modifier_mask": 3,
+        "description": "SNSR: RIGHT HDPT Switch - OFF"
+      },
+      {
+        "callback": "SimRightHptOn",
+        "scan_code": 37,
+        "modifier_mask": 5,
+        "description": "SNSR: RIGHT HDPT Switch - ON"
+      }
+    ],
+    "images": [
+      "images/beta-large-13cddf76350b4fbab94f.png",
+      "images/beta-large-a680058774d9e9367db8.png"
+    ],
+    "offline": "images/beta-large-f06903e0ff2f6f8fddad.png"
+  },
+  "fcr": {
+    "id": "fcr",
+    "label": "FCR",
+    "arg": 672,
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "callbacks": [
+      "SimFCROff",
+      "SimFCROn"
+    ],
+    "group": "SENSOR",
+    "kind": "toggle",
+    "values": [
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_2_position_tumb",
+      "hint": "FCR Switch, FCR/OFF",
+      "device": 31,
+      "command": 3001,
+      "command_expr": "fcr_commands.PwrSw",
+      "arg": 672
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimFCROff",
+        "scan_code": 50,
+        "modifier_mask": 5,
+        "description": "SNSR: FCR Switch - OFF"
+      },
+      {
+        "callback": "SimFCROn",
+        "scan_code": 25,
+        "modifier_mask": 3,
+        "description": "SNSR: FCR Switch - ON"
+      }
+    ],
+    "images": [
+      "images/beta-large-4681617c9e64dfb5dacf.png",
+      "images/beta-large-4a2b7e06ffbe6950690d.png"
+    ],
+    "offline": "images/beta-large-41a306440d1ae8a55cd8.png"
+  },
+  "ins": {
+    "id": "ins",
+    "label": "INS",
+    "arg": 719,
+    "states": [
+      "OFF",
+      "NORM",
+      "NAV",
+      "INFLT"
+    ],
+    "callbacks": [
+      "SimINSOff",
+      "SimINSNorm",
+      "SimINSNav",
+      "SimINSInFlt"
+    ],
+    "group": "AVIONICS",
+    "kind": "rotary",
+    "values": [
+      0,
+      0.2,
+      0.3,
+      0.5
+    ],
+    "dcs": {
+      "kind": "multiposition_switch",
+      "hint": "INS Knob, OFF/STOR HDG/NORM/NAV/CAL/INFLT ALIGN/ATT",
+      "device": 14,
+      "command": 3001,
+      "command_expr": "ins_commands.ModeKnob",
+      "arg": 719
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimINSOff",
+        "scan_code": 4,
+        "modifier_mask": 7,
+        "description": "AVIONICS: INS Knob - OFF"
+      },
+      {
+        "callback": "SimINSNorm",
+        "scan_code": 5,
+        "modifier_mask": 7,
+        "description": "AVIONICS: INS Knob - NORM"
+      },
+      {
+        "callback": "SimINSNav",
+        "scan_code": 6,
+        "modifier_mask": 7,
+        "description": "AVIONICS: INS Knob - NAV"
+      },
+      {
+        "callback": "SimINSInFlt",
+        "scan_code": 7,
+        "modifier_mask": 7,
+        "description": "AVIONICS: INS Knob - IN FLT ALIGN"
+      }
+    ],
+    "images": [
+      "images/beta-large-765851d25bb28974f160.png",
+      "images/beta-large-2d5b24498fa0b442380d.png",
+      "images/beta-large-070b49b3a5bf82686322.png",
+      "images/beta-large-5d2466c12907787592bd.png"
+    ],
+    "offline": "images/beta-large-6f730d90e830006485f4.png"
+  },
+  "mids": {
+    "id": "mids",
+    "label": "MIDS",
+    "arg": 723,
+    "states": [
+      "ZERO",
+      "OFF",
+      "ON"
+    ],
+    "callbacks": [
+      "SimMIDSLVTZero",
+      "SimMIDSLVTOff",
+      "SimMIDSLVTOn"
+    ],
+    "group": "AVIONICS",
+    "kind": "rotary",
+    "values": [
+      0,
+      0.1,
+      0.2
+    ],
+    "dcs": {
+      "kind": "multiposition_switch",
+      "hint": "MIDS LVT Knob, ZERO/OFF/ON",
+      "device": 41,
+      "command": 3001,
+      "command_expr": "mids_commands.PwrSw",
+      "arg": 723
+    },
+    "initial": 1,
+    "bindings": [
+      {
+        "callback": "SimMIDSLVTZero",
+        "scan_code": 8,
+        "modifier_mask": 7,
+        "description": "AVIONICS: MIDS Knob - ZERO"
+      },
+      {
+        "callback": "SimMIDSLVTOff",
+        "scan_code": 9,
+        "modifier_mask": 7,
+        "description": "AVIONICS: MIDS Knob - OFF"
+      },
+      {
+        "callback": "SimMIDSLVTOn",
+        "scan_code": 10,
+        "modifier_mask": 7,
+        "description": "AVIONICS: MIDS Knob - ON"
+      }
+    ],
+    "images": [
+      "images/beta-large-92f70b1ecdb1f64a5e68.png",
+      "images/beta-large-cdcf0de64bf2130fcf0b.png",
+      "images/beta-large-3169e72bd62e865b11c2.png"
+    ],
+    "offline": "images/beta-large-9c68a0c9d52d961c5ba1.png"
+  },
+  "ralt": {
+    "id": "ralt",
+    "label": "RDR ALT",
+    "arg": 673,
+    "states": [
+      "ON",
+      "STBY",
+      "OFF"
+    ],
+    "callbacks": [
+      "SimRALTON",
+      "SimRALTSTDBY",
+      "SimRALTOFF"
+    ],
+    "group": "SENSOR",
+    "kind": "toggle",
+    "values": [
+      1,
+      0,
+      -1
+    ],
+    "dcs": {
+      "kind": "default_3_position_tumb",
+      "hint": "RDR ALT Switch, RDR ALT/STBY/OFF",
+      "device": 15,
+      "command": 3001,
+      "command_expr": "ralt_commands.PwrSw",
+      "arg": 673
+    },
+    "initial": 2,
+    "bindings": [
+      {
+        "callback": "SimRALTON",
+        "scan_code": 65,
+        "modifier_mask": 4,
+        "description": "SNSR: RDR ALT Switch - ON"
+      },
+      {
+        "callback": "SimRALTSTDBY",
+        "scan_code": 66,
+        "modifier_mask": 4,
+        "description": "SNSR: RDR ALT Switch - STDBY"
+      },
+      {
+        "callback": "SimRALTOFF",
+        "scan_code": 11,
+        "modifier_mask": 7,
+        "description": "SNSR: RDR ALT Switch - OFF"
+      }
+    ],
+    "images": [
+      "images/beta-large-43cf34b0d2a91d0dcfa6.png",
+      "images/beta-large-2728e8902bf03b1db33c.png",
+      "images/beta-large-70954ea63d08a5b08962.png"
+    ],
+    "offline": "images/beta-large-49522022482c6144a500.png"
+  },
+  "ice": {
+    "id": "ice",
+    "label": "ANTI ICE",
+    "arg": 710,
+    "states": [
+      "ON",
+      "AUTO",
+      "OFF"
+    ],
+    "callbacks": [
+      "SimAntiIceUp",
+      "SimAntiIceMid",
+      "SimAntiIceDown"
+    ],
+    "group": "ENV",
+    "kind": "toggle",
+    "values": [
+      1,
+      0,
+      -1
+    ],
+    "dcs": {
+      "kind": "default_3_position_tumb",
+      "hint": "Engine ANTI ICE Switch, ON/AUTO/OFF",
+      "device": 6,
+      "command": 3004,
+      "command_expr": "engine_commands.EngAntiIceSw",
+      "arg": 710
+    },
+    "initial": 2,
+    "bindings": [
+      {
+        "callback": "SimAntiIceUp",
+        "scan_code": 59,
+        "modifier_mask": 7,
+        "description": "ICE: ENGINE Switch - ON"
+      },
+      {
+        "callback": "SimAntiIceMid",
+        "scan_code": 60,
+        "modifier_mask": 7,
+        "description": "ICE: ENGINE Switch - AUTO"
+      },
+      {
+        "callback": "SimAntiIceDown",
+        "scan_code": 61,
+        "modifier_mask": 7,
+        "description": "ICE: ENGINE Switch - OFF"
+      }
+    ],
+    "images": [
+      "images/beta-large-1b2e503a7786d4b12ba4.png",
+      "images/beta-large-0f1268c063f9d571c918.png",
+      "images/beta-large-fb7d16d5a8de79016783.png"
+    ],
+    "offline": "images/beta-large-25cba45f04518b9f44c9.png"
+  },
+  "air": {
+    "id": "air",
+    "label": "AIR SOURCE",
+    "arg": 693,
+    "states": [
+      "OFF",
+      "NORM",
+      "DUMP",
+      "RAM"
+    ],
+    "callbacks": [
+      "SimAirSourceOff",
+      "SimAirSourceNorm",
+      "SimAirSourceDump",
+      "SimAirSourceRam"
+    ],
+    "group": "ENV",
+    "kind": "rotary",
+    "values": [
+      0,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "dcs": {
+      "kind": "multiposition_switch",
+      "hint": "AIR SOURCE Knob, OFF/NORM/DUMP/RAM",
+      "device": 13,
+      "command": 3001,
+      "command_expr": "ecs_commands.AirSourceKnob",
+      "arg": 693
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimAirSourceOff",
+        "scan_code": 78,
+        "modifier_mask": 7,
+        "description": "AIR: AIR SOURCE Knob - OFF"
+      },
+      {
+        "callback": "SimAirSourceNorm",
+        "scan_code": 74,
+        "modifier_mask": 7,
+        "description": "AIR: AIR SOURCE Knob - NORM"
+      },
+      {
+        "callback": "SimAirSourceDump",
+        "scan_code": 16,
+        "modifier_mask": 6,
+        "description": "AIR: AIR SOURCE Knob - DUMP"
+      },
+      {
+        "callback": "SimAirSourceRam",
+        "scan_code": 20,
+        "modifier_mask": 6,
+        "description": "AIR: AIR SOURCE Knob - RAM"
+      }
+    ],
+    "images": [
+      "images/beta-large-0ea44911e0521b897b38.png",
+      "images/beta-large-5d6b8cbab21d49f21045.png",
+      "images/beta-large-c1f84388fb13653510c8.png",
+      "images/beta-large-eecfce3506abe74d473a.png"
+    ],
+    "offline": "images/beta-large-a651aeec73da3771ffff.png"
+  },
+  "oxygen": {
+    "id": "oxygen",
+    "label": "OXY SUPPLY",
+    "arg": 728,
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "callbacks": [
+      "SimOxySupplyOff",
+      "SimOxySupplyOn"
+    ],
+    "group": "OXY",
+    "kind": "toggle",
+    "values": [
+      0,
+      0.5
+    ],
+    "dcs": {
+      "kind": "default_3_position_tumb_small",
+      "hint": "Supply Lever, PBG/ON/OFF",
+      "device": 8,
+      "command": 3001,
+      "command_expr": "oxygen_commands.SupplyLever",
+      "arg": 728
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimOxySupplyOff",
+        "scan_code": 25,
+        "modifier_mask": 6,
+        "description": "OXY: Setting 2 - OFF (Pilot breathing)"
+      },
+      {
+        "callback": "SimOxySupplyOn",
+        "scan_code": 65,
+        "modifier_mask": 6,
+        "description": "OXY: Setting 2 - ON (Pilot breathing)"
+      }
+    ],
+    "images": [
+      "images/beta-large-1423fa1984d57a534f97.png",
+      "images/beta-large-6032fe638471fea3aafe.png"
+    ],
+    "offline": "images/beta-large-f1ffde1f0de3bb124a0c.png"
+  },
+  "scales": {
+    "id": "scales",
+    "label": "HUD SCALES",
+    "arg": 675,
+    "states": [
+      "VV / VAH",
+      "VAH",
+      "OFF"
+    ],
+    "callbacks": [
+      "SimScalesVVVAH",
+      "SimScalesVAH",
+      "SimScalesOff"
+    ],
+    "group": "HUD",
+    "kind": "toggle",
+    "values": [
+      1,
+      0,
+      -1
+    ],
+    "dcs": {
+      "kind": "default_3_position_tumb_small",
+      "hint": "HUD Scales Switch, VV/VAH / VAH / OFF",
+      "device": 19,
+      "command": 3006,
+      "command_expr": "mmc_commands.VvVah",
+      "arg": 675
+    },
+    "initial": 2,
+    "bindings": [
+      {
+        "callback": "SimScalesVVVAH",
+        "scan_code": 62,
+        "modifier_mask": 7,
+        "description": "HUD: Scales Switch - VV/VAH"
+      },
+      {
+        "callback": "SimScalesVAH",
+        "scan_code": 63,
+        "modifier_mask": 7,
+        "description": "HUD: Scales Switch - VAH"
+      },
+      {
+        "callback": "SimScalesOff",
+        "scan_code": 64,
+        "modifier_mask": 7,
+        "description": "HUD: Scales Switch - OFF"
+      }
+    ],
+    "images": [
+      "images/beta-large-70379c9b72075984cfa6.png",
+      "images/beta-large-8f487a322baa84d44c13.png",
+      "images/beta-large-aa74aa6a2950ea0424eb.png"
+    ],
+    "offline": "images/beta-large-c43d05066b6728951658.png"
+  },
+  "fpm": {
+    "id": "fpm",
+    "label": "HUD FPM",
+    "arg": 676,
+    "states": [
+      "ATT / FPM",
+      "FPM",
+      "OFF"
+    ],
+    "callbacks": [
+      "SimPitchLadderATTFPM",
+      "SimPitchLadderFPM",
+      "SimPitchLadderOff"
+    ],
+    "group": "HUD",
+    "kind": "toggle",
+    "values": [
+      1,
+      0,
+      -1
+    ],
+    "dcs": {
+      "kind": "default_3_position_tumb_small",
+      "hint": "HUD Flightpath Marker Switch, ATT/FPM / FPM / OFF",
+      "device": 19,
+      "command": 3007,
+      "command_expr": "mmc_commands.AttFpm",
+      "arg": 676
+    },
+    "initial": 2,
+    "bindings": [
+      {
+        "callback": "SimPitchLadderATTFPM",
+        "scan_code": 65,
+        "modifier_mask": 7,
+        "description": "HUD: FPM Switch - ATT/FPM"
+      },
+      {
+        "callback": "SimPitchLadderFPM",
+        "scan_code": 66,
+        "modifier_mask": 7,
+        "description": "HUD: FPM Switch - FPM"
+      },
+      {
+        "callback": "SimPitchLadderOff",
+        "scan_code": 67,
+        "modifier_mask": 7,
+        "description": "HUD: FPM Switch - OFF"
+      }
+    ],
+    "images": [
+      "images/beta-large-79799e6df1731d32c543.png",
+      "images/beta-large-60b4a84e0d71e59b6932.png",
+      "images/beta-large-402ab4c52d4e80feb758.png"
+    ],
+    "offline": "images/beta-large-570d3c7b736b74418c51.png"
+  },
+  "ded": {
+    "id": "ded",
+    "label": "HUD DATA",
+    "arg": 677,
+    "states": [
+      "DED",
+      "PFL",
+      "OFF"
+    ],
+    "callbacks": [
+      "SimHUDDEDDED",
+      "SimHUDDEDPFL",
+      "SimHUDDEDOff"
+    ],
+    "group": "HUD",
+    "kind": "toggle",
+    "values": [
+      1,
+      0,
+      -1
+    ],
+    "dcs": {
+      "kind": "default_3_position_tumb_small",
+      "hint": "HUD DED/PFLD Data Switch, DED / PFL / OFF",
+      "device": 19,
+      "command": 3008,
+      "command_expr": "mmc_commands.DedData",
+      "arg": 677
+    },
+    "initial": 2,
+    "bindings": [
+      {
+        "callback": "SimHUDDEDDED",
+        "scan_code": 68,
+        "modifier_mask": 7,
+        "description": "HUD: DED Data Switch - DED"
+      },
+      {
+        "callback": "SimHUDDEDPFL",
+        "scan_code": 87,
+        "modifier_mask": 7,
+        "description": "HUD: DED Data Switch - PFL"
+      },
+      {
+        "callback": "SimHUDDEDOff",
+        "scan_code": 88,
+        "modifier_mask": 7,
+        "description": "HUD: DED Data Switch - OFF"
+      }
+    ],
+    "images": [
+      "images/beta-large-9f5a02d70a1126b939cd.png",
+      "images/beta-large-82f68598bdfbb97d80bb.png",
+      "images/beta-large-b31002ad1a00da7bd2a0.png"
+    ],
+    "offline": "images/beta-large-f3da93d566e23401d072.png"
+  },
+  "reticle": {
+    "id": "reticle",
+    "label": "DEPR RET",
+    "arg": 678,
+    "states": [
+      "STBY",
+      "PRI",
+      "OFF"
+    ],
+    "callbacks": [
+      "SimReticleStby",
+      "SimReticlePri",
+      "SimReticleOff"
+    ],
+    "group": "HUD",
+    "kind": "toggle",
+    "values": [
+      1,
+      0,
+      -1
+    ],
+    "dcs": {
+      "kind": "default_3_position_tumb",
+      "hint": "HUD Depressible Reticle Switch, STBY / PRI / OFF",
+      "device": 19,
+      "command": 3009,
+      "command_expr": "mmc_commands.DeprRet",
+      "arg": 678
+    },
+    "initial": 2,
+    "bindings": [
+      {
+        "callback": "SimReticleStby",
+        "scan_code": 12,
+        "modifier_mask": 7,
+        "description": "HUD: DEPR RET Switch - STBY"
+      },
+      {
+        "callback": "SimReticlePri",
+        "scan_code": 13,
+        "modifier_mask": 7,
+        "description": "HUD: DEPR RET Switch - PRI"
+      },
+      {
+        "callback": "SimReticleOff",
+        "scan_code": 26,
+        "modifier_mask": 7,
+        "description": "HUD: DEPR RET Switch - OFF"
+      }
+    ],
+    "images": [
+      "images/beta-large-345c035749cb57b246d3.png",
+      "images/beta-large-5652336466fa8df6c250.png",
+      "images/beta-large-1a497761086c9e831313.png"
+    ],
+    "offline": "images/beta-large-13533a4dce8fbfd7efcd.png"
+  },
+  "speed": {
+    "id": "speed",
+    "label": "HUD SPEED",
+    "arg": 679,
+    "states": [
+      "CAS",
+      "TAS",
+      "GND SPD"
+    ],
+    "callbacks": [
+      "SimHUDVelocityCAS",
+      "SimHUDVelocityTAS",
+      "SimHUDVelocityGND"
+    ],
+    "group": "HUD",
+    "kind": "toggle",
+    "values": [
+      1,
+      0,
+      -1
+    ],
+    "dcs": {
+      "kind": "default_3_position_tumb_small",
+      "hint": "HUD Velocity Switch, CAS / TAS / GND SPD",
+      "device": 19,
+      "command": 3010,
+      "command_expr": "mmc_commands.Spd",
+      "arg": 679
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimHUDVelocityCAS",
+        "scan_code": 27,
+        "modifier_mask": 7,
+        "description": "HUD: Velocity Switch - CAS"
+      },
+      {
+        "callback": "SimHUDVelocityTAS",
+        "scan_code": 39,
+        "modifier_mask": 7,
+        "description": "HUD: Velocity Switch - TAS"
+      },
+      {
+        "callback": "SimHUDVelocityGND",
+        "scan_code": 40,
+        "modifier_mask": 7,
+        "description": "HUD: Velocity Switch - GND SPD"
+      }
+    ],
+    "images": [
+      "images/beta-large-cc028d3c55e143a6f701.png",
+      "images/beta-large-1351116a8cb63c1b0d5c.png",
+      "images/beta-large-d0a7ac1466da7af67cfe.png"
+    ],
+    "offline": "images/beta-large-69b2d22115c0e96762aa.png"
+  },
+  "alt": {
+    "id": "alt",
+    "label": "HUD ALT",
+    "arg": 680,
+    "states": [
+      "RADAR",
+      "BARO",
+      "AUTO"
+    ],
+    "callbacks": [
+      "SimHUDAltRadar",
+      "SimHUDAltBaro",
+      "SimHUDAltAuto"
+    ],
+    "group": "HUD",
+    "kind": "toggle",
+    "values": [
+      1,
+      0,
+      -1
+    ],
+    "dcs": {
+      "kind": "default_3_position_tumb_small",
+      "hint": "HUD Altitude Switch, RADAR / BARO / AUTO",
+      "device": 19,
+      "command": 3011,
+      "command_expr": "mmc_commands.Alt",
+      "arg": 680
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimHUDAltRadar",
+        "scan_code": 41,
+        "modifier_mask": 7,
+        "description": "HUD: Altitude Switch - RADAR"
+      },
+      {
+        "callback": "SimHUDAltBaro",
+        "scan_code": 51,
+        "modifier_mask": 7,
+        "description": "HUD: Altitude Switch - BARO"
+      },
+      {
+        "callback": "SimHUDAltAuto",
+        "scan_code": 52,
+        "modifier_mask": 7,
+        "description": "HUD: Altitude Switch - AUTO"
+      }
+    ],
+    "images": [
+      "images/beta-large-19126dc63ad2ecb4d795.png",
+      "images/beta-large-df80d55e2c58c1b1a134.png",
+      "images/beta-large-d5d6a398ed9cf2486ef8.png"
+    ],
+    "offline": "images/beta-large-9c7c1f8cd60ac7a9cfcb.png"
+  },
+  "hudbrt": {
+    "id": "hudbrt",
+    "label": "HUD BRT",
+    "arg": 681,
+    "states": [
+      "DAY",
+      "AUTO BRT",
+      "NIGHT"
+    ],
+    "callbacks": [
+      "SimHUDBrtDay",
+      "SimHUDBrtAuto",
+      "SimHUDBrtNight"
+    ],
+    "group": "HUD",
+    "kind": "toggle",
+    "values": [
+      1,
+      0,
+      -1
+    ],
+    "dcs": {
+      "kind": "default_3_position_tumb_small",
+      "hint": "HUD Brightness Control Switch, DAY / AUTO BRT / NIGHT",
+      "device": 19,
+      "command": 3012,
+      "command_expr": "mmc_commands.Brt",
+      "arg": 681
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimHUDBrtDay",
+        "scan_code": 53,
+        "modifier_mask": 7,
+        "description": "HUD: Brightness Switch - DAY"
+      },
+      {
+        "callback": "SimHUDBrtAuto",
+        "scan_code": 57,
+        "modifier_mask": 7,
+        "description": "HUD: Brightness Switch - AUTO BRT"
+      },
+      {
+        "callback": "SimHUDBrtNight",
+        "scan_code": 15,
+        "modifier_mask": 7,
+        "description": "HUD: Brightness Switch - NIG"
+      }
+    ],
+    "images": [
+      "images/beta-large-28ae943e0e1665c0cc9e.png",
+      "images/beta-large-865467c811887bdd970b.png",
+      "images/beta-large-273054b5b919d3d10e59.png"
+    ],
+    "offline": "images/beta-large-bf9d879deef960db59a9.png"
+  },
+  "digital": {
+    "id": "digital",
+    "label": "DIG BACKUP",
+    "arg": 566,
+    "states": [
+      "OFF",
+      "BACKUP"
+    ],
+    "callbacks": [
+      "SimDigitalBUPOff",
+      "SimDigitalBUPBackup"
+    ],
+    "group": "FLCS",
+    "kind": "toggle",
+    "values": [
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_2_position_tumb",
+      "hint": "DIGITAL BACKUP Switch, OFF/BACKUP",
+      "device": 2,
+      "command": 3001,
+      "command_expr": "control_commands.DigitalBackup",
+      "arg": 566
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimDigitalBUPOff",
+        "scan_code": 66,
+        "modifier_mask": 6,
+        "description": "FLT: DIGITAL Switch - OFF"
+      },
+      {
+        "callback": "SimDigitalBUPBackup",
+        "scan_code": 88,
+        "modifier_mask": 6,
+        "description": "FLT: DIGITAL Switch - BACKUP"
+      }
+    ],
+    "images": [
+      "images/beta-large-2103035d2b7661541a61.png",
+      "images/beta-large-0e037fe296d859ccedb9.png"
+    ],
+    "offline": "images/beta-large-5e9c6e05fb35084d7dbf.png"
+  },
+  "altflaps": {
+    "id": "altflaps",
+    "label": "ALT FLAPS",
+    "arg": 567,
+    "states": [
+      "NORM",
+      "EXTEND"
+    ],
+    "callbacks": [
+      "SimAltFlapsNorm",
+      "SimAltFlapsExtend"
+    ],
+    "group": "FLCS",
+    "kind": "toggle",
+    "values": [
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_2_position_tumb",
+      "hint": "ALT FLAPS Switch, NORM/EXTEND",
+      "device": 2,
+      "command": 3002,
+      "command_expr": "control_commands.AltFlaps",
+      "arg": 567
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimAltFlapsNorm",
+        "scan_code": 40,
+        "modifier_mask": 6,
+        "description": "FLT: ALT FLAPS Switch - NORM"
+      },
+      {
+        "callback": "SimAltFlapsExtend",
+        "scan_code": 57,
+        "modifier_mask": 6,
+        "description": "FLT: ALT FLAPS Switch - EXTEND"
+      }
+    ],
+    "images": [
+      "images/beta-large-5dbc3f91e38adb62390f.png",
+      "images/beta-large-96c53d1937489463acb7.png"
+    ],
+    "offline": "images/beta-large-154a72169d781e9a00e6.png"
+  },
+  "lef": {
+    "id": "lef",
+    "label": "LE FLAPS",
+    "arg": 572,
+    "states": [
+      "AUTO",
+      "LOCK"
+    ],
+    "callbacks": [
+      "SimLEFAuto",
+      "SimLEFLock"
+    ],
+    "group": "FLCS",
+    "kind": "toggle",
+    "values": [
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_2_position_tumb",
+      "hint": "LE FLAPS Switch, AUTO/LOCK",
+      "device": 2,
+      "command": 3005,
+      "command_expr": "control_commands.LeFlaps",
+      "arg": 572
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimLEFAuto",
+        "scan_code": 15,
+        "modifier_mask": 6,
+        "description": "FLT: LE FLAPS Switch - AUTO"
+      },
+      {
+        "callback": "SimLEFLock",
+        "scan_code": 18,
+        "modifier_mask": 5,
+        "description": "FLT: LE FLAPS Switch - LOCK"
+      }
+    ],
+    "images": [
+      "images/beta-large-3ef827cbb98919d4da9a.png",
+      "images/beta-large-f6dc2341c52f1624025e.png"
+    ],
+    "offline": "images/beta-large-5e7789f881b82b48f3d0.png"
+  },
+  "trim": {
+    "id": "trim",
+    "label": "TRIM / AP",
+    "arg": 564,
+    "states": [
+      "NORM",
+      "DISC"
+    ],
+    "callbacks": [
+      "SimTrimAPNORM",
+      "SimTrimAPDISC"
+    ],
+    "group": "FLCS",
+    "kind": "toggle",
+    "values": [
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_2_position_tumb",
+      "hint": "TRIM/AP DISC Switch, DISC/NORM",
+      "device": 2,
+      "command": 3006,
+      "command_expr": "control_commands.TrimApDisc",
+      "arg": 564
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimTrimAPNORM",
+        "scan_code": 19,
+        "modifier_mask": 5,
+        "description": "TRIM: TRIM/AP DISC Switch - NORM"
+      },
+      {
+        "callback": "SimTrimAPDISC",
+        "scan_code": 64,
+        "modifier_mask": 5,
+        "description": "TRIM: TRIM/AP DISC Switch - DISC"
+      }
+    ],
+    "images": [
+      "images/beta-large-b2a22cd5d8bb20f4b9b2.png",
+      "images/beta-large-6962b52522067490f5e3.png"
+    ],
+    "offline": "images/beta-large-bed3926273c83fe400a8.png"
+  },
+  "flash": {
+    "id": "flash",
+    "label": "POSITION",
+    "arg": 532,
+    "states": [
+      "STEADY",
+      "FLASH"
+    ],
+    "callbacks": [
+      "SimLightsSteady",
+      "SimLightsFlash"
+    ],
+    "group": "EXT LIGHT",
+    "kind": "toggle",
+    "values": [
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_2_position_tumb_small",
+      "hint": "FLASH STEADY Switch, FLASH/STEADY",
+      "device": 11,
+      "command": 3002,
+      "command_expr": "extlights_commands.PosFlash",
+      "arg": 532
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimLightsSteady",
+        "scan_code": 2,
+        "modifier_mask": 3,
+        "description": "EXT: POSITION Switch - STEADY"
+      },
+      {
+        "callback": "SimLightsFlash",
+        "scan_code": 3,
+        "modifier_mask": 3,
+        "description": "EXT: POSITION Switch - FLASH"
+      }
+    ],
+    "images": [
+      "images/beta-large-af6c30e5e879e1cbe756.png",
+      "images/beta-large-80316e1e4efa50bbbd4a.png"
+    ],
+    "offline": "images/beta-large-18b7a68b7f45686729d3.png"
+  },
+  "wing": {
+    "id": "wing",
+    "label": "WING / TAIL",
+    "arg": 533,
+    "states": [
+      "BRT",
+      "OFF",
+      "DIM"
+    ],
+    "callbacks": [
+      "SimWingLightUp",
+      "SimWingLightMid",
+      "SimWingLightDown"
+    ],
+    "group": "EXT LIGHT",
+    "kind": "toggle",
+    "values": [
+      1,
+      0,
+      -1
+    ],
+    "dcs": {
+      "kind": "default_3_position_tumb_small",
+      "hint": "WING/TAIL Switch, BRT/OFF/DIM",
+      "device": 11,
+      "command": 3003,
+      "command_expr": "extlights_commands.PosWingTail",
+      "arg": 533
+    },
+    "initial": 1,
+    "bindings": [
+      {
+        "callback": "SimWingLightUp",
+        "scan_code": 4,
+        "modifier_mask": 3,
+        "description": "EXT: WING/TAIL Switch - BRT"
+      },
+      {
+        "callback": "SimWingLightMid",
+        "scan_code": 5,
+        "modifier_mask": 3,
+        "description": "EXT: WING/TAIL Switch - OFF"
+      },
+      {
+        "callback": "SimWingLightDown",
+        "scan_code": 6,
+        "modifier_mask": 3,
+        "description": "EXT: WING/TAIL Switch - DIM"
+      }
+    ],
+    "images": [
+      "images/beta-large-d7fbe824428b682c928e.png",
+      "images/beta-large-6901c29933ac1b454472.png",
+      "images/beta-large-df019ae462160fd79a9d.png"
+    ],
+    "offline": "images/beta-large-a1bbfdbcf160cab4680a.png"
+  },
+  "fuselage": {
+    "id": "fuselage",
+    "label": "FUSELAGE",
+    "arg": 534,
+    "states": [
+      "BRT",
+      "OFF",
+      "DIM"
+    ],
+    "callbacks": [
+      "SimFuselageLightUp",
+      "SimFuselageLightMid",
+      "SimFuselageLightDown"
+    ],
+    "group": "EXT LIGHT",
+    "kind": "toggle",
+    "values": [
+      1,
+      0,
+      -1
+    ],
+    "dcs": {
+      "kind": "default_3_position_tumb_small",
+      "hint": "FUSELAGE Switch, BRT/OFF/DIM",
+      "device": 11,
+      "command": 3004,
+      "command_expr": "extlights_commands.PosFus",
+      "arg": 534
+    },
+    "initial": 1,
+    "bindings": [
+      {
+        "callback": "SimFuselageLightUp",
+        "scan_code": 7,
+        "modifier_mask": 3,
+        "description": "EXT: FUSELAGE Switch - BRT"
+      },
+      {
+        "callback": "SimFuselageLightMid",
+        "scan_code": 8,
+        "modifier_mask": 3,
+        "description": "EXT: FUSELAGE Switch - OFF"
+      },
+      {
+        "callback": "SimFuselageLightDown",
+        "scan_code": 9,
+        "modifier_mask": 3,
+        "description": "EXT: FUSELAGE Switch - DIM"
+      }
+    ],
+    "images": [
+      "images/beta-large-468fceef118deed03c7c.png",
+      "images/beta-large-6cd3a527052c4bfe922d.png",
+      "images/beta-large-8c890b19272a9d3aa3a5.png"
+    ],
+    "offline": "images/beta-large-20b79afe4ddaf9f8f1df.png"
+  },
+  "lightmaster": {
+    "id": "lightmaster",
+    "label": "LIGHT MASTER",
+    "arg": 536,
+    "states": [
+      "OFF",
+      "ALL",
+      "A-C",
+      "FORM",
+      "NORM"
+    ],
+    "callbacks": [
+      "SimExtlMasterOff",
+      "SimExtlMasterCovertAll",
+      "SimExtlMasterCovertAC",
+      "SimExtlMasterCovertForm",
+      "SimExtlMasterNorm"
+    ],
+    "group": "EXT LIGHT",
+    "kind": "rotary",
+    "values": [
+      0,
+      0.1,
+      0.2,
+      0.3,
+      0.4
+    ],
+    "dcs": {
+      "kind": "multiposition_switch",
+      "hint": "MASTER Switch, OFF/ALL/A-C/FORM/NORM",
+      "device": 11,
+      "command": 3006,
+      "command_expr": "extlights_commands.Master",
+      "arg": 536
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimExtlMasterOff",
+        "scan_code": 10,
+        "modifier_mask": 3,
+        "description": "EXT: MASTER Switch/Knob - OFF"
+      },
+      {
+        "callback": "SimExtlMasterCovertAll",
+        "scan_code": 11,
+        "modifier_mask": 3,
+        "description": "EXT: MASTER Knob - ALL"
+      },
+      {
+        "callback": "SimExtlMasterCovertAC",
+        "scan_code": 66,
+        "modifier_mask": 3,
+        "description": "EXT: MASTER Knob - A-C"
+      },
+      {
+        "callback": "SimExtlMasterCovertForm",
+        "scan_code": 12,
+        "modifier_mask": 3,
+        "description": "EXT: MASTER Knob - FORM"
+      },
+      {
+        "callback": "SimExtlMasterNorm",
+        "scan_code": 13,
+        "modifier_mask": 3,
+        "description": "EXT: MASTER Switch/Knob - NORM"
+      }
+    ],
+    "images": [
+      "images/beta-large-e15ba0519e22c95ab6af.png",
+      "images/beta-large-5f0412627824a4cbbdb3.png",
+      "images/beta-large-ccf9a3f319015bfdf654.png",
+      "images/beta-large-3efc0d63c07beda714e0.png",
+      "images/beta-large-3dbd8a229665f9f7396e.png"
+    ],
+    "offline": "images/beta-large-08dcbf053c28904a77c7.png"
+  },
+  "anticoll": {
+    "id": "anticoll",
+    "label": "ANTI COLL",
+    "arg": 531,
+    "states": [
+      "OFF",
+      "1",
+      "2",
+      "3",
+      "4",
+      "A",
+      "B",
+      "C"
+    ],
+    "callbacks": [
+      "SimAntiColModeOff",
+      "SimAntiColMode1",
+      "SimAntiColMode2",
+      "SimAntiColMode3",
+      "SimAntiColMode4",
+      "SimAntiColModeA",
+      "SimAntiColModeB",
+      "SimAntiColModeC"
+    ],
+    "group": "EXT LIGHT",
+    "kind": "rotary",
+    "values": [
+      0.0,
+      0.1,
+      0.2,
+      0.30000000000000004,
+      0.4,
+      0.5,
+      0.6000000000000001,
+      0.7000000000000001
+    ],
+    "dcs": {
+      "kind": "multiposition_switch",
+      "hint": "ANTI-COLL Knob, OFF/1/2/3/4/A/B/C",
+      "device": 11,
+      "command": 3001,
+      "command_expr": "extlights_commands.AntiCollKn",
+      "arg": 531
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimAntiColModeOff",
+        "scan_code": 41,
+        "modifier_mask": 3,
+        "description": "EXT: ANTI COLLISION Knob - OFF"
+      },
+      {
+        "callback": "SimAntiColMode1",
+        "scan_code": 57,
+        "modifier_mask": 3,
+        "description": "EXT: ANTI COLLISION Knob - 1"
+      },
+      {
+        "callback": "SimAntiColMode2",
+        "scan_code": 15,
+        "modifier_mask": 3,
+        "description": "EXT: ANTI COLLISION Knob - 2"
+      },
+      {
+        "callback": "SimAntiColMode3",
+        "scan_code": 21,
+        "modifier_mask": 4,
+        "description": "EXT: ANTI COLLISION Knob - 3"
+      },
+      {
+        "callback": "SimAntiColMode4",
+        "scan_code": 22,
+        "modifier_mask": 4,
+        "description": "EXT: ANTI COLLISION Knob - 4"
+      },
+      {
+        "callback": "SimAntiColModeA",
+        "scan_code": 37,
+        "modifier_mask": 4,
+        "description": "EXT: ANTI COLLISION Knob - A"
+      },
+      {
+        "callback": "SimAntiColModeB",
+        "scan_code": 38,
+        "modifier_mask": 4,
+        "description": "EXT: ANTI COLLISION Knob - B"
+      },
+      {
+        "callback": "SimAntiColModeC",
+        "scan_code": 49,
+        "modifier_mask": 4,
+        "description": "EXT: ANTI COLLISION Knob - C"
+      }
+    ],
+    "images": [
+      "images/beta-large-e254afd673eb1e16e464.png",
+      "images/beta-large-f8236a69e4e401b9727a.png",
+      "images/beta-large-20983ddf37051a5f5026.png",
+      "images/beta-large-a208296ba1d4e67709f2.png",
+      "images/beta-large-5f2e7398a520f2d1069a.png",
+      "images/beta-large-5a36098caabec335a87d.png",
+      "images/beta-large-6621027196d00efba885.png",
+      "images/beta-large-831965f8045c0419d607.png"
+    ],
+    "offline": "images/beta-large-e91e1439eb4257af0a0d.png"
+  },
+  "ecmpwr": {
+    "id": "ecmpwr",
+    "label": "ECM OPR",
+    "arg": 455,
+    "states": [
+      "OFF",
+      "OPR"
+    ],
+    "callbacks": [
+      "SimEcmPowerOff",
+      "SimEcmPowerOn"
+    ],
+    "group": "ECM",
+    "kind": "toggle",
+    "values": [
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_3_position_tumb",
+      "hint": "ECM Power Switch",
+      "device": 66,
+      "command": 3001,
+      "command_expr": "ecm_commands.PwrSw",
+      "arg": 455
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimEcmPowerOff",
+        "scan_code": 65,
+        "modifier_mask": 5,
+        "description": "ECM: OPR Switch - OFF"
+      },
+      {
+        "callback": "SimEcmPowerOn",
+        "scan_code": 66,
+        "modifier_mask": 5,
+        "description": "ECM: OPR Switch - OPR"
+      }
+    ],
+    "images": [
+      "images/beta-large-ff6fdbfb2d0b3e9976d7.png",
+      "images/beta-large-479dcebf472856c78017.png"
+    ],
+    "offline": "images/beta-large-ae0be1c749242f12a212.png"
+  },
+  "ecmxmit": {
+    "id": "ecmxmit",
+    "label": "ECM XMIT",
+    "arg": 457,
+    "states": [
+      "1",
+      "2",
+      "3"
+    ],
+    "callbacks": [
+      "SimXMit1",
+      "SimXMit2",
+      "SimXMit3"
+    ],
+    "group": "ECM",
+    "kind": "toggle",
+    "values": [
+      -1,
+      0,
+      1
+    ],
+    "dcs": {
+      "kind": "default_3_position_tumb",
+      "hint": "ECM XMIT Switch",
+      "device": 66,
+      "command": 3002,
+      "command_expr": "ecm_commands.XmitSw",
+      "arg": 457
+    },
+    "initial": 0,
+    "bindings": [
+      {
+        "callback": "SimXMit1",
+        "scan_code": 57,
+        "modifier_mask": 5,
+        "description": "ECM: XMT Switch - 1"
+      },
+      {
+        "callback": "SimXMit2",
+        "scan_code": 15,
+        "modifier_mask": 5,
+        "description": "ECM: XMT Switch - 2"
+      },
+      {
+        "callback": "SimXMit3",
+        "scan_code": 19,
+        "modifier_mask": 3,
+        "description": "ECM: XMT Switch - 3"
+      }
+    ],
+    "images": [
+      "images/beta-large-c6645eb7bd0b12771c15.png",
+      "images/beta-large-b69b8845d942495801a5.png",
+      "images/beta-large-1c8cd66968e4b0e26705.png"
+    ],
+    "offline": "images/beta-large-9f8eee9b4815899cfc27.png"
+  }
+}

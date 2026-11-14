@@ -1,0 +1,145 @@
+[
+  {
+    "callback": "SimRALTON",
+    "original": [
+      47,
+      3
+    ],
+    "portable": [
+      65,
+      4
+    ]
+  },
+  {
+    "callback": "SimRALTSTDBY",
+    "original": [
+      48,
+      3
+    ],
+    "portable": [
+      66,
+      4
+    ]
+  },
+  {
+    "callback": "SimFCCOn",
+    "original": [
+      46,
+      6
+    ],
+    "portable": [
+      51,
+      4
+    ]
+  },
+  {
+    "callback": "SimFCCOff",
+    "original": [
+      41,
+      5
+    ],
+    "portable": [
+      52,
+      4
+    ]
+  },
+  {
+    "callback": "SimSMSOn",
+    "original": [
+      47,
+      6
+    ],
+    "portable": [
+      57,
+      4
+    ]
+  },
+  {
+    "callback": "SimSMSOff",
+    "original": [
+      41,
+      6
+    ],
+    "portable": [
+      15,
+      4
+    ]
+  },
+  {
+    "callback": "SimMFDOn",
+    "original": [
+      48,
+      6
+    ],
+    "portable": [
+      17,
+      2
+    ]
+  },
+  {
+    "callback": "SimUFCOn",
+    "original": [
+      2,
+      6
+    ],
+    "portable": [
+      20,
+      2
+    ]
+  },
+  {
+    "callback": "SimGPSOn",
+    "original": [
+      3,
+      5
+    ],
+    "portable": [
+      21,
+      2
+    ]
+  },
+  {
+    "callback": "SimGPSOff",
+    "original": [
+      3,
+      6
+    ],
+    "portable": [
+      22,
+      2
+    ]
+  },
+  {
+    "callback": "SimDLOn",
+    "original": [
+      4,
+      6
+    ],
+    "portable": [
+      24,
+      2
+    ]
+  },
+  {
+    "callback": "SimDLOff",
+    "original": [
+      4,
+      5
+    ],
+    "portable": [
+      25,
+      2
+    ]
+  },
+  {
+    "callback": "SimMAPOn",
+    "original": [
+      52,
+      6
+    ],
+    "portable": [
+      32,
+      2
+    ]
+  }
+]
