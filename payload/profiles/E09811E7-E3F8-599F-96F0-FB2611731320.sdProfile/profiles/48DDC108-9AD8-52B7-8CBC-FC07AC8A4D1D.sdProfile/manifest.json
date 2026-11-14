@@ -49,60 +49,18 @@
     "2,0": {
       "ActionID": "18A66CEE-A003-55BF-ADCA-C5D3780D251D",
       "Controller": "Keypad",
-      "Name": "Hotkey",
-      "UUID": "com.hotspot.streamdock.system.hotkey",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
       "Settings": {
-        "Coalesce": true,
-        "Hotkeys": [
-          {
-            "VKeyCode": 81,
-            "KeyShift": true,
-            "KeyCtrl": true,
-            "KeyOption": true,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          },
-          {
-            "VKeyCode": -1,
-            "KeyShift": false,
-            "KeyCtrl": false,
-            "KeyOption": false,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          },
-          {
-            "VKeyCode": -1,
-            "KeyShift": false,
-            "KeyCtrl": false,
-            "KeyOption": false,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          }
-        ]
+        "sim": "BMS",
+        "control": "ecm1",
+        "index": 0
       },
       "SoftwareSettings": {},
       "State": 0,
       "States": [
         {
-          "Image": "beta-large-9e23f046b499b8a1dd2a.png",
+          "Image": "beta-large-77cb4656d60249827f39.png",
           "Title": "",
           "ShowTitle": false
         }
@@ -111,60 +69,18 @@
     "3,0": {
       "ActionID": "680408B4-5DAD-5EB8-9928-634BCB213DC2",
       "Controller": "Keypad",
-      "Name": "Hotkey",
-      "UUID": "com.hotspot.streamdock.system.hotkey",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
       "Settings": {
-        "Coalesce": true,
-        "Hotkeys": [
-          {
-            "VKeyCode": 87,
-            "KeyShift": true,
-            "KeyCtrl": true,
-            "KeyOption": true,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          },
-          {
-            "VKeyCode": -1,
-            "KeyShift": false,
-            "KeyCtrl": false,
-            "KeyOption": false,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          },
-          {
-            "VKeyCode": -1,
-            "KeyShift": false,
-            "KeyCtrl": false,
-            "KeyOption": false,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          }
-        ]
+        "sim": "BMS",
+        "control": "ecm2",
+        "index": 0
       },
       "SoftwareSettings": {},
       "State": 0,
       "States": [
         {
-          "Image": "beta-large-51baed8f952d6b328a90.png",
+          "Image": "beta-large-6018de103f6f9920079f.png",
           "Title": "",
           "ShowTitle": false
         }
@@ -173,60 +89,18 @@
     "4,0": {
       "ActionID": "6199EA18-40AF-543C-B6B9-07178C8AB36A",
       "Controller": "Keypad",
-      "Name": "Hotkey",
-      "UUID": "com.hotspot.streamdock.system.hotkey",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
       "Settings": {
-        "Coalesce": true,
-        "Hotkeys": [
-          {
-            "VKeyCode": 69,
-            "KeyShift": true,
-            "KeyCtrl": true,
-            "KeyOption": true,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          },
-          {
-            "VKeyCode": -1,
-            "KeyShift": false,
-            "KeyCtrl": false,
-            "KeyOption": false,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          },
-          {
-            "VKeyCode": -1,
-            "KeyShift": false,
-            "KeyCtrl": false,
-            "KeyOption": false,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          }
-        ]
+        "sim": "BMS",
+        "control": "ecm3",
+        "index": 0
       },
       "SoftwareSettings": {},
       "State": 0,
       "States": [
         {
-          "Image": "beta-large-08c60428cf71eb725987.png",
+          "Image": "beta-large-b097fcc6da76a5ca49ca.png",
           "Title": "",
           "ShowTitle": false
         }
@@ -235,60 +109,18 @@
     "5,0": {
       "ActionID": "C1DEFE7B-E06B-56EC-98C8-BCE624C92C49",
       "Controller": "Keypad",
-      "Name": "Hotkey",
-      "UUID": "com.hotspot.streamdock.system.hotkey",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
       "Settings": {
-        "Coalesce": true,
-        "Hotkeys": [
-          {
-            "VKeyCode": 82,
-            "KeyShift": true,
-            "KeyCtrl": true,
-            "KeyOption": true,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          },
-          {
-            "VKeyCode": -1,
-            "KeyShift": false,
-            "KeyCtrl": false,
-            "KeyOption": false,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          },
-          {
-            "VKeyCode": -1,
-            "KeyShift": false,
-            "KeyCtrl": false,
-            "KeyOption": false,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          }
-        ]
+        "sim": "BMS",
+        "control": "ecm4",
+        "index": 0
       },
       "SoftwareSettings": {},
       "State": 0,
       "States": [
         {
-          "Image": "beta-large-33e17214689e55eb2c91.png",
+          "Image": "beta-large-98ecbf18a9ba39d2475c.png",
           "Title": "",
           "ShowTitle": false
         }
@@ -359,60 +191,18 @@
     "2,1": {
       "ActionID": "2AD4EDD7-593B-524A-A2BB-AC80A227EF56",
       "Controller": "Keypad",
-      "Name": "Hotkey",
-      "UUID": "com.hotspot.streamdock.system.hotkey",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
       "Settings": {
-        "Coalesce": true,
-        "Hotkeys": [
-          {
-            "VKeyCode": 89,
-            "KeyShift": true,
-            "KeyCtrl": true,
-            "KeyOption": true,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          },
-          {
-            "VKeyCode": -1,
-            "KeyShift": false,
-            "KeyCtrl": false,
-            "KeyOption": false,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          },
-          {
-            "VKeyCode": -1,
-            "KeyShift": false,
-            "KeyCtrl": false,
-            "KeyOption": false,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          }
-        ]
+        "sim": "BMS",
+        "control": "ecm5",
+        "index": 0
       },
       "SoftwareSettings": {},
       "State": 0,
       "States": [
         {
-          "Image": "beta-large-1c7111950057fd2c3980.png",
+          "Image": "beta-large-d0291904491777fde148.png",
           "Title": "",
           "ShowTitle": false
         }

@@ -66,7 +66,11 @@ class PanelLayoutTests(unittest.TestCase):
                 b,_=self.manifest(device,spec['title'],'BMS');d,_=self.manifest(device,spec['title'],'DCS')
                 for role,coord in spec['keys'].items():
                     pos=sdk(coord,device)
-                    if b['Actions'][pos]['UUID']=='org.f16vsd.cycling.selector':self.assertEqual(b['Actions'][pos]['Settings']['control'],d['Actions'][pos]['Settings']['control'])
+                    if b['Actions'][pos]['UUID']=='org.f16vsd.cycling.selector':
+                        if role in {f'ecm{i}' for i in range(1,6)}:
+                            self.assertEqual(b['Actions'][pos]['Settings']['control'],role)
+                            self.assertNotEqual(d['Actions'][pos]['UUID'],'org.f16vsd.cycling.selector')
+                        else:self.assertEqual(b['Actions'][pos]['Settings']['control'],d['Actions'][pos]['Settings']['control'])
     def test_compiler_repeat_keeps_identical_art_and_commands(self):
         from apply_panel_layout import apply
         snapshot=lambda:{str(p.relative_to(PAYLOAD)):hashlib.sha256(p.read_bytes()).hexdigest() for p in PAYLOAD.rglob('*') if p.is_file()}

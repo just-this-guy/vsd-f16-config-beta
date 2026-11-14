@@ -6,7 +6,7 @@ F-16 cockpit controls for **DCS** and **Falcon BMS**, on **VSD XL_142** and **VS
 
 Choose **Code → Download ZIP**, extract it, and run **VSD F16 Config Beta.exe** from the extracted repository's top-level folder. The EXE is included in the repository root; no build step or separate Python installation is needed.
 
-[Download the Windows installer and ZIPs](https://github.com/just-this-guy/vsd-f16-config-beta/releases/tag/v0.3.1-beta).
+[Download the Windows installer and ZIPs](https://github.com/just-this-guy/vsd-f16-config-beta/releases/tag/v0.3.2-beta).
 
 Run **VSD F16 Config Beta.exe**. Python is bundled. The portable ZIP adds instructions and runtime license notices; the source ZIP is also available.
 
@@ -37,7 +37,7 @@ The images below are renders from the packaged graphics, not live simulator capt
 
 ## Feedback and limitations
 
-**BMS:** images track commands made through VSD, not live cockpit telemetry. Starting a new flight or changing switches elsewhere can desynchronize them. BMS must have keyboard focus. A yellow warning triangle can mean a press was blocked because another window was active; bring the running BMS cockpit to the foreground and retry. Rejected presses do not change displayed state. Release extra held keyboard modifiers before pressing.
+**BMS:** all 46 persistent switch/selector definitions use explicit ON/OFF or named-position commands, including ECM modes 1–5. Repeated presses choose the next position and send its specific command, so a successfully executed press brings the cockpit to the displayed position even if it was previously different. Momentary buttons and incremental knobs retain their appropriate actions. Images track commands made through VSD, not live cockpit telemetry; they are not confirmation that BMS executed a command. Starting a new flight or changing switches elsewhere can desynchronize them until the next successful press. BMS must have keyboard focus. A yellow warning triangle can mean a press was blocked because another window was active; bring the running BMS cockpit to the foreground and retry. Rejected presses do not change displayed state. Release extra held keyboard modifiers before pressing.
 
 **DCS:** selector graphics follow fresh F-16 cockpit arguments. Gray / NO DATA means feedback is unavailable. Commands use the checked DCS-ExportScript listener port; dedicated F-16 telemetry uses loopback 26028. Existing export hooks remain chained. Native momentary controls still require DCS Interface.
 
@@ -45,7 +45,7 @@ Red means OFF (or a closed refueling door); green indicates an active named sett
 
 The installer supports updates to matching profiles, conflict review, selected BMS keyfiles, and rollback backups. It preserves unrelated keyboard and joystick/MFD assignments. It does not install a Windows service or startup task or automatically download prerequisites.
 
-This is an **unsigned beta**. Isolated installer tests (19), offline runtime tests (16), panel-layout checks (10), standalone EXE startup, and the GUI/174-row binding editor were checked. Full physical-device and in-flight behavior still requires validation.
+This is an **unsigned beta**. Isolated installer tests (19), offline runtime tests (19), panel-layout checks (10), standalone EXE startup, and the GUI/179-row binding editor were checked. Full physical-device and in-flight behavior still requires validation.
 
 ## Source and tests
 

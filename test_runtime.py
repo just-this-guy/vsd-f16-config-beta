@@ -31,6 +31,25 @@ class RuntimeTests(unittest.TestCase):
     def test_two_state_toggle(self):
         self.appear('fuel',index=0);self.press();self.assertEqual(self.p.local['fuel'],1)
         self.press();self.assertEqual(self.p.local['fuel'],0)
+    def test_every_bms_position_uses_its_own_explicit_callback(self):
+        for ident,c in self.controls.items():
+            self.assertEqual(len(c['states']),len(set(c['callbacks'])),ident)
+            for initial in range(len(c['states'])):
+                target=(initial+1)%len(c['states'])
+                self.p.local[ident]=initial
+                self.appear(ident);self.press()
+                command=self.keys[-1]['callback']
+                self.assertEqual(command,c['callbacks'][target],ident)
+                self.assertNotIn('Toggle',command,ident)
+    def test_ecm_modes_have_independent_on_and_off_commands(self):
+        for i in range(1,6):
+            ident=f'ecm{i}';self.appear(ident,index=0)
+            self.press();self.assertEqual(self.keys[-1]['callback'],f'SimEcmMode{i}On')
+            self.press();self.assertEqual(self.keys[-1]['callback'],f'SimEcmMode{i}Off')
+    def test_bms_only_ecm_callback_cannot_be_sent_to_dcs(self):
+        self.appear('ecm1',sim='DCS');self.p.ingest(b'F16|1|-1=0');self.press()
+        self.assertFalse(self.keys);self.assertFalse(self.udp.sent)
+        self.assertEqual(self.ws.messages[-1]['event'],'showAlert')
     def test_three_state_cycle(self):
         self.appear('main',index=2)
         for target in [0,1,2,0]:self.press();self.assertEqual(self.p.local['main'],target)

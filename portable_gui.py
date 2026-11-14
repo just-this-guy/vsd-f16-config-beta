@@ -177,12 +177,13 @@ def main():
         controls=json.loads((runtime/'controls.json').read_text())
         for c in controls.values():
             for name in [*c['images'],c['offline']]:assert (runtime/name).is_file()
-        app=Wizard();app.withdraw();editor=BindingEditor(app);editor.withdraw();app.update_idletasks();assert editor.report and len(editor.report['rows'])==174
+        binding_rows=len(binding_review.proposals(PAYLOAD))
+        app=Wizard();app.withdraw();editor=BindingEditor(app);editor.withdraw();app.update_idletasks();assert editor.report and len(editor.report['rows'])==binding_rows
         editor.search.set('COMM');assert editor.tree.get_children();editor.search.set('');editor.destroy()
         for text,sim in [('BMS only','bms'),('DCS only','dcs'),('Both simulators','both')]:
             app.sim.set(text);assert app.args().sim==sim
             if sim!='both':assert not app.paired.get()
-        app.destroy();target.write_text(json.dumps({'status':'ok','product':'VSD F16 Config Beta','profiles':len(profiles),'pages':pages,'selector_buttons':selectors,'cycling_controls':len(controls),'gui_initialized':True,'binding_editor_rows':174,'simulator_choices':['BMS','DCS','Both'],'bundled_python':getattr(sys,'frozen',False)},indent=2));return
+        app.destroy();target.write_text(json.dumps({'status':'ok','product':'VSD F16 Config Beta','profiles':len(profiles),'pages':pages,'selector_buttons':selectors,'cycling_controls':len(controls),'gui_initialized':True,'binding_editor_rows':binding_rows,'simulator_choices':['BMS','DCS','Both'],'bundled_python':getattr(sys,'frozen',False)},indent=2));return
     Wizard().mainloop()
 if __name__=='__main__':
     try:main()

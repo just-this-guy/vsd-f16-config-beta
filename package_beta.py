@@ -2,7 +2,7 @@
 import argparse,hashlib,json,pathlib,shutil,zipfile
 
 WORK=pathlib.Path(__file__).resolve().parent;OUT=WORK/'dist'
-SOURCES=['portable_gui.py','share_installer.py','beta_install.py','binding_review.py','binding_editor.py','dcs_prerequisites.py','f16_plugin.py','graphics.py','regenerate_graphics.py','render_preview.py','build_beta.py','test_beta.py','test_runtime.py','panel-layout.json','apply_panel_layout.py','test_panel_layout.py','package_beta.py']
+SOURCES=['portable_gui.py','share_installer.py','beta_install.py','binding_review.py','binding_editor.py','dcs_prerequisites.py','f16_plugin.py','graphics.py','regenerate_graphics.py','render_preview.py','build_beta.py','test_beta.py','test_runtime.py','panel-layout.json','apply_panel_layout.py','test_panel_layout.py','explicit_bms.py','package_beta.py']
 README='''VSD F16 Config Beta — portable Windows setup
 
 Run VSD F16 Config Beta.exe. Python is included; no separate Python installation is required. You may share this EXE directly, or share the portable ZIP with these instructions and runtime licenses.
@@ -33,10 +33,11 @@ DCS Interface plugin ID: com.ctytler.dcs.sdPlugin. The separately installed DCS 
 def package(license_source):
     report=json.loads((OUT/'exe-self-check.json').read_text())
     assert report['status']=='ok' and report['bundled_python'] and report['pages']==30
-    readme=README.replace('four profiles and 28 pages','four profiles and 30 pages').replace('offline runtime tests;','offline runtime tests; 10 panel-layout checks;')
+    readme=README.replace('four profiles and 28 pages','four profiles and 30 pages').replace('16 offline runtime tests','19 offline runtime tests').replace('offline runtime tests;','offline runtime tests; 10 panel-layout checks;').replace('all 28 pages and 174 editable shortcut rows','all 30 pages and 179 editable shortcut rows')
+    readme+='\nBMS explicit positions: all 46 persistent switch/selector definitions, including ECM modes 1-5, use separate ON/OFF or named-position commands. A successfully executed press brings the cockpit to the displayed target position. Icons track sent commands rather than BMS confirmation; external changes require another press to align. Momentary and incremental controls keep their appropriate actions.\n'
     readme+='\nCockpit layout: seven XL pages and eight N4 Pro pages per simulator use deliberate rows/columns and gaps. N4 avionics power is split into an upper/middle view and an INS/MIDS lower view. See docs/PANEL-LAYOUT.md in the source or GitHub repository for references and hardware compromises.\n'
     (OUT/'Read me.txt').write_text(readme,encoding='utf-8')
-    release={'product':'VSD F16 Config Beta','version':'0.3.1-beta','date':'2026-11-14','profiles':4,'pages':30,'installer_tests':19,'runtime_tests':16,'layout_tests':10,'binding_editor_rows':174,'layout':'cockpit-like rows and columns','labels':'larger bold top-center labels','state_dots':'twice the previous diameter','in_flight_validation':'pending'}
+    release={'product':'VSD F16 Config Beta','version':'0.3.2-beta','date':'2026-11-14','profiles':4,'pages':30,'installer_tests':19,'runtime_tests':19,'layout_tests':10,'binding_editor_rows':179,'bms_explicit_selectors':46,'layout':'cockpit-like rows and columns','labels':'larger bold top-center labels','state_dots':'twice the previous diameter','in_flight_validation':'pending'}
     (OUT/'release.json').write_text(json.dumps(release,indent=2))
     licenses=OUT/'Third-party licenses'
     if not licenses.exists():shutil.copytree(license_source,licenses)

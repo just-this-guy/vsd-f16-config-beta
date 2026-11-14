@@ -84,6 +84,7 @@ class Plugin:
 
     def current(self, sim, c):
         ident = c['id']
+        if sim not in c.get('simulators', ['BMS', 'DCS']): return None
         if sim == 'BMS': return self.local.get(ident, c['initial'])
         if self.clock() - self.stamp > 1.5: return None
         value = self.feedback.get(c['arg'])

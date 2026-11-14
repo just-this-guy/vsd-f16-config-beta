@@ -348,36 +348,6 @@
     "description": "ECM: BIT Button - Hold"
   },
   {
-    "callback": "SimEcmMode1Toggle",
-    "scan_code": 16,
-    "modifier_mask": 7,
-    "description": "ECM: Mode 1 - Toggle"
-  },
-  {
-    "callback": "SimEcmMode2Toggle",
-    "scan_code": 17,
-    "modifier_mask": 7,
-    "description": "ECM: Mode 2 - Toggle"
-  },
-  {
-    "callback": "SimEcmMode3Toggle",
-    "scan_code": 18,
-    "modifier_mask": 7,
-    "description": "ECM: Mode 3 - Toggle"
-  },
-  {
-    "callback": "SimEcmMode4Toggle",
-    "scan_code": 19,
-    "modifier_mask": 7,
-    "description": "ECM: Mode 4 - Toggle"
-  },
-  {
-    "callback": "SimEcmMode5Toggle",
-    "scan_code": 21,
-    "modifier_mask": 7,
-    "description": "ECM: Mode 5 - Toggle"
-  },
-  {
     "callback": "SimJfsStartUp",
     "scan_code": 25,
     "modifier_mask": 7,
@@ -880,5 +850,65 @@
     "scan_code": 25,
     "modifier_mask": 6,
     "description": "OXY: Setting 2 - OFF (Pilot breathing)"
+  },
+  {
+    "callback": "SimEcmMode1Off",
+    "scan_code": 6,
+    "modifier_mask": 2,
+    "description": "ECM: Mode 1 - OFF"
+  },
+  {
+    "callback": "SimEcmMode1On",
+    "scan_code": 33,
+    "modifier_mask": 2,
+    "description": "ECM: Mode 1 - ON"
+  },
+  {
+    "callback": "SimEcmMode2Off",
+    "scan_code": 46,
+    "modifier_mask": 2,
+    "description": "ECM: Mode 2 - OFF"
+  },
+  {
+    "callback": "SimEcmMode2On",
+    "scan_code": 66,
+    "modifier_mask": 2,
+    "description": "ECM: Mode 2 - ON"
+  },
+  {
+    "callback": "SimEcmMode3Off",
+    "scan_code": 74,
+    "modifier_mask": 2,
+    "description": "ECM: Mode 3 - OFF"
+  },
+  {
+    "callback": "SimEcmMode3On",
+    "scan_code": 78,
+    "modifier_mask": 2,
+    "description": "ECM: Mode 3 - ON"
+  },
+  {
+    "callback": "SimEcmMode4Off",
+    "scan_code": 22,
+    "modifier_mask": 1,
+    "description": "ECM: Mode 4 - OFF"
+  },
+  {
+    "callback": "SimEcmMode4On",
+    "scan_code": 23,
+    "modifier_mask": 1,
+    "description": "ECM: Mode 4 - ON"
+  },
+  {
+    "callback": "SimEcmMode5Off",
+    "scan_code": 47,
+    "modifier_mask": 1,
+    "description": "ECM: Mode 5 - OFF"
+  },
+  {
+    "callback": "SimEcmMode5On",
+    "scan_code": 66,
+    "modifier_mask": 1,
+    "description": "ECM: Mode 5 - ON"
   }
 ]

@@ -2225,5 +2225,220 @@
       "images/beta-large-1c8cd66968e4b0e26705.png"
     ],
     "offline": "images/beta-large-9f8eee9b4815899cfc27.png"
+  },
+  "ecm1": {
+    "id": "ecm1",
+    "label": "ECM 1",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "callbacks": [
+      "SimEcmMode1Off",
+      "SimEcmMode1On"
+    ],
+    "group": "ECM",
+    "kind": "toggle",
+    "initial": 0,
+    "values": [
+      0,
+      1
+    ],
+    "arg": -1,
+    "dcs": {},
+    "bindings": [
+      {
+        "callback": "SimEcmMode1Off",
+        "scan_code": 6,
+        "modifier_mask": 2,
+        "description": "ECM: Mode 1 - OFF"
+      },
+      {
+        "callback": "SimEcmMode1On",
+        "scan_code": 33,
+        "modifier_mask": 2,
+        "description": "ECM: Mode 1 - ON"
+      }
+    ],
+    "simulators": [
+      "BMS"
+    ],
+    "images": [
+      "images/beta-large-77cb4656d60249827f39.png",
+      "images/beta-large-d23a497a3bfe9550ff27.png"
+    ],
+    "offline": "images/beta-large-1dfefe6e9f066adf2fbc.png"
+  },
+  "ecm2": {
+    "id": "ecm2",
+    "label": "ECM 2",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "callbacks": [
+      "SimEcmMode2Off",
+      "SimEcmMode2On"
+    ],
+    "group": "ECM",
+    "kind": "toggle",
+    "initial": 0,
+    "values": [
+      0,
+      1
+    ],
+    "arg": -1,
+    "dcs": {},
+    "bindings": [
+      {
+        "callback": "SimEcmMode2Off",
+        "scan_code": 46,
+        "modifier_mask": 2,
+        "description": "ECM: Mode 2 - OFF"
+      },
+      {
+        "callback": "SimEcmMode2On",
+        "scan_code": 66,
+        "modifier_mask": 2,
+        "description": "ECM: Mode 2 - ON"
+      }
+    ],
+    "simulators": [
+      "BMS"
+    ],
+    "images": [
+      "images/beta-large-6018de103f6f9920079f.png",
+      "images/beta-large-011a3617a81231d2bffe.png"
+    ],
+    "offline": "images/beta-large-40ed13051fcd634d6a54.png"
+  },
+  "ecm3": {
+    "id": "ecm3",
+    "label": "ECM 3",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "callbacks": [
+      "SimEcmMode3Off",
+      "SimEcmMode3On"
+    ],
+    "group": "ECM",
+    "kind": "toggle",
+    "initial": 0,
+    "values": [
+      0,
+      1
+    ],
+    "arg": -1,
+    "dcs": {},
+    "bindings": [
+      {
+        "callback": "SimEcmMode3Off",
+        "scan_code": 74,
+        "modifier_mask": 2,
+        "description": "ECM: Mode 3 - OFF"
+      },
+      {
+        "callback": "SimEcmMode3On",
+        "scan_code": 78,
+        "modifier_mask": 2,
+        "description": "ECM: Mode 3 - ON"
+      }
+    ],
+    "simulators": [
+      "BMS"
+    ],
+    "images": [
+      "images/beta-large-b097fcc6da76a5ca49ca.png",
+      "images/beta-large-8d6120d30c730ffb7f0e.png"
+    ],
+    "offline": "images/beta-large-29f479889b627baf4b5a.png"
+  },
+  "ecm4": {
+    "id": "ecm4",
+    "label": "ECM 4",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "callbacks": [
+      "SimEcmMode4Off",
+      "SimEcmMode4On"
+    ],
+    "group": "ECM",
+    "kind": "toggle",
+    "initial": 0,
+    "values": [
+      0,
+      1
+    ],
+    "arg": -1,
+    "dcs": {},
+    "bindings": [
+      {
+        "callback": "SimEcmMode4Off",
+        "scan_code": 22,
+        "modifier_mask": 1,
+        "description": "ECM: Mode 4 - OFF"
+      },
+      {
+        "callback": "SimEcmMode4On",
+        "scan_code": 23,
+        "modifier_mask": 1,
+        "description": "ECM: Mode 4 - ON"
+      }
+    ],
+    "simulators": [
+      "BMS"
+    ],
+    "images": [
+      "images/beta-large-98ecbf18a9ba39d2475c.png",
+      "images/beta-large-7d9e7130a7b610c66769.png"
+    ],
+    "offline": "images/beta-large-369dcd587ed24831ce06.png"
+  },
+  "ecm5": {
+    "id": "ecm5",
+    "label": "ECM 5",
+    "states": [
+      "OFF",
+      "ON"
+    ],
+    "callbacks": [
+      "SimEcmMode5Off",
+      "SimEcmMode5On"
+    ],
+    "group": "ECM",
+    "kind": "toggle",
+    "initial": 0,
+    "values": [
+      0,
+      1
+    ],
+    "arg": -1,
+    "dcs": {},
+    "bindings": [
+      {
+        "callback": "SimEcmMode5Off",
+        "scan_code": 47,
+        "modifier_mask": 1,
+        "description": "ECM: Mode 5 - OFF"
+      },
+      {
+        "callback": "SimEcmMode5On",
+        "scan_code": 66,
+        "modifier_mask": 1,
+        "description": "ECM: Mode 5 - ON"
+      }
+    ],
+    "simulators": [
+      "BMS"
+    ],
+    "images": [
+      "images/beta-large-d0291904491777fde148.png",
+      "images/beta-large-7a1404aae473f9ca9926.png"
+    ],
+    "offline": "images/beta-large-babe61f213d502e21c0e.png"
   }
 }

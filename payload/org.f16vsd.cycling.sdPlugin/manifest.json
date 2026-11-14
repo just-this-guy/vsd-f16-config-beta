@@ -1,7 +1,7 @@
 {
   "Name": "VSD F16 Config Beta controls",
   "Author": "F-16 VSD Profiles",
-  "Version": "0.3.1",
+  "Version": "0.3.2",
   "Description": "Single-button F-16 toggle and selector controls.",
   "Icon": "images/icon",
   "Category": "F-16 Controls",
