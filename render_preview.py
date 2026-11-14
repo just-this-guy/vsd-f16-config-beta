@@ -9,6 +9,7 @@ for p in profiles:
         folder=root if i==0 else root/'profiles'/page;m=json.loads((folder/'manifest.json').read_text());xl=p['device']=='VSDXL'
         im=Image.new('RGB',(1600 if xl else 1120,1100 if xl else 1040),'#0c0d10');d=ImageDraw.Draw(im)
         d.text((25,20),'VSD F16 Config Beta  /  '+p['sim']+'  /  '+p['device']+f'  /  {i+1}',font=ImageFont.truetype('C:/Windows/Fonts/segoeuib.ttf',28),fill='white')
+        if p.get('page_titles'):d.text((25,65),p['page_titles'][i],font=ImageFont.truetype('C:/Windows/Fonts/segoeuib.ttf',24),fill='#b8bec8')
         for coord,a in m['Actions'].items():
             x,y=map(int,coord.split(','));s=a['States'][0];c=catalog.get(a.get('Settings',{}).get('control'))
             asset=plugin/c['images'][c['initial']] if c else folder/'Images'/s['Image']

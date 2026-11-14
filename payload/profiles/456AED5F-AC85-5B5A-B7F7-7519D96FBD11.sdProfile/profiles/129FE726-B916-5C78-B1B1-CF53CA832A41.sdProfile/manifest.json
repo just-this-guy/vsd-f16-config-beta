@@ -1,13 +1,153 @@
 {
-  "Name": "HUD DATA",
+  "Name": "AVIONICS POWER",
   "DeviceModel": "20GBA9901",
   "DeviceUUID": "VSDN4Pro",
   "DeviceSerialNumber": "",
   "Version": "1.0",
   "AppIdentifier": "",
   "Actions": {
+    "0,2": {
+      "ActionID": "94BAFC50-9ED6-55E0-AF01-865D31F2E614",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "mmc",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-96205dbfc0a7f06757d0.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "1,2": {
+      "ActionID": "0EEA1AA6-18CC-51A8-BCF3-7ADBE0E3ECD5",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "sms",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-59ef19afab161cd586a7.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "2,2": {
+      "ActionID": "F3D4ADCE-F82A-5C66-AE5A-ADD4EA04389C",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "mfd",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-203c723a023383dec4bb.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "3,2": {
+      "ActionID": "5CC00F9F-0698-55D8-ACD8-79CE39111B05",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "ufc",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-b83b28e3a1db6aa5a9fb.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "4,2": {
+      "ActionID": "3F2C3FFB-ECD6-5D32-AD1A-3DD955D3C44A",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "map",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-90a50193d0dbcab7a17d.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "2,1": {
+      "ActionID": "67DFF87C-EE49-599B-BEC2-D5B2F6194F10",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "gps",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-d369d71d3da691af6c1e.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "3,1": {
+      "ActionID": "B96584B1-5440-57DB-A039-F73490B312B0",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "dl",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-ed5276d7453af61eae6f.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
     "0,1": {
-      "ActionID": "fab66116-e419-4fe8-a1b2-243b1dadb9ae",
+      "ActionID": "F62A1818-1297-587E-9D63-2083ADC26C2F",
       "Controller": "",
       "Name": "Previous page",
       "UUID": "com.hotspot.streamdock.page.previous",
@@ -16,14 +156,14 @@
       "State": 0,
       "States": [
         {
-          "Image": "beta-large-7876d644674241cb6105.png",
+          "Image": "nav-previous.png",
           "Title": "",
           "ShowTitle": false
         }
       ]
     },
     "4,1": {
-      "ActionID": "24f2e675-a41f-47a7-aea8-67545b1373d4",
+      "ActionID": "84F3E07A-A3AE-5516-9666-D73BE03162DB",
       "Controller": "",
       "Name": "Next page",
       "UUID": "com.hotspot.streamdock.page.next",
@@ -32,274 +172,14 @@
       "State": 0,
       "States": [
         {
-          "Image": "beta-large-fd3a03f31f3a04ea7cde.png",
+          "Image": "nav-next.png",
           "Title": "",
           "ShowTitle": false
         }
       ]
     },
-    "0,0": {
-      "ActionID": "56cd503c-a292-40d3-9650-7de75494459b",
-      "Controller": "Knob",
-      "Name": "Hotkey",
-      "UUID": "com.hotspot.streamdock.system.hotkey",
-      "Settings": {
-        "Coalesce": true,
-        "Hotkeys": [
-          {
-            "VKeyCode": 65,
-            "KeyShift": true,
-            "KeyCtrl": true,
-            "KeyOption": true,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          },
-          {
-            "VKeyCode": 80,
-            "KeyShift": true,
-            "KeyCtrl": true,
-            "KeyOption": true,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          },
-          {
-            "VKeyCode": -1,
-            "KeyShift": false,
-            "KeyCtrl": false,
-            "KeyOption": false,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          }
-        ],
-        "CCWRemarks": "Decrease",
-        "CWRemarks": "Increase",
-        "hotkeyRadioButtonIndex": -1
-      },
-      "SoftwareSettings": {},
-      "State": 0,
-      "States": [
-        {
-          "Image": "beta-large-a4db0ca28c9f30b8695d.png",
-          "Title": "",
-          "ShowTitle": false
-        }
-      ]
-    },
-    "1,0": {
-      "ActionID": "3c1554b6-79cb-4f70-95c7-9797025f7133",
-      "Controller": "Knob",
-      "Name": "Hotkey",
-      "UUID": "com.hotspot.streamdock.system.hotkey",
-      "Settings": {
-        "Coalesce": true,
-        "Hotkeys": [
-          {
-            "VKeyCode": 68,
-            "KeyShift": true,
-            "KeyCtrl": true,
-            "KeyOption": true,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          },
-          {
-            "VKeyCode": 83,
-            "KeyShift": true,
-            "KeyCtrl": true,
-            "KeyOption": true,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          },
-          {
-            "VKeyCode": -1,
-            "KeyShift": false,
-            "KeyCtrl": false,
-            "KeyOption": false,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          }
-        ],
-        "CCWRemarks": "Decrease",
-        "CWRemarks": "Increase",
-        "hotkeyRadioButtonIndex": -1
-      },
-      "SoftwareSettings": {},
-      "State": 0,
-      "States": [
-        {
-          "Image": "beta-large-cdfe7aba9952507edfed.png",
-          "Title": "",
-          "ShowTitle": false
-        }
-      ]
-    },
-    "2,0": {
-      "ActionID": "b612b37a-fa14-4a1a-973e-7e575990ae49",
-      "Controller": "Knob",
-      "Name": "Hotkey",
-      "UUID": "com.hotspot.streamdock.system.hotkey",
-      "Settings": {
-        "Coalesce": true,
-        "Hotkeys": [
-          {
-            "VKeyCode": 71,
-            "KeyShift": true,
-            "KeyCtrl": true,
-            "KeyOption": true,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          },
-          {
-            "VKeyCode": 70,
-            "KeyShift": true,
-            "KeyCtrl": true,
-            "KeyOption": true,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          },
-          {
-            "VKeyCode": -1,
-            "KeyShift": false,
-            "KeyCtrl": false,
-            "KeyOption": false,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          }
-        ],
-        "CCWRemarks": "Decrease",
-        "CWRemarks": "Increase",
-        "hotkeyRadioButtonIndex": -1
-      },
-      "SoftwareSettings": {},
-      "State": 0,
-      "States": [
-        {
-          "Image": "beta-large-48bc060fff0adf7e01fb.png",
-          "Title": "",
-          "ShowTitle": false
-        }
-      ]
-    },
-    "3,0": {
-      "ActionID": "cecc770f-c87a-4d78-89de-7023fcaec220",
-      "Controller": "Knob",
-      "Name": "Hotkey",
-      "UUID": "com.hotspot.streamdock.system.hotkey",
-      "Settings": {
-        "Coalesce": true,
-        "Hotkeys": [
-          {
-            "VKeyCode": 74,
-            "KeyShift": true,
-            "KeyCtrl": true,
-            "KeyOption": true,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          },
-          {
-            "VKeyCode": 72,
-            "KeyShift": true,
-            "KeyCtrl": true,
-            "KeyOption": true,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          },
-          {
-            "VKeyCode": -1,
-            "KeyShift": true,
-            "KeyCtrl": true,
-            "KeyOption": true,
-            "KeyCmd": false,
-            "RKeyShift": false,
-            "RKeyCtrl": false,
-            "RKeyOption": false,
-            "RKeyCmd": false,
-            "KeyModifiers": 65536,
-            "NativeCode": -1,
-            "QTKeyCode": -1
-          }
-        ],
-        "CCWRemarks": "Decrease",
-        "CWRemarks": "Increase",
-        "hotkeyRadioButtonIndex": -1
-      },
-      "SoftwareSettings": {},
-      "State": 0,
-      "States": [
-        {
-          "Image": "beta-large-3b7b54a66c13d5ada5bd.png",
-          "Title": "",
-          "ShowTitle": false
-        }
-      ]
-    },
-    "4,2": {
-      "ActionID": "bc1d9d50-0bd2-400f-80a4-168ef5918f18",
+    "1,1": {
+      "ActionID": "1AD808A5-AC71-5D39-9293-A87D027A8CCA",
       "Controller": "Keypad",
       "Name": "Multi Action",
       "UUID": "com.hotspot.streamdock.multiactions.routine",
@@ -323,7 +203,7 @@
       ],
       "Actions": [
         {
-          "ActionID": "002d2baf-a305-4f3c-b3d9-74987c6e1844",
+          "ActionID": "80b3de79-b46d-420c-8cd2-5c20630f8f02",
           "Controller": "",
           "Name": "Scene Shift",
           "UUID": "com.hotspot.streamdock.profile.rotate",
@@ -344,7 +224,7 @@
           ]
         },
         {
-          "ActionID": "6481312b-9be8-4f8e-a559-b0664a3f9884",
+          "ActionID": "bb517137-673e-47d5-ac0c-436cc3c44878",
           "Controller": "",
           "Name": "Scene Shift",
           "UUID": "com.hotspot.streamdock.profile.rotate",
@@ -365,66 +245,6 @@
           ]
         }
       ]
-    },
-    "1,1": {
-      "ActionID": "144b7e61-543a-44f7-aec9-aeefba03326c",
-      "Controller": "Keypad",
-      "Name": "F-16 selector",
-      "UUID": "org.f16vsd.cycling.selector",
-      "Settings": {
-        "sim": "DCS",
-        "control": "ded",
-        "index": 2
-      },
-      "SoftwareSettings": {},
-      "State": 0,
-      "States": [
-        {
-          "Image": "beta-large-f3da93d566e23401d072.png",
-          "Title": "",
-          "ShowTitle": false
-        }
-      ]
-    },
-    "2,1": {
-      "ActionID": "566c1a6f-aecf-4ea3-85fd-872af2907039",
-      "Controller": "Keypad",
-      "Name": "F-16 selector",
-      "UUID": "org.f16vsd.cycling.selector",
-      "Settings": {
-        "sim": "DCS",
-        "control": "fpm",
-        "index": 2
-      },
-      "SoftwareSettings": {},
-      "State": 0,
-      "States": [
-        {
-          "Image": "beta-large-570d3c7b736b74418c51.png",
-          "Title": "",
-          "ShowTitle": false
-        }
-      ]
-    },
-    "3,1": {
-      "ActionID": "a0292d9e-8734-45d0-88b8-ab75c5762cc0",
-      "Controller": "Keypad",
-      "Name": "F-16 selector",
-      "UUID": "org.f16vsd.cycling.selector",
-      "Settings": {
-        "sim": "DCS",
-        "control": "scales",
-        "index": 2
-      },
-      "SoftwareSettings": {},
-      "State": 0,
-      "States": [
-        {
-          "Image": "beta-large-c43d05066b6728951658.png",
-          "Title": "",
-          "ShowTitle": false
-        }
-      ]
     }
   },
   "Pages": {
@@ -436,7 +256,8 @@
       "C3FA4002-4B90-51C3-B19C-830DC13D47BD.sdProfile",
       "997A569E-A1EA-5CBA-96BA-1C7FBBCBFC29.sdProfile",
       "C9C905BA-EB97-5E17-9B07-74E0145CB5A4.sdProfile",
-      "F9EA19DF-DC83-547F-94EC-62470491E42E.sdProfile"
+      "F9EA19DF-DC83-547F-94EC-62470491E42E.sdProfile",
+      "0553D839-DC32-587B-B164-A0008C4E9F4B.sdProfile"
     ]
   }
 }

@@ -2,8 +2,6 @@ VSD F16 Config Beta — portable Windows setup
 
 Run VSD F16 Config Beta.exe. Python is included; no separate Python installation is required. You may share this EXE directly, or share the portable ZIP with these instructions and runtime licenses.
 
-For GitHub Code -> Download ZIP, extract the archive and run VSD F16 Config Beta.exe from the top-level folder. No build step is needed.
-
 1. Close VSD Craft and the simulator(s) you want to configure.
 2. Confirm the detected VSD XL / N4 Pro panels and software folders.
 3. Select BMS only, DCS only, or both. Select either panel or both panels.
@@ -12,7 +10,7 @@ For GitHub Code -> Download ZIP, extract the archive and run VSD F16 Config Beta
 6. Choose Review choices, then Apply changes. Choose whether to keep rollback backups when prompted. Conflicts and incomplete checks stop Apply.
 7. Open VSD Craft and choose the matching F-16 profile for each panel. Restart DCS after changing its export scripts.
 
-The latest design is included: one button per switch/selector, repeated presses to toggle or cycle, changing graphics, larger bold top-center labels, and larger state captions. Bottom-left red/green indicators have twice the previous diameter. Long labels wrap. The package contains four profiles and 28 pages.
+The latest design is included: one button per switch/selector, repeated presses to toggle or cycle, changing graphics, larger bold top-center labels, and larger state captions. Bottom-left red/green indicators have twice the previous diameter. Long labels wrap. The package contains four profiles and 30 pages.
 
 The control runtime installs with the profiles in VSD Craft's plugin folder. Existing matching F-16 profiles can be updated. Single-simulator installations show a simulator badge rather than a toggle to an unavailable simulator. With both simulators installed, logo toggles can switch the selected panel or both panels. No Windows service, startup task, automatic download, or system-wide Python installation is created.
 
@@ -22,6 +20,8 @@ DCS switch graphics follow cockpit feedback. Gray / NO DATA means no fresh F-16 
 
 Backups default to Documents/VSD F16 Config Beta/Backups. Each contains a restore-manifest.json, changed original files/directories, the VSD database when affected, a binding-review.json report, and an installation report. Unrelated profiles, keyboard entries and joystick/MFD assignments are preserved. If installation fails after changes begin, the installer attempts to restore the prior files automatically, retaining backup evidence.
 
-Validation: 19 isolated installation tests and 16 offline runtime tests; standalone EXE/GUI self-check with Python removed from PATH; all 28 pages and 174 editable shortcut rows verified. Fresh BMS-only, DCS-only, both-simulator and single-panel scenarios, updates, backups, edited bindings, prerequisite failures, conflict blocking and rollback are covered. Physical-device/in-flight validation is still pending. This beta EXE is unsigned.
+Validation: 19 isolated installation tests and 16 offline runtime tests; 10 panel-layout checks; standalone EXE/GUI self-check with Python removed from PATH; all 28 pages and 174 editable shortcut rows verified. Fresh BMS-only, DCS-only, both-simulator and single-panel scenarios, updates, backups, edited bindings, prerequisite failures, conflict blocking and rollback are covered. Physical-device/in-flight validation is still pending. This beta EXE is unsigned.
 
 DCS Interface plugin ID: com.ctytler.dcs.sdPlugin. The separately installed DCS Interface and other third-party simulator software are not bundled. Simulator logos and third-party components retain their owners' rights. Runtime license notices are included in the ZIP. No open-source license has been selected for the original profile/application code.
+
+Cockpit layout: seven XL pages and eight N4 Pro pages per simulator use deliberate rows/columns and gaps. N4 avionics power is split into an upper/middle view and an INS/MIDS lower view. See docs/PANEL-LAYOUT.md in the source or GitHub repository for references and hardware compromises.

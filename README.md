@@ -6,7 +6,7 @@ F-16 cockpit controls for **DCS** and **Falcon BMS**, on **VSD XL_142** and **VS
 
 Choose **Code → Download ZIP**, extract it, and run **VSD F16 Config Beta.exe** from the extracted repository's top-level folder. The EXE is included in the repository root; no build step or separate Python installation is needed.
 
-[Download the Windows installer and ZIPs](https://github.com/just-this-guy/vsd-f16-config-beta/releases/tag/v0.3.0-beta).
+[Download the Windows installer and ZIPs](https://github.com/just-this-guy/vsd-f16-config-beta/releases/tag/v0.3.1-beta).
 
 Run **VSD F16 Config Beta.exe**. Python is bundled. The portable ZIP adds instructions and runtime license notices; the source ZIP is also available.
 
@@ -23,7 +23,8 @@ Run **VSD F16 Config Beta.exe**. Python is bundled. The portable ZIP adds instru
 - One button per persistent switch or selector; repeated presses toggle or cycle through its settings.
 - Changing state graphics, larger bold top-center labels, and larger state captions.
 - Bottom-left red/green indicators with twice the earlier diameter.
-- Four profiles and 28 pages; physical encoder functions and momentary controls retained.
+- Cockpit-like rows and columns, with deliberate gaps and matching DCS/BMS positions. [Panel layout and reference notes](docs/PANEL-LAYOUT.md).
+- Four profiles and 30 pages: seven XL pages and eight N4 Pro pages per simulator. Physical encoder functions and momentary controls are retained.
 - Linked simulator switching for both panels, or independent/single-simulator setup.
 
 ![Control state examples](docs/control-states.png)
@@ -44,7 +45,7 @@ Red means OFF (or a closed refueling door); green indicates an active named sett
 
 The installer supports updates to matching profiles, conflict review, selected BMS keyfiles, and rollback backups. It preserves unrelated keyboard and joystick/MFD assignments. It does not install a Windows service or startup task or automatically download prerequisites.
 
-This is an **unsigned beta**. Isolated installer tests (19), offline runtime tests (16), standalone EXE startup, and the GUI/174-row binding editor were checked. Full physical-device and in-flight behavior still requires validation.
+This is an **unsigned beta**. Isolated installer tests (19), offline runtime tests (16), panel-layout checks (10), standalone EXE startup, and the GUI/174-row binding editor were checked. Full physical-device and in-flight behavior still requires validation.
 
 ## Source and tests
 
@@ -53,6 +54,7 @@ See [Build.txt](Build.txt). With Python installed:
 ```powershell
 python test_beta.py
 python test_runtime.py
+python test_panel_layout.py
 python build_beta.py --python "C:/path/to/python.exe"
 ```
 

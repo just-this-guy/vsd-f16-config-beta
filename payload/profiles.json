@@ -4,27 +4,65 @@
     "device": "VSDXL",
     "name": "F-16 BMS XL",
     "folder": "E09811E7-E3F8-599F-96F0-FB2611731320.sdProfile",
-    "pages": 7
+    "pages": 7,
+    "page_titles": [
+      "ELEC / ENGINE",
+      "AVIONICS POWER",
+      "HUD PANEL",
+      "SNSR / AIR / OXY",
+      "FLCS / TEST",
+      "ECM PANEL",
+      "EXT LIGHTING"
+    ]
   },
   {
     "sim": "BMS",
     "device": "VSDN4Pro",
     "name": "F-16 BMS Knobs",
     "folder": "A87AFB73-9C70-56DD-908D-1B3AD6BB7283.sdProfile",
-    "pages": 7
+    "pages": 8,
+    "page_titles": [
+      "AUDIO / SENSOR",
+      "HUD PANEL",
+      "AVIONICS POWER",
+      "INS / MIDS",
+      "INT LIGHTING",
+      "EXT LIGHTING",
+      "AIR / OXY",
+      "ELEC / TEST"
+    ]
   },
   {
     "sim": "DCS",
     "device": "VSDXL",
     "name": "F-16 DCS XL",
     "folder": "ADE1DEFA-1523-5B90-8D2D-A526C8D5FB7C.sdProfile",
-    "pages": 7
+    "pages": 7,
+    "page_titles": [
+      "ELEC / ENGINE",
+      "AVIONICS POWER",
+      "HUD PANEL",
+      "SNSR / AIR / OXY",
+      "FLCS / TEST",
+      "ECM PANEL",
+      "EXT LIGHTING"
+    ]
   },
   {
     "sim": "DCS",
     "device": "VSDN4Pro",
     "name": "F-16 DCS Knobs",
     "folder": "456AED5F-AC85-5B5A-B7F7-7519D96FBD11.sdProfile",
-    "pages": 7
+    "pages": 8,
+    "page_titles": [
+      "AUDIO / SENSOR",
+      "HUD PANEL",
+      "AVIONICS POWER",
+      "INS / MIDS",
+      "INT LIGHTING",
+      "EXT LIGHTING",
+      "AIR / OXY",
+      "ELEC / TEST"
+    ]
   }
 ]

@@ -15,10 +15,11 @@ def main():
         c['offline']='images/'+save_image(tile(c['label'],'NO DATA',c['kind'],offline=True),PLUGIN/'images')
     (PLUGIN/'controls.json').write_text(json.dumps(catalog,indent=2))
     profiles=json.loads((PAYLOAD/'profiles.json').read_text());rows=list(csv.DictReader((PAYLOAD/'controls.csv').open(encoding='utf-8-sig')))
+    layout=json.loads((WORK/'panel-layout.json').read_text()) if (WORK/'panel-layout.json').exists() else None
     knob_labels=[['COMM 1','COMM 2','MSL TONE','THREAT'],['HUD SYM','HMCS BRT','INST PNL','FLOOD CNS'],['HUD SYM','HMCS BRT','INST PNL','FLOOD CNS'],['INST PNL','DED BRT','FLOOD CNS','HUD SYM'],['FORM LIGHT','AAR LIGHT','INST PNL','FLOOD CNS'],['COMM 1','COMM 2','INST PNL','FLOOD CNS'],['HUD SYM','HMCS BRT','INST PNL','FLOOD CNS']]
     for p in profiles:
         root=PAYLOAD/'profiles'/p['folder'];base=json.loads((root/'manifest.json').read_text())
-        names=list(dict.fromkeys(r['page'] for r in rows if (r['sim'],r['device'])==(p['sim'],p['device'])))
+        names=p.get('page_titles') or list(dict.fromkeys(r['page'] for r in rows if (r['sim'],r['device'])==(p['sim'],p['device'])))
         for pi,page in enumerate(base['Pages']['Pages']):
             folder=root if pi==0 else root/'profiles'/page;m=json.loads((folder/'manifest.json').read_text());images=folder/'Images'
             page_rows=[r for r in rows if (r['sim'],r['device'],r['page'])==(p['sim'],p['device'],names[pi])]
@@ -29,13 +30,18 @@ def main():
                     source=PLUGIN/(c['offline'] if p['sim']=='DCS' else c['images'][index])
                     name=source.name;shutil.copy2(source,images/name);a['States']=[{'Image':name,'Title':'','ShowTitle':False}]
                 elif a.get('Controller')=='Knob':
-                    label=knob_labels[pi][int(coord.split(',')[0])];legend='ROTATE'
+                    column=coord.split(',')[0]
+                    if layout:
+                        from apply_panel_layout import KNOB_LABELS
+                        label=KNOB_LABELS[layout[p['device']][pi]['knobs'][column]]
+                    else:label=knob_labels[pi][int(column)]
+                    legend='ROTATE'
                     row=next((r for r in page_rows if r['coordinate']==coord and r['trigger']=='knob press'),None)
                     if row and a['Settings']['Hotkeys'][2].get('VKeyCode',-1)>=0:legend=row['control'].replace('PUSH KNOB 4: ','PUSH ')
                     name=save_image(tile(label,legend,'rotary',active=True),images);a['States']=[{'Image':name,'Title':'','ShowTitle':False}]
                 elif kind.startswith('com.hotspot.streamdock.page.'):
                     suffix=kind.rsplit('.',1)[-1]
-                    label,text=('PREVIOUS','←') if suffix=='previous' else ('NEXT','→') if suffix=='next' else (names[pi],f'{pi+1} / 7')
+                    label,text=('PREVIOUS','←') if suffix=='previous' else ('NEXT','→') if suffix=='next' else (names[pi],f'{pi+1} / {len(base["Pages"]["Pages"])}')
                     name=save_image(tile(label,text,'nav'),images);a['States']=[{'Image':name,'Title':'','ShowTitle':False}]
                 elif kind=='com.ctytler.dcs.lamp.button.two-state' or kind=='com.hotspot.streamdock.system.hotkey':
                     row=next((r for r in page_rows if r['coordinate']==coord and r['trigger']=='key'),None)

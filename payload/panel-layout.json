@@ -1,0 +1,27 @@
+{
+  "version": "0.3.1-beta",
+  "coordinate_system": "zero-based column,row as viewed on the physical device; utility keys are separate from cockpit controls",
+  "manuals": [
+    {"name": "DCS F-16C Early Access Guide EN", "pages": [63,64,65,67,69,71,72,75,76,77,78,94,706], "edition": "installed English guide, 774 PDF pages"},
+    {"name": "TO 1F-16CMAM-1 BMS", "pages": [129,150], "edition": "Change 4.38"}
+  ],
+  "VSDXL": [
+    {"title":"ELEC / ENGINE", "keys":{"main":[0,0],"elecreset":[0,1],"jfs1":[2,0],"jfs2":[2,1],"eng":[2,2],"epu":[3,0],"fuel":[4,0],"feed":[6,0],"refuel":[7,0],"firetest":[4,1],"obogs":[5,1],"lamptest":[6,1],"eputest":[5,2],"transfer":[7,2]}, "notes":"Composite of small left-console panels. MAIN PWR above ELEC RESET; engine controls vertical. FUEL MASTER / blank TANK INERTING / ENG FEED / AIR REFUEL retain columns. TEST controls form a three-over-one cluster. JFS START 1/2 remain separate momentary commands."},
+    {"title":"AVIONICS POWER", "keys":{"mmc":[0,0],"sms":[1,0],"mfd":[2,0],"ufc":[3,0],"map":[4,0],"gps":[2,1],"dl":[3,1],"ins":[1,2],"mids":[4,2]}, "notes":"Five upper switches, GPS/DL below, INS lower-left and MIDS lower-right. Positions quantized to five columns from the panel illustration."},
+    {"title":"HUD PANEL", "keys":{"scales":[0,0],"fpm":[1,0],"ded":[2,0],"reticle":[3,0],"speed":[0,1],"alt":[1,1],"hudbrt":[2,1]}, "notes":"Four upper switches and three lower switches; the unmapped TEST switch position remains empty."},
+    {"title":"SNSR / AIR / OXY", "keys":{"lhdpt":[0,0],"rhdpt":[1,0],"fcr":[2,0],"ralt":[3,0],"ice":[5,0],"air":[5,1],"oxygen":[7,2]}, "notes":"Sensor-power switches retain their real left-to-right row. Single-control environmental panels occupy separate blocks; the composite is not a scale model of the full console."},
+    {"title":"FLCS / TEST", "keys":{"digital":[0,0],"altflaps":[2,0],"lef":[0,2],"trim":[3,2],"firetest":[5,0],"obogs":[6,0],"lamptest":[7,0],"eputest":[6,1]}, "notes":"DIG BACKUP upper-left, ALT FLAPS upper-right, LE FLAPS lower-left. Separate TEST cluster: FIRE / OBOGS / LAMP above EPU GEN. TRIM/AP represents its separate manual-trim panel."},
+    {"title":"ECM PANEL", "keys":{"ecmpwr":[0,0],"ecmxmit":[1,0],"ecm1":[2,0],"ecm2":[3,0],"ecm3":[4,0],"ecm4":[5,0],"ecmbit":[1,1],"ecm5":[2,1]}, "notes":"Power/XMIT on the left; modules 1-4 in the upper row, module 5 below module 1, BIT below XMIT. Unmapped FRM/SPL positions stay empty."},
+    {"title":"EXT LIGHTING", "keys":{"anticoll":[0,0],"flash":[1,0],"wing":[2,0],"fuselage":[3,0],"lightmaster":[1,1]}, "notes":"ANTI COLL / POSITION / WING-TAIL / FUSELAGE across the upper row, MASTER centered below. FORM and AAR are operated on the N4 Pro knobs."}
+  ],
+  "VSDN4Pro": [
+    {"title":"AUDIO / SENSOR", "keys":{"lhdpt":[0,0],"rhdpt":[1,0],"fcr":[2,0],"ralt":[3,0]}, "knobs":{"0":"comm1","1":"comm2","2":"msl","3":"threat"}, "notes":"Sensor switches keep their four-column row. Physical knobs retain COMM1 / COMM2 / MSL / THREAT order; the single physical knob row cannot reproduce AUDIO1's two-row geometry."},
+    {"title":"HUD PANEL", "keys":{"scales":[0,0],"fpm":[1,0],"ded":[2,0],"reticle":[3,0],"speed":[0,1],"alt":[1,1],"hudbrt":[2,1]}, "knobs":{"0":"hud","3":"hmcs"}, "notes":"Both rows of the HUD panel are visible together. The two physical brightness knobs are helper controls from the ICP/HMCS panels."},
+    {"title":"AVIONICS POWER", "keys":{"mmc":[0,0],"sms":[1,0],"mfd":[2,0],"ufc":[3,0],"map":[4,0],"gps":[2,1],"dl":[3,1]}, "previous":[0,1],"next":[4,1],"simulator":[1,1], "notes":"Upper/middle portion of the real power panel: five switches across, GPS under MFD and DL under UFC. INS/MIDS are on the following page."},
+    {"title":"INS / MIDS", "keys":{"ins":[1,0],"mids":[4,0]}, "simulator":[0,1], "notes":"Lower portion of the same power panel, shown as its own viewport. INS and MIDS preserve the columns used on the XL."},
+    {"title":"INT LIGHTING", "keys":{}, "knobs":{"0":"flood","1":"inst","2":"dedbrt"}, "notes":"Instrument-panel brightness occupies the center knob, DED brightness the right knob, and flood-console brightness the left knob. The physical single-row constraint is retained; unrelated HUD/radar controls are removed from this lighting page."},
+    {"title":"EXT LIGHTING", "keys":{"anticoll":[0,0],"flash":[1,0],"wing":[2,0],"fuselage":[3,0],"lightmaster":[1,1]}, "knobs":{"0":"formation","2":"aar"}, "notes":"Four upper controls and MASTER centered below. FORM uses the left physical knob and AAR the right-side knob, matching their relative panel columns."},
+    {"title":"AIR / OXY", "keys":{"air":[2,0],"ice":[4,0],"oxygen":[2,1]}, "simulator":[0,1], "notes":"AIR SOURCE above the oxygen SUPPLY control; ANTI ICE belongs to its separate neighboring panel."},
+    {"title":"ELEC / TEST", "keys":{"main":[0,0],"elecreset":[0,1],"firetest":[1,0],"obogs":[2,0],"lamptest":[3,0],"eputest":[2,1]}, "notes":"Electrical controls form a vertical pair. The separate TEST cluster retains FIRE / OBOGS / LAMP across its top and EPU GEN below OBOGS."}
+  ]
+}
