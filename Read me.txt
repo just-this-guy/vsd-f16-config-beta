@@ -2,6 +2,8 @@ VSD F16 Config Beta — portable Windows setup
 
 Run VSD F16 Config Beta.exe. Python is included; no separate Python installation is required. You may share this EXE directly, or share the portable ZIP with these instructions and runtime licenses.
 
+For GitHub Code -> Download ZIP, extract the archive and run VSD F16 Config Beta.exe from the top-level folder. No build step is needed.
+
 1. Close VSD Craft and the simulator(s) you want to configure.
 2. Confirm the detected VSD XL / N4 Pro panels and software folders.
 3. Select BMS only, DCS only, or both. Select either panel or both panels.

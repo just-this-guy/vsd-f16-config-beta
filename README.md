@@ -4,6 +4,8 @@ F-16 cockpit controls for **DCS** and **Falcon BMS**, on **VSD XL_142** and **VS
 
 ## Download and run
 
+Choose **Code → Download ZIP**, extract it, and run **VSD F16 Config Beta.exe** from the extracted repository's top-level folder. The EXE is included in the repository root; no build step or separate Python installation is needed.
+
 [Download the Windows installer and ZIPs](https://github.com/just-this-guy/vsd-f16-config-beta/releases/tag/v0.3.0-beta).
 
 Run **VSD F16 Config Beta.exe**. Python is bundled. The portable ZIP adds instructions and runtime license notices; the source ZIP is also available.
