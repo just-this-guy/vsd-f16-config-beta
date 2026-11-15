@@ -42,23 +42,23 @@ class InstallerTests(unittest.TestCase):
     def manifests(self):return [json.loads(p.read_text()) for p in (self.vsd/'profiles').rglob('manifest.json')]
     def test_review_is_read_only(self):
         before=snapshot(self.root);self.args.apply=False;self.install();self.assertEqual(before,snapshot(self.root))
-    def test_fresh_both_install_includes_runtime_hook_and_30_pages(self):
+    def test_fresh_both_install_includes_runtime_hook_and_all_pages(self):
         original=self.config.read_bytes();backup=self.install()
-        self.assertEqual(len(self.manifests()),30);self.assertTrue((self.vsd/'plugins'/beta.PLUGIN/'VSD F16 Controls.exe').is_file())
+        self.assertEqual(len(self.manifests()),29);self.assertTrue((self.vsd/'plugins'/beta.PLUGIN/'VSD F16 Controls.exe').is_file())
         self.assertTrue((self.dcs/'Scripts/VSD-F16-States.lua').exists());self.assertEqual(self.config.read_bytes(),original)
         self.assertIn('-- keep other tool hooks',(self.dcs/'Scripts/Export.lua').read_text());self.assertTrue((pathlib.Path(backup)/'restore-manifest.json').exists())
         c=sqlite3.connect(self.vsd/'config/DataCache.db');self.assertEqual(c.execute('select value from unrelated').fetchone()[0],'preserve');self.assertEqual(c.execute('select count(*) from VSDXL').fetchone()[0],2);c.close()
         self.assertEqual((self.vsd/'profiles/untouched/keep.txt').read_bytes(),b'keep unrelated profile')
     def test_bms_only_needs_no_dcs_and_disables_simulator_toggle(self):
         self.args.sim='bms';self.args.dcs_saved_games=None;shutil.rmtree(self.dcs);shutil.rmtree(self.program)
-        self.install();self.assertEqual(len(self.manifests()),15);self.assertFalse(self.dcs.exists())
+        self.install();self.assertEqual(len(self.manifests()),14);self.assertFalse(self.dcs.exists())
         for m in self.manifests():
             for a in m['Actions'].values():
                 if a['UUID']=='com.hotspot.streamdock.multiactions.routine':self.assertFalse(a['Actions']);self.assertEqual(a['States'][0]['Title'],'BMS ONLY')
     def test_dcs_only_needs_no_bms_files(self):
         self.args.sim='dcs';self.args.bms_config=None;shutil.rmtree(self.bms);self.install();self.assertEqual(len(self.manifests()),15);self.assertFalse(self.bms.exists())
     def test_single_panel_both_installs_only_its_profiles(self):
-        self.args.devices=['VSDXL'];self.args.paired=False;self.install();self.assertEqual(len(self.manifests()),14)
+        self.args.devices=['VSDXL'];self.args.paired=False;self.install();self.assertEqual(len(self.manifests()),13)
         for m in self.manifests():
             self.assertEqual(m['DeviceUUID'],'VSDXL')
             for a in m['Actions'].values():

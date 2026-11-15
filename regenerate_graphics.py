@@ -30,6 +30,7 @@ def main():
                     source=PLUGIN/(c['offline'] if p['sim']=='DCS' else c['images'][index])
                     name=source.name;shutil.copy2(source,images/name);a['States']=[{'Image':name,'Title':'','ShowTitle':False}]
                 elif a.get('Controller')=='Knob':
+                    if layout and 'profiles' in layout:continue
                     column=coord.split(',')[0]
                     if layout:
                         from apply_panel_layout import KNOB_LABELS

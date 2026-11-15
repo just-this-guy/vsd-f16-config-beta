@@ -6,86 +6,6 @@
   "Version": "1.0",
   "AppIdentifier": "",
   "Actions": {
-    "0,2": {
-      "ActionID": "DBCC3814-B19D-5E85-B3D9-3E435ED7FA69",
-      "Controller": "Keypad",
-      "Name": "F-16 selector",
-      "UUID": "org.f16vsd.cycling.selector",
-      "Settings": {
-        "sim": "BMS",
-        "control": "lhdpt",
-        "index": 0
-      },
-      "SoftwareSettings": {},
-      "State": 0,
-      "States": [
-        {
-          "Image": "beta-large-5c8d05d8b2c9931716da.png",
-          "Title": "",
-          "ShowTitle": false
-        }
-      ]
-    },
-    "1,2": {
-      "ActionID": "DE43E1A6-AF84-547B-ACC4-FC7E530E8A04",
-      "Controller": "Keypad",
-      "Name": "F-16 selector",
-      "UUID": "org.f16vsd.cycling.selector",
-      "Settings": {
-        "sim": "BMS",
-        "control": "rhdpt",
-        "index": 0
-      },
-      "SoftwareSettings": {},
-      "State": 0,
-      "States": [
-        {
-          "Image": "beta-large-13cddf76350b4fbab94f.png",
-          "Title": "",
-          "ShowTitle": false
-        }
-      ]
-    },
-    "2,2": {
-      "ActionID": "24F3C402-9244-56FD-A1C2-D1CEE49485C8",
-      "Controller": "Keypad",
-      "Name": "F-16 selector",
-      "UUID": "org.f16vsd.cycling.selector",
-      "Settings": {
-        "sim": "BMS",
-        "control": "fcr",
-        "index": 0
-      },
-      "SoftwareSettings": {},
-      "State": 0,
-      "States": [
-        {
-          "Image": "beta-large-4681617c9e64dfb5dacf.png",
-          "Title": "",
-          "ShowTitle": false
-        }
-      ]
-    },
-    "3,2": {
-      "ActionID": "6832E649-555F-5436-AC84-38CAFB65BCE8",
-      "Controller": "Keypad",
-      "Name": "F-16 selector",
-      "UUID": "org.f16vsd.cycling.selector",
-      "Settings": {
-        "sim": "BMS",
-        "control": "ralt",
-        "index": 2
-      },
-      "SoftwareSettings": {},
-      "State": 0,
-      "States": [
-        {
-          "Image": "beta-large-70954ea63d08a5b08962.png",
-          "Title": "",
-          "ShowTitle": false
-        }
-      ]
-    },
     "0,0": {
       "ActionID": "9AFBE9E3-9E45-5F5E-BB0E-79FAADE1BAA1",
       "Controller": "Knob",
@@ -146,6 +66,26 @@
       "States": [
         {
           "Image": "knob-comm1.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "0,2": {
+      "ActionID": "DBCC3814-B19D-5E85-B3D9-3E435ED7FA69",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "BMS",
+        "control": "lhdpt",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-5c8d05d8b2c9931716da.png",
           "Title": "",
           "ShowTitle": false
         }
@@ -216,6 +156,26 @@
         }
       ]
     },
+    "1,2": {
+      "ActionID": "DE43E1A6-AF84-547B-ACC4-FC7E530E8A04",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "BMS",
+        "control": "rhdpt",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-13cddf76350b4fbab94f.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
     "2,0": {
       "ActionID": "FA1B1BC8-5D6D-5324-8927-E03A1688E940",
       "Controller": "Knob",
@@ -276,6 +236,26 @@
       "States": [
         {
           "Image": "knob-msl.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "2,2": {
+      "ActionID": "24F3C402-9244-56FD-A1C2-D1CEE49485C8",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "BMS",
+        "control": "fcr",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-4681617c9e64dfb5dacf.png",
           "Title": "",
           "ShowTitle": false
         }
@@ -357,6 +337,26 @@
       "States": [
         {
           "Image": "nav-previous.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "3,2": {
+      "ActionID": "6832E649-555F-5436-AC84-38CAFB65BCE8",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "BMS",
+        "control": "ralt",
+        "index": 2
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-70954ea63d08a5b08962.png",
           "Title": "",
           "ShowTitle": false
         }

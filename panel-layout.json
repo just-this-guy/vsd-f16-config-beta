@@ -1,27 +1,497 @@
 {
-  "version": "0.3.1-beta",
-  "coordinate_system": "zero-based column,row as viewed on the physical device; utility keys are separate from cockpit controls",
-  "manuals": [
-    {"name": "DCS F-16C Early Access Guide EN", "pages": [63,64,65,67,69,71,72,75,76,77,78,94,706], "edition": "installed English guide, 774 PDF pages"},
-    {"name": "TO 1F-16CMAM-1 BMS", "pages": [129,150], "edition": "Change 4.38"}
-  ],
-  "VSDXL": [
-    {"title":"ELEC / ENGINE", "keys":{"main":[0,0],"elecreset":[0,1],"jfs1":[2,0],"jfs2":[2,1],"eng":[2,2],"epu":[3,0],"fuel":[4,0],"feed":[6,0],"refuel":[7,0],"firetest":[4,1],"obogs":[5,1],"lamptest":[6,1],"eputest":[5,2],"transfer":[7,2]}, "notes":"Composite of small left-console panels. MAIN PWR above ELEC RESET; engine controls vertical. FUEL MASTER / blank TANK INERTING / ENG FEED / AIR REFUEL retain columns. TEST controls form a three-over-one cluster. JFS START 1/2 remain separate momentary commands."},
-    {"title":"AVIONICS POWER", "keys":{"mmc":[0,0],"sms":[1,0],"mfd":[2,0],"ufc":[3,0],"map":[4,0],"gps":[2,1],"dl":[3,1],"ins":[1,2],"mids":[4,2]}, "notes":"Five upper switches, GPS/DL below, INS lower-left and MIDS lower-right. Positions quantized to five columns from the panel illustration."},
-    {"title":"HUD PANEL", "keys":{"scales":[0,0],"fpm":[1,0],"ded":[2,0],"reticle":[3,0],"speed":[0,1],"alt":[1,1],"hudbrt":[2,1]}, "notes":"Four upper switches and three lower switches; the unmapped TEST switch position remains empty."},
-    {"title":"SNSR / AIR / OXY", "keys":{"lhdpt":[0,0],"rhdpt":[1,0],"fcr":[2,0],"ralt":[3,0],"ice":[5,0],"air":[5,1],"oxygen":[7,2]}, "notes":"Sensor-power switches retain their real left-to-right row. Single-control environmental panels occupy separate blocks; the composite is not a scale model of the full console."},
-    {"title":"FLCS / TEST", "keys":{"digital":[0,0],"altflaps":[2,0],"lef":[0,2],"trim":[3,2],"firetest":[5,0],"obogs":[6,0],"lamptest":[7,0],"eputest":[6,1]}, "notes":"DIG BACKUP upper-left, ALT FLAPS upper-right, LE FLAPS lower-left. Separate TEST cluster: FIRE / OBOGS / LAMP above EPU GEN. TRIM/AP represents its separate manual-trim panel."},
-    {"title":"ECM PANEL", "keys":{"ecmpwr":[0,0],"ecmxmit":[1,0],"ecm1":[2,0],"ecm2":[3,0],"ecm3":[4,0],"ecm4":[5,0],"ecmbit":[1,1],"ecm5":[2,1]}, "notes":"Power/XMIT on the left; modules 1-4 in the upper row, module 5 below module 1, BIT below XMIT. Unmapped FRM/SPL positions stay empty."},
-    {"title":"EXT LIGHTING", "keys":{"anticoll":[0,0],"flash":[1,0],"wing":[2,0],"fuselage":[3,0],"lightmaster":[1,1]}, "notes":"ANTI COLL / POSITION / WING-TAIL / FUSELAGE across the upper row, MASTER centered below. FORM and AAR are operated on the N4 Pro knobs."}
-  ],
-  "VSDN4Pro": [
-    {"title":"AUDIO / SENSOR", "keys":{"lhdpt":[0,0],"rhdpt":[1,0],"fcr":[2,0],"ralt":[3,0]}, "knobs":{"0":"comm1","1":"comm2","2":"msl","3":"threat"}, "notes":"Sensor switches keep their four-column row. Physical knobs retain COMM1 / COMM2 / MSL / THREAT order; the single physical knob row cannot reproduce AUDIO1's two-row geometry."},
-    {"title":"HUD PANEL", "keys":{"scales":[0,0],"fpm":[1,0],"ded":[2,0],"reticle":[3,0],"speed":[0,1],"alt":[1,1],"hudbrt":[2,1]}, "knobs":{"0":"hud","3":"hmcs"}, "notes":"Both rows of the HUD panel are visible together. The two physical brightness knobs are helper controls from the ICP/HMCS panels."},
-    {"title":"AVIONICS POWER", "keys":{"mmc":[0,0],"sms":[1,0],"mfd":[2,0],"ufc":[3,0],"map":[4,0],"gps":[2,1],"dl":[3,1]}, "previous":[0,1],"next":[4,1],"simulator":[1,1], "notes":"Upper/middle portion of the real power panel: five switches across, GPS under MFD and DL under UFC. INS/MIDS are on the following page."},
-    {"title":"INS / MIDS", "keys":{"ins":[1,0],"mids":[4,0]}, "simulator":[0,1], "notes":"Lower portion of the same power panel, shown as its own viewport. INS and MIDS preserve the columns used on the XL."},
-    {"title":"INT LIGHTING", "keys":{}, "knobs":{"0":"flood","1":"inst","2":"dedbrt"}, "notes":"Instrument-panel brightness occupies the center knob, DED brightness the right knob, and flood-console brightness the left knob. The physical single-row constraint is retained; unrelated HUD/radar controls are removed from this lighting page."},
-    {"title":"EXT LIGHTING", "keys":{"anticoll":[0,0],"flash":[1,0],"wing":[2,0],"fuselage":[3,0],"lightmaster":[1,1]}, "knobs":{"0":"formation","2":"aar"}, "notes":"Four upper controls and MASTER centered below. FORM uses the left physical knob and AAR the right-side knob, matching their relative panel columns."},
-    {"title":"AIR / OXY", "keys":{"air":[2,0],"ice":[4,0],"oxygen":[2,1]}, "simulator":[0,1], "notes":"AIR SOURCE above the oxygen SUPPLY control; ANTI ICE belongs to its separate neighboring panel."},
-    {"title":"ELEC / TEST", "keys":{"main":[0,0],"elecreset":[0,1],"firetest":[1,0],"obogs":[2,0],"lamptest":[3,0],"eputest":[2,1]}, "notes":"Electrical controls form a vertical pair. The separate TEST cluster retains FIRE / OBOGS / LAMP across its top and EPU GEN below OBOGS."}
-  ]
+  "profiles": {
+    "E09811E7-E3F8-599F-96F0-FB2611731320.sdProfile": [
+      {
+        "page": "E09811E7-E3F8-599F-96F0-FB2611731320.sdProfile",
+        "title": "ELEC / ENGINE",
+        "actions": {
+          "0,0": "9304A9C3-642A-54CC-83ED-F028ED07E729",
+          "0,2": "EF320C55-4239-5D7E-BF42-F54E689A8641",
+          "0,3": "7E7A76BB-5135-5969-8CCF-5C1AB894EBB8",
+          "1,0": "8CCC6EDA-2063-5652-8664-082D76571194",
+          "1,2": "E43BEF77-C7C8-5376-A94D-068FFEFC50D5",
+          "2,0": "BA417CE4-5FD9-5693-879A-E416534B4DA8",
+          "2,2": "27FD3E33-1BE9-5349-B394-D77FC30226B7",
+          "3,0": "560B075D-EB4D-5B49-9834-3AA23CB0F791",
+          "3,1": "51C02AB3-548E-5769-835B-BBC5598EDB8C",
+          "4,1": "CFA66C2F-313E-5C7F-8204-CBBA6FE0279A",
+          "5,0": "E479F6C2-3151-5580-897F-3193F4356D6F",
+          "5,1": "97B456AC-BB86-58E7-B8D1-EE284D0EA849",
+          "6,1": "BC04661D-B8C8-5B42-A8C4-7477FD8FA104",
+          "6,3": "D464389A-94AA-5A6B-B2A8-C7F5F73CD39C",
+          "7,0": "2A55032F-BA09-5728-9603-055DA16F9912",
+          "7,1": "3EB0258F-1261-5EEC-BDEF-C7F602CB282F",
+          "7,2": "5B61F7A4-E79D-5866-A23B-71B9E250542D",
+          "7,3": "289B3DA3-B85B-59D3-95EC-420B15EDF77F"
+        }
+      },
+      {
+        "page": "91672FED-6901-5AE0-8E85-9A05AECCBBC9.sdProfile",
+        "title": "AVIONICS POWER",
+        "actions": {
+          "0,1": "7FFD93C5-F90E-52F9-B166-E3CD7A3BDA99",
+          "0,3": "7831BCD9-E814-59CE-84BF-38152A365B37",
+          "1,1": "AFAC52A7-0D7B-51C3-9F00-749A4AE74446",
+          "1,2": "A85A63A4-89A3-5E8A-A3A5-332B05E96DD5",
+          "2,1": "B0AC8784-9EF7-58AC-9D60-5C6FB2A79402",
+          "2,2": "C0CC8423-1B6A-5BB7-A28A-52D6CF173875",
+          "3,1": "0232AAAD-3137-595C-B266-33352BF73ED6",
+          "3,2": "3764FF43-1C77-5CC9-8779-51EF8F9E768F",
+          "3,3": "3A3D8D2A-8213-5E7D-B81F-7E73329B4D88",
+          "4,1": "EE977E68-1D35-5DD6-A7F0-3131090A6D82",
+          "4,2": "010B6338-90E3-5DB5-87AA-CB925925A6C1",
+          "5,0": "9MC1EK7R-SB6Z-M68P-TI9E-1M7940SL7QQN",
+          "6,1": "8X6UEG83-1GSK-1VS1-0W21-PYVZ6VXK1DAC",
+          "6,2": "598O80AE-ZP69-TVH2-12T3-41KV9B4F0HDV",
+          "6,3": "ECDA533A-7702-5CF2-8F90-A2C176CCC45C",
+          "7,1": "904605X5-47SW-Y2Z2-210L-29Y37TIV110U",
+          "7,3": "04D309CB-C559-5966-B1CC-6E656E98E819"
+        }
+      },
+      {
+        "page": "511633BB-4821-52EB-ABDF-2D466039F874.sdProfile",
+        "title": "HUD PANEL",
+        "actions": {
+          "0,0": "BR7323MS-0SZI-X1N3-M964-90Q8439N2Q4F",
+          "0,1": "31EEDC73-4636-567F-8C25-A23F0896C753",
+          "0,2": "D2A64E67-D60A-5302-B9A9-8328C42A6C6C",
+          "0,3": "935705D9-02C3-5916-9211-BC492D925B44",
+          "1,0": "GXKJ22LT-7S84-Q1O9-FW94-9CAZG2IM34GA",
+          "1,1": "F8C5B9D2-E080-576E-A102-B089D84E45EA",
+          "1,2": "A844F02A-E1BD-5405-9663-F9738582E49E",
+          "2,0": "I0NX191W-N4I7-7B65-15S1-V9P929DI3442",
+          "2,1": "7B5EB026-4E56-5088-97A9-51D3952DAA87",
+          "2,2": "C6579728-5D09-59AA-9D91-08CD5550A36D",
+          "3,0": "S35E6T8K-AH3Q-X622-0YXJ-1820S00W011Y",
+          "3,1": "DB381C78-7897-5692-B988-6FA6BAF11BAE",
+          "3,3": "AC70DC00-05F9-5751-9B63-FD88AA1DC250",
+          "6,3": "19899D4C-D800-5186-B1C9-70405FC685A8",
+          "7,3": "C80B4A83-5B20-5096-9CF9-174904B912CE"
+        }
+      },
+      {
+        "page": "D9FFD433-8159-5E83-845B-ED8325ECC75D.sdProfile",
+        "title": "FLCS / TEST",
+        "actions": {
+          "0,0": "B4519EA0-3F48-5A1D-A451-17A03856EBE1",
+          "2,0": "D50234AB-5782-5966-B03B-090F3F23CF31",
+          "0,2": "9421F3DB-6F61-56E4-A15B-A22C73D374E6",
+          "3,2": "89DD5831-9D93-598F-BB6C-237D4D0542C6",
+          "5,0": "30AFAD8C-FBA8-55F3-9125-85CD07825108",
+          "6,0": "4351A994-622F-5229-B5B8-66F6056B024B",
+          "7,0": "704317B6-D54C-5D71-9E0D-41C6B10A0B67",
+          "6,1": "ABA1C17F-A8F7-5049-967A-27F6DEE580B4",
+          "0,3": "DDDA4A94-3B07-5C70-9D62-4DF560FFCE53",
+          "7,3": "1E35AA14-781F-5B21-B2FA-FEAA31B2ADD8",
+          "6,3": "B345785C-3CAD-56C8-B354-C04C4208B84E",
+          "3,3": "36EC736D-5EAE-5EED-8C9A-00F6808B3CFD"
+        }
+      },
+      {
+        "page": "48DDC108-9AD8-52B7-8CBC-FC07AC8A4D1D.sdProfile",
+        "title": "ECM PANEL",
+        "actions": {
+          "0,0": "DB5607D4-4A0C-5104-888F-F9F28A97F960",
+          "0,1": "FC26ABA2-D9A9-5221-A831-178AC6E24A55",
+          "0,3": "99D08BE4-88EC-551E-9471-417C44B88FC0",
+          "1,1": "18A66CEE-A003-55BF-ADCA-C5D3780D251D",
+          "1,2": "76B1FAE3-F7E9-5A2A-83CF-EBC0C7B1E06E",
+          "2,1": "680408B4-5DAD-5EB8-9928-634BCB213DC2",
+          "2,2": "2AD4EDD7-593B-524A-A2BB-AC80A227EF56",
+          "3,1": "6199EA18-40AF-543C-B6B9-07178C8AB36A",
+          "3,2": "C26ECF43-A607-5298-AA12-8C084FA0D550",
+          "4,1": "C1DEFE7B-E06B-56EC-98C8-BCE624C92C49",
+          "6,3": "B801CB1F-F28F-54FB-B9F5-162E677FD2EA",
+          "7,3": "2A42A2F4-E278-52D3-9CD6-4F0726363F50"
+        }
+      },
+      {
+        "page": "71887072-6A8F-5D3C-A314-7997456205AA.sdProfile",
+        "title": "EXT LIGHTING",
+        "actions": {
+          "0,1": "8D80D6B2-09CB-5A99-AC3F-45F2F482DD9A",
+          "0,3": "FDE5F6B2-E7BB-5B7E-879E-63D4894B43A6",
+          "1,1": "F5F779A6-5D55-5043-A06C-D748C20FD505",
+          "1,2": "C843C0AF-4200-55B4-BC0C-197B6B53A0DD",
+          "2,1": "FCFF3A0D-7663-542F-8BF8-191A319D3AA0",
+          "2,2": "B8FF144A-8BE2-510A-ACBB-A75B552A4497",
+          "3,1": "A67100C5-6E5A-5331-A8CF-AA69915849C1",
+          "6,3": "1D728DF9-2A80-5093-A44D-66DFB27D3213",
+          "7,3": "28467ED5-0187-5203-AFF2-85D0C969401D"
+        }
+      }
+    ],
+    "A87AFB73-9C70-56DD-908D-1B3AD6BB7283.sdProfile": [
+      {
+        "page": "A87AFB73-9C70-56DD-908D-1B3AD6BB7283.sdProfile",
+        "title": "AUDIO / SENSOR",
+        "actions": {
+          "0,0": "9AFBE9E3-9E45-5F5E-BB0E-79FAADE1BAA1",
+          "0,2": "DBCC3814-B19D-5E85-B3D9-3E435ED7FA69",
+          "1,0": "E00A0DFD-830A-5EA6-AA80-6568997BFDA1",
+          "1,2": "DE43E1A6-AF84-547B-ACC4-FC7E530E8A04",
+          "2,0": "FA1B1BC8-5D6D-5324-8927-E03A1688E940",
+          "2,2": "24F3C402-9244-56FD-A1C2-D1CEE49485C8",
+          "3,0": "B9C76AF4-1232-5E4D-A6D9-398D94FF1EEB",
+          "3,1": "C5958ACE-649F-55EC-AD6A-33F9F2FFE2C5",
+          "3,2": "6832E649-555F-5436-AC84-38CAFB65BCE8",
+          "4,1": "68DCCA96-E2AC-5CDC-BC5F-9ECC5CB7667C",
+          "4,2": "090E100D-81F6-5453-B9D3-5B76C27B42CC"
+        }
+      },
+      {
+        "page": "0A41214F-0851-56B3-B50A-D3AD8E956168.sdProfile",
+        "title": "HUD PANEL",
+        "actions": {
+          "0,0": "2E56087D-0DAA-5781-8F12-BB292A48C2D4",
+          "0,1": "B870B6A5-FF4F-554C-B000-9655FCCCF5AA",
+          "0,2": "FE9B736B-899F-58F7-A2F3-D37BA86A84A3",
+          "1,1": "BC071C39-7B69-5F2D-AF1A-90166E75BA37",
+          "1,2": "79244881-F02A-5E01-A5F6-F347C42336F2",
+          "2,1": "E9B68D5A-BA91-598F-98B8-3B3A9BEFE2E4",
+          "2,2": "6459920B-7432-5CDA-94E3-EFDA3938991E",
+          "3,0": "61AD214E-A68F-5AE3-A36F-3F39BC10058C",
+          "3,1": "036B9EAA-C2E0-5332-B042-6378FA1A82AA",
+          "3,2": "8FA26B89-A9D4-5140-AB7B-EC49FC499585",
+          "4,1": "171D6C3B-FEF7-5A06-A6F1-66E6BCBE4BA2",
+          "4,2": "B562F260-E882-55E5-AB53-AD37AD33B6B5"
+        }
+      },
+      {
+        "page": "DB859DE2-6798-5F9B-A409-4081CD8C9627.sdProfile",
+        "title": "AVIONICS POWER",
+        "actions": {
+          "0,2": "52E6A4E7-3DB3-55F5-BD6B-82D08382B477",
+          "1,2": "62183A80-8EED-58DB-A778-B47535716C98",
+          "2,2": "9F5E8F92-1419-5248-9540-4407C6169D78",
+          "3,2": "952A44E2-325A-587A-9ECF-26A3A6B7B90A",
+          "4,2": "428AE941-FF4B-5D74-B4EE-4DCDF7F63ADB",
+          "2,1": "FB8CBDD7-1BC9-5060-B1F6-F5FFF3815F2D",
+          "3,1": "19F09203-48BB-5E94-8722-17469E8A106E",
+          "0,1": "BA8E3614-F0E2-59FE-90BD-791A2A44B23E",
+          "4,1": "A6E0F34A-EA78-5757-9599-6AF3E8A202DD",
+          "1,1": "317E28B9-05E5-5C22-B6AE-11E321BDE302"
+        }
+      },
+      {
+        "page": "B420297C-F418-5455-B72D-229AABF3BE2C.sdProfile",
+        "title": "INS / MIDS",
+        "actions": {
+          "1,2": "791A19C6-4759-5413-8098-C8E1BEAD9876",
+          "4,2": "CD4A35D1-8AE1-5B5D-9537-B38CFEE06BC7",
+          "3,1": "78A2EE69-C36E-548B-B93A-3C580ECA66B1",
+          "4,1": "5E7AD670-9169-5F02-B192-D09829F5EE13",
+          "0,1": "5DA697E1-F5F9-55D6-85C4-A182E334D4DA"
+        }
+      },
+      {
+        "page": "C7743B63-450B-5770-B2EF-259C08A51431.sdProfile",
+        "title": "INT LIGHTING",
+        "actions": {
+          "0,0": "54E0B333-6C04-52EE-8AB7-56FFCF70E6A9",
+          "1,0": "C8AC30AC-B1BE-5D2A-B583-99A9C1E7328D",
+          "2,0": "85DC19A6-D2B0-5F25-A6DE-34C686140785",
+          "3,1": "9655D150-77A4-5223-A31C-ED187F764060",
+          "4,1": "8261BC2C-9AFC-5B9F-95CF-A85DAD97F0A3",
+          "4,2": "3C56485E-73FC-549C-BCA5-61A8E2C06799"
+        }
+      },
+      {
+        "page": "48E54C1F-B982-5CF6-B8F9-DF1A43E3EEBC.sdProfile",
+        "title": "EXT LIGHTING",
+        "actions": {
+          "0,2": "5B400083-528D-5DCD-A61B-750E59B80DF0",
+          "1,2": "3DF89293-442A-5D5F-B0E0-041AA44CBAE0",
+          "2,2": "E662E622-5EE3-5F02-9BA6-D3B9523D816A",
+          "3,2": "1A34AE0C-EC3A-5DC9-B4A6-60CDD7F6CAEC",
+          "1,1": "4720832F-C16F-5FDE-9CFD-28EC83DFB927",
+          "0,0": "38D1D416-DC1F-52E6-9B82-8D8A9C478656",
+          "2,0": "C68CACB1-2D0D-5801-B110-DD531B98673D",
+          "3,1": "6BA456CB-4655-5357-8380-E6BD86F00839",
+          "4,1": "73BA1A38-7838-50D3-911F-59B2E35EE0DF",
+          "4,2": "4E9D67DB-8B98-535F-AAB2-829C54C9CB02"
+        }
+      },
+      {
+        "page": "6606CEBE-21BF-5B8A-A127-833B6887E274.sdProfile",
+        "title": "AIR / OXY",
+        "actions": {
+          "2,2": "144DB9BC-EA17-5962-B776-5F3E0CDF0F33",
+          "4,2": "6EFF78A9-161F-5D3D-8F0F-B8463BB123C8",
+          "2,1": "EE64C4EC-3040-523E-82CC-FE5CA5544636",
+          "3,1": "DD838C44-265C-5CE7-BD3A-7A7FE1DCE2F0",
+          "4,1": "F41CED97-D987-5C4E-9922-E8F3D7378307",
+          "0,1": "AB8A5604-6FF3-56CC-BC6D-85193559608C"
+        }
+      },
+      {
+        "page": "9E395513-3777-5E01-A0C6-CEB29820D6F1.sdProfile",
+        "title": "ELEC / TEST",
+        "actions": {
+          "0,2": "90113857-7A2C-5349-888B-481BAFE7D6CD",
+          "0,1": "A8A680AC-5085-555C-8D1B-4F7CA01D68BB",
+          "1,2": "DE069C95-A4E8-54CF-9AD0-1A7E5203CA20",
+          "2,2": "19BFE78F-D879-5EB3-A853-214047C5CE84",
+          "3,2": "6E922098-7258-5E31-B2BD-3A88340A7EF7",
+          "2,1": "C4D86207-E07E-5842-8542-24901F169D89",
+          "3,1": "9068E433-6830-59FC-878B-B3CE748663F4",
+          "4,1": "416B08D0-37C9-587D-B667-5F46AE45D3CB",
+          "4,2": "EFC2EB29-5E0D-50B9-813F-8CE6A022615E"
+        }
+      }
+    ],
+    "ADE1DEFA-1523-5B90-8D2D-A526C8D5FB7C.sdProfile": [
+      {
+        "page": "ADE1DEFA-1523-5B90-8D2D-A526C8D5FB7C.sdProfile",
+        "title": "ELEC / ENGINE",
+        "actions": {
+          "0,0": "F10E5E6D-FD78-5A1B-B30E-DE877DE03826",
+          "0,1": "9C1DD7C7-CF63-5A1C-BE69-0DCCA7775697",
+          "0,3": "0A589B2F-2C07-5448-AE43-05D13F12398A",
+          "2,0": "5A4329D0-9533-5BA0-A401-AA83D879DE3A",
+          "2,1": "95A8A770-67EB-5082-AD8F-800E9C50416E",
+          "2,2": "77EEC829-CF4C-5C5E-96D7-1913BFFAC92A",
+          "3,0": "46017BD5-D815-504E-935A-D62ABE33729C",
+          "3,3": "3DFFCFC0-F64B-53C7-9EEB-360189C0B127",
+          "4,0": "C8D0F69A-6EDA-5A01-9C2F-35430A9A6460",
+          "4,1": "A706704A-0166-5F3C-8B4C-C9EB410EDBA8",
+          "5,1": "7E3D1FDF-A9DB-59E9-AA3D-C4D40EE74D9F",
+          "5,2": "054EA9AE-DDBB-50C5-96BE-293D5729597F",
+          "6,0": "7B536C9F-FFFD-599C-AC3E-DEF0223A0EC2",
+          "6,1": "FCABF2B6-A985-5BA8-B896-28A6D4296D87",
+          "6,3": "D19B7F9F-5AF8-5834-A2AD-8790E9ED6AC4",
+          "7,0": "FDD5768C-467C-5D6A-A493-DD4E369E3F02",
+          "7,2": "2C0CDC0A-3B3B-5B18-B0C7-1DDD984C1276",
+          "7,3": "A3AB2CC7-7C24-5806-BF1F-27857BEF6C0C"
+        }
+      },
+      {
+        "page": "FBB7A996-500F-5F8B-A7DA-2EB1DEADCCC7.sdProfile",
+        "title": "AVIONICS POWER",
+        "actions": {
+          "0,0": "00362018-9F32-56E7-B4DE-88AA3D3FFB7D",
+          "0,3": "6217A6DE-361E-5E00-9BF6-FAF404B2B832",
+          "1,0": "DA22A65B-9DD3-5947-BF5C-57BE7E648426",
+          "1,2": "052A2250-502F-5E50-A92A-088A63BD07A8",
+          "2,0": "CD66339D-D17E-5459-AB81-9614A1B65E4D",
+          "2,1": "250CB7D0-C75D-5AE1-AB45-7F520505F3E1",
+          "3,0": "E6D28E01-1AB2-5633-889C-55BB701CB437",
+          "3,1": "5091123D-7BD8-5208-B368-2607B42ED74A",
+          "3,2": "F82BDF82-7129-5502-B53B-8481CFB43990",
+          "3,3": "FAC5D505-394D-55E6-8ADA-9AB0AA739F52",
+          "4,0": "D3E9A66A-9E69-55B3-8BCC-AEC619101988",
+          "6,3": "F48A3A5B-B5C2-552A-8561-32ACE3F6F263",
+          "7,3": "530EA5AC-9B07-5DD5-AAE0-DAF008E7C103"
+        }
+      },
+      {
+        "page": "87FE7C6B-6117-5076-8D6F-96C8FAA99D82.sdProfile",
+        "title": "HUD PANEL",
+        "actions": {
+          "0,0": "AB3UPID1-FKKD-L1X1-Y504-08J392JF208U",
+          "0,1": "FDC04515-CF9B-5ADF-9265-F49F520C1C20",
+          "0,2": "E6815970-0BC8-5B79-8F94-7B6FEE01007C",
+          "0,3": "FD02FF1B-C858-50DF-9816-6298D6C3023D",
+          "1,0": "3Q6L0UZ6-CLJ8-X542-3ONK-1XS28LYUA3U6",
+          "1,1": "65C9E42E-6651-5126-B5B3-CB371B920840",
+          "1,2": "BBDF8EFC-9CBD-5937-AF94-4F77E65D567E",
+          "2,0": "2IQ023UO-W94A-88GZ-RH0K-FG19507J4460",
+          "2,1": "280AE23F-423D-5A54-8C9D-AC549D7EA9B0",
+          "2,2": "2901504B-EF6B-520A-B108-756D1DE2E4F7",
+          "3,0": "M4IL02G2-H961-9K7T-U1G8-5194EK3VU0J2",
+          "3,1": "95473DE5-C4DE-5A8D-857C-D5FE2B1C48E5",
+          "3,3": "6B0F7FE0-CDFB-5EFF-B3A7-F3DF4875D4DE",
+          "6,3": "AFECD472-E098-52AC-B56D-1A9886C626CD",
+          "7,3": "FA8FE239-9520-58A9-BE96-11EBA9B7EBDB"
+        }
+      },
+      {
+        "page": "B1ED0F0A-814C-5D60-B075-1E8353E7D9C0.sdProfile",
+        "title": "SNSR / AIR / OXY",
+        "actions": {
+          "0,0": "21A7779F-4765-5342-BDF8-D517EB5C6CBB",
+          "1,0": "FADB3407-084E-5F88-998C-6173EC92AB3D",
+          "2,0": "797DACBE-3602-5036-BD2E-9D52F1F48D76",
+          "3,0": "2964F084-2AF2-53FA-B6D5-32476882C0AE",
+          "5,0": "D8D76D88-7490-54F8-9B6B-154552FCC5DD",
+          "5,1": "54A96E8F-A101-5200-A18B-CE4A0001415F",
+          "7,2": "ACEF9B41-4D72-5C81-8F72-17A03B3049FB",
+          "0,3": "0C72BD2C-DCFA-5B8A-9DB3-67CE30C35111",
+          "7,3": "0B499776-D0F8-5BC1-91F4-ED5C5AA17F12",
+          "6,3": "D46459FA-32CD-5981-B135-49B592F50BFC",
+          "3,3": "899AA313-4DF1-598E-9365-C16335F4150B"
+        }
+      },
+      {
+        "page": "2D5C5DF1-AA1C-5C23-96FA-A6A2B50BC0AE.sdProfile",
+        "title": "FLCS / TEST",
+        "actions": {
+          "0,0": "1CEC9E5C-7630-5DE6-A3E9-AF3C07053EAB",
+          "2,0": "AD11A023-04ED-57FB-9597-DF65CF254E10",
+          "0,2": "A5288D45-04CF-5573-83DD-C65E91868517",
+          "3,2": "CBBE9359-08D1-5D6A-9C8E-8B029BD02148",
+          "5,0": "58C33E94-323B-546B-BAEF-B2A3517A79CF",
+          "6,0": "88D30C66-F0CD-56BD-BD64-087F9E728B20",
+          "7,0": "31056847-0E04-566B-89A2-F3858D00A740",
+          "6,1": "786A542C-C451-58CF-8FBB-79F73D559585",
+          "0,3": "41A64B99-54B1-528A-9501-5C80083B657E",
+          "7,3": "79E47D7B-77C4-55A1-A7A4-E5F0D50372FB",
+          "6,3": "98F30EF9-C1BC-52D8-982B-A1AF8909B5C2",
+          "3,3": "77722DE7-ADD1-513B-A2B8-65CA22EEBA71"
+        }
+      },
+      {
+        "page": "2DA38513-02BD-58F2-88CA-B88BC00E4BBA.sdProfile",
+        "title": "ECM PANEL",
+        "actions": {
+          "0,0": "D3CBCE12-0E31-5DF0-B5A9-BC5BE62346A6",
+          "0,1": "1ED7FB14-DB0B-5A3B-8E7A-1D692A7D2487",
+          "0,3": "BE9ECCE5-951C-5E54-8C17-612BFCF59765",
+          "1,1": "8AB0D3C8-C2B7-55D1-B89B-D929F143EBBF",
+          "1,2": "3956F064-87DC-5865-989B-73AFD83F63F5",
+          "2,1": "6EDC0056-C84A-5A1F-90E9-E5E0CD30D331",
+          "2,2": "BBB56759-0D61-5922-A132-53C7022D1FB2",
+          "3,1": "B4EDAAA8-4B3E-5310-B01F-8BF951C014BB",
+          "3,2": "A898FA7B-A77D-5B2A-B8B9-AA4D444F61FE",
+          "4,1": "2431A9FB-B15D-5203-882C-2F84D062FDDC",
+          "6,3": "8D2B61A9-43E7-5FEB-997E-88E22D36472F",
+          "7,3": "50BD2D0C-5B6C-5723-826A-DECCB8D15428"
+        }
+      },
+      {
+        "page": "3C3733FD-CE0B-5E4D-BC54-BBCF2E8CA1C6.sdProfile",
+        "title": "EXT LIGHTING",
+        "actions": {
+          "0,0": "753FBDC5-934C-5729-ABB6-71684635C601",
+          "1,0": "28EB59FA-D845-59D0-999C-4A162AF8FB25",
+          "2,0": "587E4FBD-B881-5AE5-B857-95FEFD86CDEC",
+          "3,0": "989D6CEA-D1A6-5239-A88F-6D69EA05C44E",
+          "1,1": "6D7BE8E0-8356-5562-9EAD-92F89805B92B",
+          "0,3": "B8F56036-9EAB-5A8A-B3DC-EF44830D536C",
+          "7,3": "0F5318CD-6F1C-5538-9A95-F62E9153922B",
+          "6,3": "4E63943A-26C3-57D0-9FF1-1B994344F428",
+          "3,3": "E090F695-D829-5637-8936-A6E5FE05DED5"
+        }
+      }
+    ],
+    "456AED5F-AC85-5B5A-B7F7-7519D96FBD11.sdProfile": [
+      {
+        "page": "456AED5F-AC85-5B5A-B7F7-7519D96FBD11.sdProfile",
+        "title": "AUDIO / SENSOR",
+        "actions": {
+          "0,0": "8773386C-052C-58BA-8CBD-EB9F6D4425D3",
+          "0,2": "03DE681D-76CF-58AD-80AF-7ACE961CA4B1",
+          "1,0": "5D692556-610E-5C9B-9628-A7FA63C23B4D",
+          "1,2": "D3750BF0-228D-5D59-9512-DC362BB6994C",
+          "2,0": "F03EC2A7-8F93-5C13-B808-44F0F2EE9BF2",
+          "2,2": "1FB289E9-6D55-5D8F-A0B3-C7D0223DA395",
+          "3,0": "9FEB9539-68A4-5B63-A0C7-3C1B3E3C9DF0",
+          "3,1": "6714E948-E523-5CBC-BCAC-E6C4CD1FBF4A",
+          "3,2": "47AD6AD4-D84C-53B0-88B8-4B2FE635540F",
+          "4,1": "E825C012-03CF-5C67-993E-1368D06EA480",
+          "4,2": "33FEEB99-C61C-58C1-B8DF-7F7E70AAAD8A"
+        }
+      },
+      {
+        "page": "70729AA9-ED7F-52B2-85DA-0C4843D5C559.sdProfile",
+        "title": "HUD PANEL",
+        "actions": {
+          "0,2": "59D86430-AFF3-5E13-B65B-1A55DB95F5EF",
+          "1,2": "FD030091-FBF1-51A6-9AD7-5281EC6017BC",
+          "2,2": "6E88B598-BB47-55B8-9EC1-5602643A00CB",
+          "3,2": "9CB0BF5A-69A9-577E-A4F4-CB271AC89355",
+          "0,1": "29C3BF72-1582-52A5-87BF-26D6307622F2",
+          "1,1": "9127E825-A392-552B-A91A-D84C3B9C34ED",
+          "2,1": "013C5D6F-58EF-516F-8EBB-49C826642CED",
+          "0,0": "117A13FB-2B50-5A24-9E11-771CBD846EC2",
+          "3,0": "4ED1E954-DF5F-5B16-84D2-FEB00BC5AA97",
+          "3,1": "D1731E9C-FA68-5E91-BF01-89755E86C10C",
+          "4,1": "DD357BFF-18CE-5166-A6D5-E7193E72C9D8",
+          "4,2": "9D5EFAB3-6A5E-518F-BB6F-4F37C6B569F7"
+        }
+      },
+      {
+        "page": "129FE726-B916-5C78-B1B1-CF53CA832A41.sdProfile",
+        "title": "AVIONICS POWER",
+        "actions": {
+          "0,2": "94BAFC50-9ED6-55E0-AF01-865D31F2E614",
+          "1,2": "0EEA1AA6-18CC-51A8-BCF3-7ADBE0E3ECD5",
+          "2,2": "F3D4ADCE-F82A-5C66-AE5A-ADD4EA04389C",
+          "3,2": "5CC00F9F-0698-55D8-ACD8-79CE39111B05",
+          "4,2": "3F2C3FFB-ECD6-5D32-AD1A-3DD955D3C44A",
+          "2,1": "67DFF87C-EE49-599B-BEC2-D5B2F6194F10",
+          "3,1": "B96584B1-5440-57DB-A039-F73490B312B0",
+          "0,1": "F62A1818-1297-587E-9D63-2083ADC26C2F",
+          "4,1": "84F3E07A-A3AE-5516-9666-D73BE03162DB",
+          "1,1": "1AD808A5-AC71-5D39-9293-A87D027A8CCA"
+        }
+      },
+      {
+        "page": "C3FA4002-4B90-51C3-B19C-830DC13D47BD.sdProfile",
+        "title": "INS / MIDS",
+        "actions": {
+          "1,2": "EC567200-57A0-53EC-A3D0-AECA6ACCD26B",
+          "4,2": "5FC7DF51-D6C6-5814-903D-441173FE75E2",
+          "3,1": "8889ACB9-6CA3-5470-A4DE-80AEA487E050",
+          "4,1": "1AF65C77-1571-5344-9410-1ABC2B937B79",
+          "0,1": "43E893C0-63FC-5A8D-B705-9FB2C07828E0"
+        }
+      },
+      {
+        "page": "997A569E-A1EA-5CBA-96BA-1C7FBBCBFC29.sdProfile",
+        "title": "INT LIGHTING",
+        "actions": {
+          "0,0": "5279B504-FDD1-5923-B88C-5557CEA80103",
+          "1,0": "87F703A3-58C6-5109-9703-BBB8BA74DED4",
+          "2,0": "7349BE71-5E84-5EB8-8931-F654BE5EAE78",
+          "3,1": "AA4329AD-53A9-5841-8C93-E2A8C3B93CFD",
+          "4,1": "6F3F3AE1-69EF-5839-8638-37D49111F8FF",
+          "4,2": "7344AC73-D3D6-593F-A431-63949B4ABEA9"
+        }
+      },
+      {
+        "page": "C9C905BA-EB97-5E17-9B07-74E0145CB5A4.sdProfile",
+        "title": "EXT LIGHTING",
+        "actions": {
+          "0,2": "49FEE867-F56A-5680-9F2F-F185F4443AEC",
+          "1,2": "76430696-2FEF-5ED6-AF01-BDCE40C95AB6",
+          "2,2": "EB867DCB-F3CF-5E05-9A79-A23224C7085C",
+          "3,2": "69007FF5-6141-5083-A589-C848C7E31FF3",
+          "1,1": "FEA03E10-9CE3-55DE-8345-1DD63E7EA6A1",
+          "0,0": "BCC6E7E7-15CD-517B-81C5-F0D574C71DFF",
+          "2,0": "332C25B1-B919-59A5-A0B5-73E391433B1E",
+          "3,1": "4F1B6481-6F00-5EE6-8F53-66AFFD593F51",
+          "4,1": "07C25D4D-CF78-57C5-A19E-89AC68A2641F",
+          "4,2": "B1F76820-B6DE-5610-8772-D69B4DFB9135"
+        }
+      },
+      {
+        "page": "F9EA19DF-DC83-547F-94EC-62470491E42E.sdProfile",
+        "title": "AIR / OXY",
+        "actions": {
+          "2,2": "850C9876-02EB-5F49-AE8B-E2E6C0F32D0F",
+          "4,2": "9C96DECB-41CF-5EF1-8461-E333AF59B19C",
+          "2,1": "EF9F730D-4274-562A-9036-400E49318221",
+          "3,1": "D4D81F6B-8128-58F3-AF0B-56C621274534",
+          "4,1": "849D086D-1454-5CF8-98C6-3A373E4C9DB2",
+          "0,1": "45D9EFFA-1853-517F-9A4E-B5ABD2802D93"
+        }
+      },
+      {
+        "page": "0553D839-DC32-587B-B164-A0008C4E9F4B.sdProfile",
+        "title": "ELEC / TEST",
+        "actions": {
+          "0,2": "920B3D8A-3655-5960-9819-B0B3438EB964",
+          "0,1": "6753D476-1B7C-565C-ADA6-2EA544B3417F",
+          "1,2": "7CAAFC3B-3E73-5ED7-A533-9810739B0EFA",
+          "2,2": "5F2A06D4-DCE1-5714-8808-170EDB44A961",
+          "3,2": "6F138888-CB5B-5F8B-A043-223C842287D3",
+          "2,1": "2F99D3CB-0817-587D-9217-F8E54CE1A94E",
+          "3,1": "BE04D681-BB8E-559F-9DD0-9E1102DAA21A",
+          "4,1": "E06C7035-E360-5725-90B5-D460BEF9EE1E",
+          "4,2": "64265DD9-7C76-52B4-AEE6-C4BB1CB2AE03"
+        }
+      }
+    ]
+  }
 }

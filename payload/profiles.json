@@ -4,12 +4,11 @@
     "device": "VSDXL",
     "name": "F-16 BMS XL",
     "folder": "E09811E7-E3F8-599F-96F0-FB2611731320.sdProfile",
-    "pages": 7,
+    "pages": 6,
     "page_titles": [
       "ELEC / ENGINE",
       "AVIONICS POWER",
       "HUD PANEL",
-      "SNSR / AIR / OXY",
       "FLCS / TEST",
       "ECM PANEL",
       "EXT LIGHTING"

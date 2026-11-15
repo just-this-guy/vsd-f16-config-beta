@@ -59,6 +59,22 @@
         }
       ]
     },
+    "0,3": {
+      "ActionID": "0A589B2F-2C07-5448-AE43-05D13F12398A",
+      "Controller": "",
+      "Name": "Previous page",
+      "UUID": "com.hotspot.streamdock.page.previous",
+      "Settings": {},
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "nav-previous.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
     "2,0": {
       "ActionID": "5A4329D0-9533-5BA0-A401-AA83D879DE3A",
       "Controller": "Keypad",
@@ -165,6 +181,22 @@
         }
       ]
     },
+    "3,3": {
+      "ActionID": "3DFFCFC0-F64B-53C7-9EEB-360189C0B127",
+      "Controller": "",
+      "Name": "Page Indicator",
+      "UUID": "com.hotspot.streamdock.page.indicator",
+      "Settings": {},
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "layout-706413144cb2315160d8.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
     "4,0": {
       "ActionID": "C8D0F69A-6EDA-5A01-9C2F-35430A9A6460",
       "Controller": "Keypad",
@@ -180,46 +212,6 @@
       "States": [
         {
           "Image": "beta-large-f20e0b353bddbd069843.png",
-          "Title": "",
-          "ShowTitle": false
-        }
-      ]
-    },
-    "6,0": {
-      "ActionID": "7B536C9F-FFFD-599C-AC3E-DEF0223A0EC2",
-      "Controller": "Keypad",
-      "Name": "F-16 selector",
-      "UUID": "org.f16vsd.cycling.selector",
-      "Settings": {
-        "sim": "DCS",
-        "control": "feed",
-        "index": 0
-      },
-      "SoftwareSettings": {},
-      "State": 0,
-      "States": [
-        {
-          "Image": "beta-large-615303101295cc79b757.png",
-          "Title": "",
-          "ShowTitle": false
-        }
-      ]
-    },
-    "7,0": {
-      "ActionID": "FDD5768C-467C-5D6A-A493-DD4E369E3F02",
-      "Controller": "Keypad",
-      "Name": "F-16 selector",
-      "UUID": "org.f16vsd.cycling.selector",
-      "Settings": {
-        "sim": "DCS",
-        "control": "refuel",
-        "index": 0
-      },
-      "SoftwareSettings": {},
-      "State": 0,
-      "States": [
-        {
-          "Image": "beta-large-e53f364e889921e7efcb.png",
           "Title": "",
           "ShowTitle": false
         }
@@ -291,39 +283,6 @@
         }
       ]
     },
-    "6,1": {
-      "ActionID": "FCABF2B6-A985-5BA8-B896-28A6D4296D87",
-      "Controller": "Keypad",
-      "Name": "Momentary Button with Lamp",
-      "UUID": "com.ctytler.dcs.lamp.button.two-state",
-      "Settings": {
-        "button_id": "3002",
-        "device_id": "12",
-        "send_address": "12,3002",
-        "dcs_id_compare_monitor": "577",
-        "dcs_id_compare_condition": "EQUAL_TO",
-        "dcs_id_comparison_value": "1",
-        "string_monitor_passthrough_check": true,
-        "string_monitor_vertical_spacing": "0",
-        "press_value": "1",
-        "release_value": "0",
-        "disable_release_check": false
-      },
-      "SoftwareSettings": {},
-      "State": 0,
-      "States": [
-        {
-          "Image": "beta-large-00cea5ed0bcf5d9223c1.png",
-          "Title": "",
-          "ShowTitle": false
-        },
-        {
-          "Image": "beta-large-d6fec5d19a6e32b242f3.png",
-          "Title": "",
-          "ShowTitle": false
-        }
-      ]
-    },
     "5,2": {
       "ActionID": "054EA9AE-DDBB-50C5-96BE-293D5729597F",
       "Controller": "Keypad",
@@ -357,53 +316,54 @@
         }
       ]
     },
-    "7,2": {
-      "ActionID": "2C0CDC0A-3B3B-5B18-B0C7-1DDD984C1276",
+    "6,0": {
+      "ActionID": "7B536C9F-FFFD-599C-AC3E-DEF0223A0EC2",
       "Controller": "Keypad",
       "Name": "F-16 selector",
       "UUID": "org.f16vsd.cycling.selector",
       "Settings": {
         "sim": "DCS",
-        "control": "transfer",
+        "control": "feed",
         "index": 0
       },
       "SoftwareSettings": {},
       "State": 0,
       "States": [
         {
-          "Image": "beta-large-8cad6d3df775efe81235.png",
+          "Image": "beta-large-615303101295cc79b757.png",
           "Title": "",
           "ShowTitle": false
         }
       ]
     },
-    "0,3": {
-      "ActionID": "0A589B2F-2C07-5448-AE43-05D13F12398A",
-      "Controller": "",
-      "Name": "Previous page",
-      "UUID": "com.hotspot.streamdock.page.previous",
-      "Settings": {},
+    "6,1": {
+      "ActionID": "FCABF2B6-A985-5BA8-B896-28A6D4296D87",
+      "Controller": "Keypad",
+      "Name": "Momentary Button with Lamp",
+      "UUID": "com.ctytler.dcs.lamp.button.two-state",
+      "Settings": {
+        "button_id": "3002",
+        "device_id": "12",
+        "send_address": "12,3002",
+        "dcs_id_compare_monitor": "577",
+        "dcs_id_compare_condition": "EQUAL_TO",
+        "dcs_id_comparison_value": "1",
+        "string_monitor_passthrough_check": true,
+        "string_monitor_vertical_spacing": "0",
+        "press_value": "1",
+        "release_value": "0",
+        "disable_release_check": false
+      },
       "SoftwareSettings": {},
       "State": 0,
       "States": [
         {
-          "Image": "nav-previous.png",
+          "Image": "beta-large-00cea5ed0bcf5d9223c1.png",
           "Title": "",
           "ShowTitle": false
-        }
-      ]
-    },
-    "7,3": {
-      "ActionID": "A3AB2CC7-7C24-5806-BF1F-27857BEF6C0C",
-      "Controller": "",
-      "Name": "Next page",
-      "UUID": "com.hotspot.streamdock.page.next",
-      "Settings": {},
-      "SoftwareSettings": {},
-      "State": 0,
-      "States": [
+        },
         {
-          "Image": "nav-next.png",
+          "Image": "beta-large-d6fec5d19a6e32b242f3.png",
           "Title": "",
           "ShowTitle": false
         }
@@ -477,17 +437,57 @@
         }
       ]
     },
-    "3,3": {
-      "ActionID": "3DFFCFC0-F64B-53C7-9EEB-360189C0B127",
+    "7,0": {
+      "ActionID": "FDD5768C-467C-5D6A-A493-DD4E369E3F02",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "refuel",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-e53f364e889921e7efcb.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "7,2": {
+      "ActionID": "2C0CDC0A-3B3B-5B18-B0C7-1DDD984C1276",
+      "Controller": "Keypad",
+      "Name": "F-16 selector",
+      "UUID": "org.f16vsd.cycling.selector",
+      "Settings": {
+        "sim": "DCS",
+        "control": "transfer",
+        "index": 0
+      },
+      "SoftwareSettings": {},
+      "State": 0,
+      "States": [
+        {
+          "Image": "beta-large-8cad6d3df775efe81235.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ]
+    },
+    "7,3": {
+      "ActionID": "A3AB2CC7-7C24-5806-BF1F-27857BEF6C0C",
       "Controller": "",
-      "Name": "Page Indicator",
-      "UUID": "com.hotspot.streamdock.page.indicator",
+      "Name": "Next page",
+      "UUID": "com.hotspot.streamdock.page.next",
       "Settings": {},
       "SoftwareSettings": {},
       "State": 0,
       "States": [
         {
-          "Image": "page-indicator.png",
+          "Image": "nav-next.png",
           "Title": "",
           "ShowTitle": false
         }

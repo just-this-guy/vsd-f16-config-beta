@@ -3,41 +3,14 @@ import argparse,hashlib,json,pathlib,shutil,zipfile
 
 WORK=pathlib.Path(__file__).resolve().parent;OUT=WORK/'dist'
 SOURCES=['portable_gui.py','share_installer.py','beta_install.py','binding_review.py','binding_editor.py','dcs_prerequisites.py','f16_plugin.py','graphics.py','regenerate_graphics.py','render_preview.py','build_beta.py','test_beta.py','test_runtime.py','panel-layout.json','apply_panel_layout.py','test_panel_layout.py','explicit_bms.py','package_beta.py']
-README='''VSD F16 Config Beta — portable Windows setup
-
-Run VSD F16 Config Beta.exe. Python is included; no separate Python installation is required. You may share this EXE directly, or share the portable ZIP with these instructions and runtime licenses.
-
-1. Close VSD Craft and the simulator(s) you want to configure.
-2. Confirm the detected VSD XL / N4 Pro panels and software folders.
-3. Select BMS only, DCS only, or both. Select either panel or both panels.
-4. Check the prerequisites. DCS Interface by Charlie Tytler and DCS-ExportScript are separate prerequisites; download/help buttons open their authors' pages. Missing prerequisites stop installation. BMS-only setup does not require DCS.
-5. Choose the BMS keyfiles you actually use. Open Review / edit shortcuts to inspect all proposed assignments, find conflicts, edit keys/modifiers, and save/load your mapping. Edits are applied to the simulator bindings and corresponding control buttons together.
-6. Choose Review choices, then Apply changes. Choose whether to keep rollback backups when prompted. Conflicts and incomplete checks stop Apply.
-7. Open VSD Craft and choose the matching F-16 profile for each panel. Restart DCS after changing its export scripts.
-
-The latest design is included: one button per switch/selector, repeated presses to toggle or cycle, changing graphics, larger bold top-center labels, and larger state captions. Bottom-left red/green indicators have twice the previous diameter. Long labels wrap. The package contains four profiles and 28 pages.
-
-The control runtime installs with the profiles in VSD Craft's plugin folder. Existing matching F-16 profiles can be updated. Single-simulator installations show a simulator badge rather than a toggle to an unavailable simulator. With both simulators installed, logo toggles can switch the selected panel or both panels. No Windows service, startup task, automatic download, or system-wide Python installation is created.
-
-BMS switch graphics track commands made through VSD; they are not live cockpit telemetry. Starting a new flight or changing switches elsewhere can desynchronize them. BMS must be the foreground application. A yellow warning triangle after a rejected press can mean BMS does not have keyboard focus; bring the running BMS cockpit to the foreground and retry. Rejected presses do not change the displayed state. Release unrelated held keyboard modifiers before pressing.
-
-DCS switch graphics follow cockpit feedback. Gray / NO DATA means no fresh F-16 feedback is available. DCS command routing follows the checked DCS-ExportScript listener port; dedicated F-16 telemetry uses loopback port 26028. Existing export hooks remain chained. Red means OFF (or a closed refueling door); green indicates an active named setting. Selectors without an OFF setting use green for their named modes.
-
-Backups default to Documents/VSD F16 Config Beta/Backups. Each contains a restore-manifest.json, changed original files/directories, the VSD database when affected, a binding-review.json report, and an installation report. Unrelated profiles, keyboard entries and joystick/MFD assignments are preserved. If installation fails after changes begin, the installer attempts to restore the prior files automatically, retaining backup evidence.
-
-Validation: 19 isolated installation tests and 16 offline runtime tests; standalone EXE/GUI self-check with Python removed from PATH; all 28 pages and 174 editable shortcut rows verified. Fresh BMS-only, DCS-only, both-simulator and single-panel scenarios, updates, backups, edited bindings, prerequisite failures, conflict blocking and rollback are covered. Physical-device/in-flight validation is still pending. This beta EXE is unsigned.
-
-DCS Interface plugin ID: com.ctytler.dcs.sdPlugin. The separately installed DCS Interface and other third-party simulator software are not bundled. Simulator logos and third-party components retain their owners' rights. Runtime license notices are included in the ZIP. No open-source license has been selected for the original profile/application code.
-'''
+README='VSD F16 Config Beta\n\nrearanged icons to more closely match Block 50 layout\n\nExtract the ZIP and run VSD F16 Config Beta.exe from the top-level folder.\nClose VSD Craft and the simulators first. Back up any layout you have edited.\n\nChoose BMS, DCS, or both, and the panels you use. Check prerequisites, review\nand edit the shortcuts, then review your choices and apply.\n\nDCS needs DCS Interface by Charlie Tytler and DCS-ExportScript; the installer\nincludes links. BMS must have keyboard focus when using the buttons.\n\nBMS icons remember commands sent through VSD, so mouse/HOTAS changes can leave\nthem out of sync until another successful button press. DCS uses cockpit feedback.\n\nThis is an informal, unsigned beta. Expect rough edges.\n'
 
 def package(license_source):
     report=json.loads((OUT/'exe-self-check.json').read_text())
-    assert report['status']=='ok' and report['bundled_python'] and report['pages']==30
-    readme=README.replace('four profiles and 28 pages','four profiles and 30 pages').replace('16 offline runtime tests','19 offline runtime tests').replace('offline runtime tests;','offline runtime tests; 10 panel-layout checks;').replace('all 28 pages and 174 editable shortcut rows','all 30 pages and 179 editable shortcut rows')
-    readme+='\nBMS explicit positions: all 46 persistent switch/selector definitions, including ECM modes 1-5, use separate ON/OFF or named-position commands. A successfully executed press brings the cockpit to the displayed target position. Icons track sent commands rather than BMS confirmation; external changes require another press to align. Momentary and incremental controls keep their appropriate actions.\n'
-    readme+='\nCockpit layout: seven XL pages and eight N4 Pro pages per simulator use deliberate rows/columns and gaps. N4 avionics power is split into an upper/middle view and an INS/MIDS lower view. See docs/PANEL-LAYOUT.md in the source or GitHub repository for references and hardware compromises.\n'
+    assert report['status']=='ok' and report['bundled_python'] and report['pages']==sum(p['pages'] for p in json.loads((WORK/'payload/profiles.json').read_text()))
+    readme=README
     (OUT/'Read me.txt').write_text(readme,encoding='utf-8')
-    release={'product':'VSD F16 Config Beta','version':'0.3.2-beta','date':'2026-11-14','profiles':4,'pages':30,'installer_tests':19,'runtime_tests':19,'layout_tests':10,'binding_editor_rows':179,'bms_explicit_selectors':46,'layout':'cockpit-like rows and columns','labels':'larger bold top-center labels','state_dots':'twice the previous diameter','in_flight_validation':'pending'}
+    release={'product':'VSD F16 Config Beta','version':'0.3.3-beta','profiles':4,'pages':report['pages']}
     (OUT/'release.json').write_text(json.dumps(release,indent=2))
     licenses=OUT/'Third-party licenses'
     if not licenses.exists():shutil.copytree(license_source,licenses)
